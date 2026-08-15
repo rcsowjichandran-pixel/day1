@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="step active" id="step1">
+    <label>Email:</label><br>
+    <input type="email" id="email"><br>
+    <span class="error" id="emailError"></span><br>
+    <button onclick="validateStep1()">Next</button>
+  </div>
+  <div class="step" id="step2">
+    <label>Password:</label><br>
+    <input type="password" id="password"><br>
+    <span class="error" id="passwordError"></span><br>
+    <button onclick="prevStep(1)">Back</button>
+    <button onclick="validateStep2()">Next</button>
+  </div>
+  <div class="step" id="step3">
+    <label>Full Name:</label><br>
+    <input type="text" id="fullname"><br>
+    <span class="error" id="nameError"></span><br>
+    <button onclick="prevStep(2)">Back</button>
+    <button onclick="validateStep3()">Submit</button>
+  </div>
+
+  <h2>login form</h2>
+  <form>
+    <label for="email">Mail Id</label>
+    <input type="text" id="email" required><br>
+    <label for="password">Password</label>
+    <input type="password" id="password" minlength="8" required><br>
+    <span class="error" id="passwordError"></span>
+    <button type="submit">LOGIN</button>
+  </form>
+
+  <h2>subscribtion form</h2>
+   <form>
+    <h2>Subscribe Now</h2>
+   <label for="email">Email:</label>
+    <input type="email" id="email" placeholder="Enter your email" required><br>
+    <label>Gender:</label>
+    <div class="radio-group">
+      <input type="radio" id="male" name="gender" value="male" required>
+      <label for="male">Male</label>
+      <input type="radio" id="female" name="gender" value="female" required>
+      <label for="female">Female</label>
+      <input type="radio" id="other" name="gender" value="other" required>
+      <label for="other">Other</label>
+    </div>
+    <label for="color">Favorite Color:</label>
+    <select id="color" required>
+      <option value="" disabled selected>Select a color</option>
+      <option value="red">Red</option>
+      <option value="blue">Blue</option>
+      <option value="green">Green</option>
+      <option value="yellow">Yellow</option>
+      <option value="purple">Purple</option>
+    </select>
+    <button type="submit">Subscribe</button>
+  </form>
+
+  <form>
+    <h2>Subscription Preferences</h2>
+    <label for="volume">Select Volume Level:</label>
+    <input type="range" id="volume" min="0" max="100" value="50">
+    <span class="value-display" id="volumeValue">50</span>
+    <button type="submit">Submit</button>
+  </form>
+
+  <form>
+    <h2>Choose Your Favorite Color</h2>
+    <label for="favColor">Select a Color:</label>
+    <input type="color" id="favColor" value="red" required>
+    <div class="preview-box" id="colorPreview"></div>
+    <button type="submit">Subscribe</button>
+  </form>
+
+   <form>
+    <h2>Book an Appointment</h2>    
+    <label for="appointmentDate">Select a Date:</label>
+    <input type="date" id="appointmentDate" required>
+    <button type="submit">Submit</button>
+  </form>
+
+  <form>
+    <h2>Search Topics</h2>
+    <label for="topic">Search:</label>
+    <input type="search" id="topic" list="topics" placeholder="Type a topic..." required>
+    <datalist id="topics">
+      <option value="HTML">
+      <option value="CSS">
+      <option value="JavaScript">
+      <option value="React">
+      <option value="Node.js">
+    </datalist>
+    <button type="submit">Search</button>
+  </form>
+
+  <form>
+    <h2>Checkout</h2>
+    <fieldset>
+      <legend>Shipping Address</legend>
+
+      <label for="fullname">Full Name:</label>
+      <input type="text" id="fullname" placeholder="Enter your full name" required><br>
+
+      <label for="address">Street Address:</label>
+      <input type="text" id="address" placeholder="Enter street address" required><br>
+
+      <label for="city">City:</label>
+      <input type="text" id="city" placeholder="Enter city" required><br>
+
+      <label for="zip">ZIP Code:</label>
+      <input type="text" id="zip" pattern="[0-9]{5}" placeholder="12345" required><br>
+
+      <label for="country">Country:</label>
+      <input type="text" id="country" placeholder="Enter country" required><br>
+      <button type="submit">Submit</button>
+    </fieldset>
+    
+  </form>
+
+  <form id="feedbackForm">
+    <h2>Feedback Form</h2>
+
+    <label for="feedback">Your Feedback:</label>
+    <textarea id="feedback" placeholder="Write your feedback here..." required></textarea>
+    <div class="checkbox">
+      <input type="checkbox" id="agree" required>
+      <label for="agree">I agree to the terms and conditions</label>
+      </div>
+    <button type="submit">Submit</button>
+  </form>
+
+  <form id="donationForm">
+    <h2>Make a Donation</h2>
+    <label for="amount">Donation Amount ($):</label>
+    <input type="number" id="amount" min="1" placeholder="Enter amount" required>
+      <h3>Additional Options</h3>
+      <label>
+        <input type="checkbox" id="giftAid"> Apply Gift Aid
+      </label><br>
+      <label for="message">Special Message:</label>
+      <textarea id="message" placeholder="Write a message..."></textarea>
+    </div>
+    <button type="submit">Donate</button>
+  </form>
+
+</body>
+</html>

@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+header{
+    position: absolute;
+    width: 100%;
+    padding: 20px 50px;
+}
+a{
+    text-decoration: none;
+    color: black;
+    gap:10px;
+}
+.info{
+    display: flexbox;
+    width: 100vw;
+    height: 50vh;
+    background: linear-gradient(to right, #4facfe, #00f2fe);
+    padding: 100px;
+    text-align: center;
+}
+.info h2{
+    font-size: 48px;
+}
+.info p{
+    font-size: 40px;
+}
+.btn {
+  padding: 12px 25px;
+  background: white;
+  font-weight: bold;
+  border-radius: 5px;
+  border: none;
+  transition: 0.3s;
+}
+.btn:hover {
+  background: darkslateblue;
+  color: #fff;
+}
+.blog{
+    width: 100vw;
+    padding: 10px;
+    height: 10%;
+   font-size:2rem;
+   text-align:center;
+   font-weight: bold;
+   background: brown;
+}
+article h2{
+    font-size: 2rem;
+}
+article .meta{
+    font-size: 1em;
+}
+article p{
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+footer {
+      width: 100vw;
+      padding: 15px;
+      background: rgb(230, 89, 89);
+      text-align: center;
+      font-size: 0.9rem;
+    }
+.card{
+    width: 30%;
+    text-align: center;
+    border: 2px solid black;
+    border-radius: 7px;
+}
+.card h2{
+    font-size: 4vmax;
+}
+.card img{
+    width: 30%;
+    height: auto;
+    border-radius: 8px;
+}
+.price{
+    font-size: 3vmin;
+    text-align: center;
+}
+.button{
+    font-size: 2vmax;
+    padding: 10px 20px;
+    border-radius:5px;
+    border: none;
+    background-color: aquamarine;
+}
+.button:hover{
+    background: #0fe593;
+}
+.output{
+    font-size: 0.7rem;
+    border:1px solid ;
+    height: 5em;
+    width: 100%;
+    text-align: center;
+    background: rgb(2, 2, 90);
+    color:white;
+}
+.Me{
+    background-color: gray;
+    text-align: center;
+}
+.skills{
+    text-align: center;
+    background: conic-gradient( white, blue, white);
+}
+.projects{
+    text-align: center;
+    background-color: lightgrey;
+}
+.pro1,.pro2{
+    background-color: white;
+    width: 500px;
+}
+.mini4{
+    display: flexbox;
+    border: 1px solid black;
+
+}
+.contact-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+
+}
+form{
+    display: flex;
+    width: 400px;
+    height: 300px;
+    flex-direction: column;
+}
+input,textarea{
+    width: 100%;
+    padding:10px;
+    border-radius: 10px;
+}
+.submit{
+    padding: 10px;
+    border:none;
+    background: greenyellow;
+    font-size: 1rem;
+    border-radius: 5px;
+}
+.contact-info{
+    text-align: center;
+}
+.pricing-container{
+    display: flex;
+    gap:20px;
+}
+.card{
+    width: 30%;
+    border: none;
+    border-radius:10px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    padding: 20px;    
+}
+.price,h3{
+    font-size: 5vmin;
+    font-weight: bold;
+}
+.card h3{
+    color: green;
+}
+li{
+    text-align:left;
+    font-size: 3vmin;
+}
+.pricing-container button{
+    font-size: 3vmin;
+    background-color: rgb(72, 209, 72);
+    border-radius: 5px;
+    border: none;
+}
+.pricing-container button:hover{
+    background: darkgreen;
+}
+.gallery{
+    display: grid;
+    grid-template-columns: 200px 200px 200px;
+    gap:30px;
+}
+
+.gallery-item img{
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+.gallery-item img:hover{
+    filter: brightness(80%);
+}
+.caption{
+    text-align: center;
+    font-size: 1.5rem;
+}
+.newsletter-banner{
+    background-color: goldenrod;
+    text-align: left;
+    width: 100vw;
+    height: 60vh;
+    text-align: center;
+
+}
+.newsletter-banner h2{
+    font-size: 2rem;
+}
+.newsletter-banner p{
+    font-size: 1em;
+}
+.news{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+
+}
+input[type="email1"] {
+      width: 60%; 
+      padding: 12px; 
+      border: none;
+      border-radius: 5px;
+      font-size: 2vmin;
+    }
+button {
+      padding: 12px 20px; 
+      background: #fff;
+      color: #2e8b57;
+      border: none;
+      border-radius: 5px;
+      font-size: 1rem;
+    }
+button:hover {
+      background: #1c5d3b;
+      color: #fff;
+    }
+    </style>
+</head>
+<body>
+   <header>
+    <nav>
+        <h1 class="header">MY PAGE</h1>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#service">Service</a>
+        <a href="#contact">Contact</a>
+    </nav>
+   </header>
+    <section class="info">
+        <h2>WELCOME TO MY LANDING PAGE</h2><br>
+        <p>Simple and Resposive Page</p><br>
+        <button class="btn">Get Started</button>
+    </section><br><br><br>
+
+
+
+    <header class="blog">
+    My Tech Blog
+    </header><br><br><br><br>
+  <article>
+    <h2>How Technology is Changing the World</h2>
+    <p class="meta">By John Doe - Feb 2026</p>
+    <p>
+      Technology is evolving at an unprecedented pace, shaping the way we live, work, and interact with the world. 
+      From AI advancements to the Internet of Things, innovation is driving the future.
+    </p>
+  </article>
+
+  <footer>
+    © 2026 My Tech Blog. All Rights Reserved.
+  </footer><br><br>
+
+  <div class="card">
+    <h2>Wireless Headphone</h2>
+    <img src="headphone.jpg" alt="headphone" >
+    <div class="price">$99</div>
+    <button class="button">Add to cart</button>
+  </div><br><br>
+<main class="mini4">
+  <header class="output">
+    <h1>John Doe</h1>
+    <p>Web Developer|Designer|Freelancer</p>
+ </header><br><br><br><br><br>
+ <section class="Me">
+    <h2>About me</h2>
+    <p>I am a passionate web developer specializing in front end and backend technologies.</p>
+</section>
+<section class="skills">
+    <h3>Skills</h3>
+    <p>HTML,CSS,JavaScript,React,Node.js,Django,UI/UX Design.</p>
+</section>
+<section class="projects">
+    <h3 class="out1">Projects</h3>
+        <div class="pro1"> 
+            <h4>Portfolio Website</h4>
+            <p>A sleek and modern portfolio to showcase my work.</p>
+        </div>
+        <div class="pro2">
+            <h4>E-Commerce App</h4>
+            <p>An online store with cart functionality and payment integration. </p>
+        </div>    
+</section>
+ <footer class="output">Contact <br>Email:john@example.com</footer>
+ </main><br><br><br>
+
+ <section class="contact-section">
+    <h2>Contact Us</h2>
+    <p class="instructions">Fill out the form below and we’ll get back to you soon.</p>
+
+    <form>
+      <label for="name">Name</label>
+      <input type="text" id="name" placeholder="Enter your name"><br>
+
+      <label for="email">Email</label>
+      <input type="email" id="email" placeholder="Enter your email"><br>
+
+      <label for="message">Message</label>
+      <textarea id="message" rows="5" placeholder="Write your message"></textarea><br>
+
+      <button class="submit">Send Message</button>
+    </form>
+
+    <div class="contact-info">
+      <p>Email: support@example.com</p>
+      <p>Phone: +91 98765 43210</p>
+    </div>
+  </section><br><br>
+
+  
+<div class="pricing-container">
+<div class="card basic">
+      <h3>Basic</h3>
+      <p class="price">$9/mo</p>
+      <ul>
+        <li>10GB Storage</li>
+        <li>Email Support</li>
+        <li>Advanced Features</li>
+      </ul>
+      <button>Choose Plan</button>
+    </div>
+    <div class="card featured">
+      <h3>Pro</h3>
+      <p class="price">$29/mo</p>
+      <ul>
+        <li>100GB Storage</li>
+        <li>Priority Support</li>
+        <li>Advanced Features</li>
+      </ul>
+      <button>Best Plan</button>
+    </div>
+    <div class="card premium">
+      <h3>Premium</h3>
+      <p class="price">$59/mo</p>
+      <ul>
+        <li>1TB Storage</li>
+        <li>24/7 Support</li>
+        <li>All Features</li>
+      </ul>
+      <button>Choose Plan</button>
+    </div>
+  </div><br><br>
+
+<div class="gallery">
+    
+ <div class="gallery-item">
+      <img src="flower1.jpg" alt="image1">
+      <div class="caption">Image 1</div>
+</div>
+<div class="gallery-item">
+    <img src="flower2.jpg" alt="image2">
+    <div class="caption">Image 2</div>
+</div>
+    <div class="gallery-item">
+    <img src="flower3.jpg" alt="image3">
+    <div class="caption">Image 3</div>
+</div>
+    <div class="gallery-item">
+    <img src="flower4.jpg" alt="image4">
+    <div class="caption">Image 4</div>
+</div>
+    <div class="gallery-item">
+    <img src="flower5.jpg" alt="image5">
+    <div class="caption">Image 5</div>
+</div>
+    <div class="gallery-item">
+    <img src="flower6.jpg" alt="image6">
+    <div class="caption">Image 6</div>
+</div>
+</div><br><br>
+
+<section class="newsletter-banner">
+    <h2>Stay Updated!</h2>
+    <p>Subscribe to our newsletter for the latest updates.</p>
+    <form class="news">
+      <input type="email1" placeholder="Enter your email">
+      <button type="submit">Subscribe</button>
+    </form>
+  </section>
+    
+</body>
+</html>

@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        nav{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: linear-gradient(to top, #4facfe, #00f2fe);
+            padding: 10px;
+        }
+        .logo{
+            color: white;
+            font-size: 2rem;
+            font-weight: bold;
+        } 
+        .menu{
+            display: flex;
+            gap: 20px;
+        }
+        .menu a{
+            text-decoration: none;
+            font-size: 1em;
+            color:white ;
+        }
+        .menu a:hover{
+            color: #ff908a;
+        }
+        .login{
+            display: flex;
+            background: lightskyblue;
+            width: 300px;
+            min-height:300px;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid none;
+           
+        }
+        .login form{
+            background: white;
+            padding: 20px;
+            margin: 30px;
+            border-radius: 10px;
+            box-shadow: 0px 2px 4px rgba(0,0,0,0.4);
+            text-align: center;
+        }
+        .login form h3{
+            margin-bottom: 20px;
+            font-size: 30px;           
+        }
+        .login input{
+            margin: 10px;
+            padding: 10px;
+            border: 1px solid gray;
+            border-radius: 5px;
+        }
+        .login button{
+            width: 50%;
+            padding: 10px;
+            background: #4facfe;
+            border: none;
+            border-radius: 5px;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .login button:hover{
+            background: #075798;
+            box-shadow: 0 1px 2px rgba(0,0,0,0.5);
+            transform: scale(1.05);
+        }
+        .gallery{
+        display: flex;
+        gap: 10px;
+        flex-wrap: wrap;
+        justify-content: center;
+        }
+        .gallery img{
+        height: 150px;
+        object-fit: cover;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+        }
+        .gallery img:hover {
+        transform: scale(1.05);   
+        }
+        .herocard{
+            display: flex;
+            flex-direction: column;
+            width: 800px;
+            height: 300px;
+            border: 1px solid black;
+            background:linear-gradient(to right,#075798,#4facfe);
+            justify-content: center; 
+            align-items: center;
+        }
+        .card{
+            background: white;
+            padding: 20px;
+            margin: 30px;
+            border-radius: 10px;
+            box-shadow: 0px 2px 4px rgba(0,0,0,0.4);
+            text-align: center;
+        }
+        .herocard button:hover{
+            background: #4facfe;
+            transform: scale(1.05);
+            box-shadow: 1px 0 2px;
+
+        }
+        .pricebox{
+            display: flex;
+            border: 1px solid black;
+            gap: 20px;
+            min-height: 200px;
+            width: 500px;
+            background: gray;
+        }
+        .Card{
+            padding: 20px;
+            margin: 10px;
+            width: 150px;
+            background: lightgreen;
+            text-align: center;
+            align-content: center;
+        }
+        .pricebox .smart{
+            box-shadow: 2px 4px 8px rgba(0,0,0,0.3);
+            background: linear-gradient(to top,coral);
+        }
+        .pricebox .smart:hover{
+            transform: scale(1.05);
+        }
+        .containerbox{
+        display: flex;
+        gap: 30px;
+        background: linear-gradient(to top, #4facfe, #00f2fe);
+        justify-content: center;
+        align-items: center;
+        min-height: 400px;
+        }
+        .formbox{
+        padding: 30px;
+        background: #fff;
+        border-radius: 5px;
+        width: 300px;
+        height: 270px;
+        text-align: center;
+        box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+        }
+        .formbox h2{
+        margin-bottom: 20px;
+        }
+        .formbox input{
+        width: 80%;
+        padding: 10px;
+        margin: 10px;
+        border: 1px solid lightgray;
+        border-radius: 5px;
+        }
+        .formbox button {
+        width: 50%;
+        padding: 10px;
+        background: #4facfe;
+        border: none;
+        border-radius: 6px;
+        color: white;
+        font-size: 16px;
+        cursor: pointer;
+        }
+        .formbox button:hover {
+        background: #00c6fb;
+        }
+        .contact{
+            display: flex;
+            gap: 20px;
+            background: linear-gradient(to top, #4facfe, #00f2fe);
+            justify-content: center;
+            align-items: center;
+        }
+        .map{
+          padding: 30px;
+        }
+        .message{
+            padding: 30px;
+            background: #fff;
+            border-radius: 5px;
+            width: 300px;
+            height: 270px;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+        }
+        .message input,textarea{
+            width: 80%;
+            padding: 10px;
+            margin: 10px;
+            border: 1px solid lightgray;
+            border-radius: 5px;
+        }
+        .message button{
+            width: 50%;
+            padding: 10px;
+            background: #4facfe;
+            border: none;
+            border-radius: 6px;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .message button:hover{
+          box-shadow: 0px 4px 8px rgba(0,0,0,0.5);
+          transform: scale(1.05);
+        }
+        
+    </style>
+</head>
+<body>
+    <nav>
+    <div class="logo">MySite</div>
+    <div class="menu">
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Services</a>
+      <a href="#">Contact</a>
+    </div>
+  </nav><br>
+
+  <div class="login">
+    <form>
+        <h3>Login</h3>
+        <input type="text" placeholder="username">
+        <input type="password" placeholder="password">
+        <button type="submit">login</button>
+    </form>
+  </div><br>
+
+  <div class="gallery">
+    <img src="flower1.jpg" width="200px" alt="flower">
+    <img src="flower2.jpg" width="200px" alt="flower">
+    <img src="flower3.jpg" width="200px" alt="flower">
+    <img src="flower4.jpg" width="200px" alt="flower">
+    <img src="flower5.jpg" width="200px" alt="flower">
+    <img src="flower6.jpg" width="200px" alt="flower">
+  </div><br>
+
+  <div class="herocard">
+    <div class="card">
+    <h1>Welcome to the page</h1>
+    <p>This is the hero section card.You can add text here to introduce your project.</p>
+    <button>Get Started</button>
+    </div>
+  </div><br>
+
+  <div class="pricebox">
+    <div class="Card basic">$199</div>
+    <div class="Card smart">$299</div>
+    <div class="Card premium">$499</div>
+  </div><br><br>
+
+<div class="contact">
+        <div class="map">
+            <h2>Reach Us</h2>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.796558795931!2d80.1853706!3d13.048617799999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5266c655555541%3A0x3139db96820d8c68!2sVettri%20Technologies!5e0!3m2!1sen!2sin!4v1785936353309!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+        </div>
+        <div class="message">
+            <h2>Contact Us</h2>
+            <input type="text" placeholder="enter your name">
+            <input type="email" placeholder="enter mail id">
+            <textarea row="5" placeholder="your message"></textarea>
+            <button>submit</button>
+        </div>
+    </div><br><br>
+
+   <div class="containerbox">
+    <div class="formbox">
+        <h2>login</h2>
+        <input type="text" placeholder="enter your username">
+        <input type="password" placeholder="enter password">
+        <button>Login</button>
+    </div>
+    <div class="formbox">
+      <h2>Sign Up</h2>
+        <input type="text" placeholder="enter your name">
+        <input type="email" placeholder="enter your mail id">
+        <input type="password" placeholder="enter password">
+        <button>SignUp</button>
+    </div><br><br><br> 
+</body>
+</html>

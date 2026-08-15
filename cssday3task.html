@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+     header{
+    
+           margin-top: 5vh;
+           background: #eee;
+           padding: 10px;
+           font-size: 30px;
+           
+        }
+       h1{ 
+          margin-top: 10vh;
+          font-size: 3vw;
+          
+        }
+        p{
+            margin: 1cm;
+        }
+        section{
+            width:20%;
+        }
+        .em{
+            font-size: 2em;
+        }
+        h2{
+            margin: 4rem;
+            font-size: 2rem;
+        }
+        .viewport-div {
+               width: 50vw; 
+               background: lightgreen;
+        }
+        .vmin-text{
+                width: 30vw;
+                font-size: 10vmin;
+                background: lightblue;
+        }
+        .vmax-container{
+                padding: 3vmax;
+                width: 30vw;
+                background: lightpink;
+        }
+        .vh-footer{
+            height: 20vh;
+            background: lightcoral;
+            text-align: center;
+        }
+        .rem-button{
+            font-size: 2rem;
+            background: lightseagreen;
+        }
+        .line-height-text {
+            font-size: 16px;
+            line-height: 4em; 
+        }
+        .hero{
+            width: 100vw;
+            height: 100vh;
+            border: 3px solid yellowgreen;
+            background:linear-gradient(to right,purple,pink);
+            font-size: 8vmin;
+            padding:4vmin ;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+.container{
+  width: 100%;
+  background: gainsboro;
+}
+.sidebar{
+  width: 50%;
+  padding: 5px;
+  background: lightblue;
+}
+.main{
+  width: 20em;
+  padding: 2px;
+  background: lightgreen;
+
+}
+nav{
+  padding: 10px;
+  background: gray;
+}
+.cm-box{
+  width: 10cm;
+  background: lightcyan;
+}
+.img-con{
+  height: 300px;
+}
+.img-con img{
+  height:50%;
+}
+.parent{
+  font-size: 30px;
+}
+.parent p{
+  font-size: 1.5em;
+}
+.circle{
+  width: 100px;
+  height: 100px;
+  background-color: aquamarine;
+  border-radius: 4vmax;
+  text-align: center;
+  align-content: center;
+}
+.circle1{
+  width: 8%;
+  height: 8%;
+  padding: 1rem;
+  font-size: 1em;
+  border-radius: 2vmax;
+  background-color: blanchedalmond;
+}
+.circle1:hover{
+  background: conic-gradient(#b7d026,#ffff66,#66ffcc,#3399ff,#9999ff,#ff66ff);;
+}
+#img{
+  max-width: 400px;
+  width: 200%;
+  height: auto;
+}
+        
+    </style>
+</head>
+<body>
+    <header>CSS TASK3</header>
+    <h1>TASK BASED ON UNITS</h1>
+    <p>Here we use centimeter to define the paragraph margin.</p>
+    <section>
+        <p>Here we set width to the section by using percentage.</p>
+        <p class="em">setting font size of paragraph relative to its parent.</p>
+    </section>
+    <h2>Heading using with rem unit</h2><br>
+
+    <div class="viewport-div">Div width using vw</div><br>
+
+    <div class="vmin-text">Text scaled with vmin</div><br>
+
+    <div class="vmax-container">Container padding using vmax</div><br><br>
+
+     <p class="line-height-text">
+    This text uses line-height in em.<br> 
+    Notice the spacing between lines is relative to the font size.
+     </p>
+
+    <button class="rem-button">Rem Button</button><br><br>
+
+    <div class="hero">Use vw and vh to make a full-screen hero banner.</div><br><br>
+
+    <div class="container">
+    <h1>Mixed Units Layout</h1>
+    <div class="sidebar">
+      <p>This sidebar uses % width and px padding.</p>
+    </div>
+    <div class="main">
+      <p>This main section also uses em for width and px padding.</p>
+      <button style="background-color: rgb(183, 126, 237);">Click Me</button>
+    </div>
+  </div><br><br>
+  <nav>Navigation Bar</nav>
+  <div class="cm-box">This div is 10cm wide</div>
+  <div class="img-con">
+    <img src="lion.jpg" alt="lion">
+  </div>
+  <div class="parent"><p>This paragraoh scales with em.</p></div>
+
+<div class="circle">Circle</div>
+<button class="circle1">Clik Me</button><br>
+<img src="image/flower" alt="flower image" id="img"><br>
+
+<footer class="vh-footer">In this footer we use viewport height.  </footer>
+</body>
+</html>

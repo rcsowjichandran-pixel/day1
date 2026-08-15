@@ -1,0 +1,31 @@
+h3
+{
+background-color: blanchedalmond;
+font-size: xx-large;
+font-style: italic;
+text-align: center;
+}
+p
+{
+background-color: brown;
+color: aqua;
+text-align: justify;
+font-style: italic;
+}
+ul
+{
+    background-color: blueviolet;
+    text-decoration:overline;
+    
+}
+table
+{
+    background-color: beige;
+    font-size: larger;
+   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+img
+{
+    border-style: dashed;
+}

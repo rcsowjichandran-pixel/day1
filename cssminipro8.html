@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*project 1*/
+    .card {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;  
+      align-items: center; 
+      background: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      text-align: center;
+      width: 300px;
+    }
+    .card h2 {
+      margin-bottom: 15px;
+      color: #333;
+    }
+    .card p {
+      margin-bottom: 20px;
+      color: #555;
+    }
+    .card button {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      background: linear-gradient(#4facfe, #00f2fe);
+      color: white;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .card button:hover {
+      background: linear-gradient(#00f2fe, #4facfe);
+    }
+        /*project 2*/
+
+    .features {
+      display: flex;
+      flex-wrap: wrap;
+      background: linear-gradient(#4facfe, #00f2fe);;         
+      gap: 20px;               
+      padding: 40px;
+      justify-content: center;
+    }
+    .feature {                  
+      min-width: 250px;         
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      padding: 20px;
+      text-align: center;
+    }
+    .feature:nth-child(2) {
+      flex-grow: 2;          
+    }
+    .icon {
+      font-size: 40px;
+      margin-bottom: 15px;
+      align-self: center;       
+    }
+    h3 {
+      margin-bottom: 10px;
+      color: #333;
+    }
+    p {
+      color: #555;
+    }    
+
+        /*project3*/
+
+    .card-container {
+      display: flex;
+      flex-wrap: wrap;        
+      gap: 20px;                
+      justify-content: center;
+    }
+    .card {      
+      flex-basis: 100px;        
+      flex-grow: 1;             
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      flex-direction: column;
+      text-align: center;
+    }
+    .card img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+    .card h3 {
+      margin: 15px  10px;
+      color: #333;
+    }
+    .card p {
+      padding: 0 15px;
+      color: #555;
+      flex-grow: 1; 
+    }
+    .card button {
+      margin: 15px;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      background: linear-gradient(#4facfe, #00f2fe);
+      color: white;
+      cursor: pointer;
+      align-self: flex-end; 
+    }
+    .card button:hover {
+      background: linear-gradient( #00f2fe, #4facfe);
+    }
+        /*project 4*/
+
+        .products{
+            display: flex;
+            flex-wrap: wrap;
+            gap:30px;
+            padding: 30px;
+            justify-content: center;
+            background: linear-gradient(#4facfe, #00f2fe);            
+        }
+        .product{
+            min-width: 250px;
+            flex: 1;
+            text-align: center;
+            background: #fff;
+            border-radius: 7px;
+        }
+        .product h3{
+            color: #555;
+            margin: 10px;
+        }
+        .product p{
+            color: #333;
+            margin: 15px;
+        }
+        .price{
+            font-weight: bold;
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+        .product button{
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background:pink;
+            color: white;
+            cursor: pointer;
+            align-self: flex-end;
+        }
+        .product button:hover{
+            background: darkred;
+            transform: scale(1.05);
+        }
+        .featured{
+            flex-grow: 2;
+        }
+
+        /* project 5*/
+
+    .pricing-table {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+    .plan {
+      flex: 1;                   
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      text-align: center;
+      padding: 30px;
+    }
+    .plan:hover {
+      transform: scale(1.05);    
+    }
+    .plan h2 {
+      margin-bottom: 15px;
+      color: #333;
+    }
+    .plan p {
+      margin-bottom: 20px;
+      color: #555;
+    }
+    .plan button {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      background: linear-gradient( #4facfe, #00f2fe);
+      color: white;
+      cursor: pointer;
+    }
+    .plan button:hover {
+      background: linear-gradient( #00f2fe, #4facfe);
+    }
+    .plan.pro {
+      flex-grow: 2;             
+      background: linear-gradient( #667eea, #764ba2);
+      color: white;
+      box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+    }
+    .plan.pro button {
+      background: #fff;
+      color: #764ba2;
+    }
+    .plan.pro button:hover {
+      background: #eee;
+    }
+
+    /*project 6*/
+
+    section {
+      max-width: 1200px;          
+      margin: 0 auto;
+      padding: 20px;
+    }
+    nav {
+      display: flex;
+      justify-content: space-between; 
+      align-items: center;
+      background: linear-gradient(to top, #4facfe, #00f2fe); 
+      padding: 15px;
+      border-radius: 8px;
+      flex-wrap: wrap; 
+     }          
+    .navbar {
+      display: flex;
+      gap: 20px;                  
+      flex-wrap: wrap;
+    }
+    .navbar a {
+      text-decoration: none;
+      color: white;
+      font-weight: 500;
+    }
+    .navbar a:hover {
+      color:black;
+    }
+    .search-bar {
+      display: flex;              
+      gap: 10px;
+    }
+    .search-bar input {
+      padding: 8px;
+      border: none;
+      border-radius: 5px;
+    }
+    .search-bar button {
+      padding: 8px 16px;
+      border: none;
+      border-radius: 5px;
+      background: white;
+      color: #00f2fe;
+      cursor: pointer;
+    }
+    .search-bar button:hover {
+      background: #eee;
+    }
+
+    /*project 7*/
+
+    .contact-section {
+      display: flex;
+      flex-direction: row;       
+      gap: 30px;                 
+      padding: 40px;
+      max-width: 1000px;        
+      margin: 0 auto;
+    }
+    .form, .info {
+      flex: 1;                  
+      background: #fff;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    .form h2, .info h2 {
+      margin-bottom: 15px;
+      color: #333;
+    }
+    .form input, .form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    .form button {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      background: linear-gradient(to left, #4facfe, #00f2fe);
+      color: white;
+      cursor: pointer;
+    }
+    .form button:hover {
+      background: linear-gradient(to left, #00f2fe, #4facfe);
+    }
+    .info p {
+      margin: 10px 0;
+      color: #555;
+    }
+    /*project 8*/
+
+     section {
+      max-width: 900px;           
+      margin: 40px auto;
+      padding: 20px;
+    }
+    .banner {
+      display: flex;
+      justify-content: space-between; 
+      align-items: center;
+      background: linear-gradient(to right, #4facfe, #00f2fe);
+      padding: 20px 30px;
+      border-radius: 10px;
+      flex-wrap: wrap;             
+      gap: 20px;                   
+    }
+    .banner-text {
+      color: white;
+      font-size: 20px;
+      font-weight: bold;
+    }
+    .signup {
+      display: flex;               
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .signup input {
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+      width: 250px;
+    }
+    .signup button {
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      background: white;
+      color: #00f2fe;
+      cursor: pointer;
+    }
+    .signup button:hover {
+      background: lightslategray;
+    }
+    </style>
+</head>
+<body>
+    /*project 1*/
+    <div class="card">
+    <h2>Welcome!</h2>
+    <p>This is a simple card layout using Flexbox.</p>
+    <button>Click Me</button>
+  </div><br>
+
+  /*project2*/
+  <section>
+    <h1 style="text-align:center; margin-top:20px;">Our Features</h1>
+    <div class="features">
+      <div class="feature">
+        <div class="icon">⚡</div>
+        <h3>Fast Performance</h3>
+        <p>Experience lightning-fast load times.</p>
+      </div>
+      <div class="feature">
+        <div class="icon">🔒</div>
+        <h3>Secure Platform</h3>
+        <p>Enhanced security to protect your data.</p>
+      </div>
+      <div class="feature">
+        <div class="icon">🔗</div>
+        <h3>Easy Integration</h3>
+        <p>Seamless integration with your tools.</p>
+      </div>
+    </div>
+  </section><br><br>
+  /*project 3*/
+
+  <h1 style="text-align: center;">Responsive Card Layout</h1>
+  <div class="card-container">
+    <div class="card">
+      <img src="image/exter.jpg" alt="Car Image">
+      <h3>Card One</h3>
+      <p>This is the description for card one.</p>
+      <button>Read More</button>
+    </div>
+    <div class="card">
+      <img src="image/i20.jpg" alt="Car Image">
+      <h3>Card Two</h3>
+      <p>This is the description for card two.</p>
+      <button>Read More</button>
+    </div>
+    <div class="card">
+      <img src="image/benz.jpg" alt="Car Image">
+      <h3>Card Three</h3>
+      <p>This is the description for card three.</p>
+      <button>Read More</button>
+    </div>
+  </div><br>
+
+  /*project 4*/
+
+  <h1 style="text-align: center;">Responsive Product</h1>
+    <div class="products">
+        <div class="product">
+            <img src="headphone.jpg" width="100px" alt="product1">
+            <h3>Featured Headphones</h3>
+            <p>High-quality sound with noise cancellation</p>
+            <div class="price">#199</div>
+            <button>Add To cart</button>
+        </div>
+        <div class="product">
+            <img src="earpods.jpg" width="100px" alt="product2">
+            <h3>Wireless Earbuds</h3>
+            <p>Compact and powerful sound</p>
+            <div class="price">$799</div>
+            <button>Add To cart</button>
+        </div>
+        <div class="product featured">
+            <img src="smart.jpg" width="100px" alt="product3">
+            <h3>Smart Watch</h3>
+            <p>Track fitness and notifictaions.</p>
+            <div class="price">$1999</div>
+            <button>Add To cart</button>
+        </div>
+    </div><br>
+
+    /* project 5 */
+
+    <h1 style="text-align:center;">Pricing Plans</h1>
+  <div class="pricing-table">
+    <div class="plan">
+      <h2>Basic</h2>
+      <p>Essential features for starters.</p>
+      <h3>$9/month</h3>
+      <button>Choose Plan</button>
+    </div>
+    <div class="plan pro">
+      <h2>Pro</h2>
+      <p>Advanced features for professionals.</p>
+      <h3>$29/month</h3>
+      <button>Choose Plan</button>
+    </div>
+    <div class="plan">
+      <h2>Premium</h2>
+      <p>All features for enterprises.</p>
+      <h3>$49/month</h3>
+      <button>Choose Plan</button>
+    </div>
+  </div><br>
+
+  /*project 6*/
+
+  <h1 style="text-align:center;">Flexbox Navigation Bar</h1>
+  <section>
+  <nav>
+    <img src="vetri.jpg" width="100px" alt="logo">
+    <div class="navbar">
+    <a href="#Home">Home</a>
+    <a href="#About Us">About Us</a>
+    <a href="#Courses">Courses</a>
+    <a href="#Contact Us">Contact Us</a>
+    </div>
+    <div class="search-bar">
+    <input type="text" placeholder="Search...">
+    <button>Go</button>
+    </div>
+  </nav>
+  </section><br>
+
+  /* project 7 */
+
+   <h1 style="text-align:center;">Flexbox Contact Section</h1>
+  <div class="contact-section">
+    <div class="form">
+      <h2>Contact Us</h2>
+      <input type="text" placeholder="Your Name">
+      <input type="email" placeholder="Your Email">
+      <textarea rows="5" placeholder="Your Message"></textarea>
+      <button>Send Message</button>
+    </div>
+    <div class="info">
+      <h2>Our Info</h2>
+      <p>📞 Phone: +91 8438164827</p>
+      <p>✉️ Email: vetritechnologysolutions@gamil.com</p>
+      <p>📍 Address:VTS & VIS, April’s Complex,Surandai - 627859,</p>
+    </div>
+  </div><br>
+
+  /*project 8*/
+
+  <h1 style="text-align:center;">Newsletter Signup Banner</h1>
+  <section>
+    <div class="banner">
+      <div class="banner-text">📩 Subscribe to our Newsletter</div>
+      <div class="signup">
+        <input type="email" placeholder="Enter your email">
+        <button>Subscribe</button>
+      </div>
+    </div>
+  </section><br>
+</body>
+</html>

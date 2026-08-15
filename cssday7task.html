@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .demo{
+            border: 1px solid #ccc8;
+            margin: 10px;
+            padding: 10px;
+            height: 200px;
+            display: flex;
+            background: #f9f9f9;
+        }
+       .box{
+        background: lightblue;
+        padding: 20px;
+        margin: 5px;
+        text-align: center;
+       }
+       .row{
+        flex-direction: row;
+       }
+       .column{
+        flex-direction: column;
+       }
+       .center{
+        justify-content: center;
+       }
+       .flexend{
+        justify-content: flex-end;
+       }
+       .space{
+        justify-content: space-between;
+       }
+       .sidebar{
+        flex-direction: column;
+        align-items: flex-start;
+       }
+       .navbar{
+        justify-content: space-around;
+       }
+       a{
+        background: lightblue;
+        width: 100px;
+        text-align: center;
+       }
+       .aligncenter{
+        align-items: center;
+       }
+
+       .wrap{
+        flex-wrap: wrap;
+        flex-wrap: wrap-reverse;
+        align-content: center;
+        gap:10px
+       }
+       .JAcenter{
+        justify-content: center;
+        align-items: center;
+       }
+       .JAcenter div{
+        background: lightblue;
+        width: 100px;
+        height: 100px;
+        text-align: center;
+        align-content: center;
+       }
+       .foot{
+        justify-content: center;
+        height: 20px;
+       }
+    .flex{
+      display: flex;
+      width: 200px;
+      height: 100px;
+      border: 1px solid #333f;
+      margin: 10px;
+    }
+    .item{
+      background: lightblue;
+      padding: 10px;
+      text-align: center;
+      border: 1px solid black;
+    }
+    .grow .item1{
+        flex-grow: 1;
+    }
+    .shrink .item2{
+        flex-shrink: 0;
+    }
+    .basis .item3{
+        flex-basis: 200px;
+    }
+    .all .item1{
+        flex:1 0 150px;
+    }
+    .columnreverse{
+        flex-direction: column-reverse;
+    }
+    .alignself .box3{
+        align-self: flex-end;
+    }
+    .twocol div{
+        flex:1;
+    }
+    .pricecard{
+        justify-content: space-evenly;
+    }
+    .nested{
+        justify-content: space-evenly;
+    }
+    .nested .inner{
+        display: flex;
+        gap: 20px;
+        flex-direction: column;
+        padding: 20px;
+        background: lightblue;
+    }
+    .alignstretch{
+        display: flex;
+        align-items: stretch;
+        height: 100px;
+        border: 1px solid #ccca;
+        gap: 10px;
+    }
+    .alignstretch .box1{
+        gap: 10px;
+        background: lightblue;
+        text-align: center;
+    }
+    .alignstretch .box2{
+        background:lightcoral;
+    }
+    .login{
+        height: 50vh;
+        width: 50vw;
+        justify-content: center;
+        align-items: center;
+    }
+    .login div{
+        background: rgb(210, 107, 107);
+        padding: 20px;
+        border: 1px solid black;
+    }
+
+    </style>
+</head>
+<body>
+   <div class="demo row">
+    <div class="box">box1</div>
+    <div class="box">box2</div>
+    <div class="box">box3</div>
+   </div> 
+   <div class="demo column">
+    <div class="box">box1</div>
+    <div class="box">box2</div>
+    <div class="box">box3</div>
+   </div> 
+   <div class="demo center">
+    <div class="box">box1</div>
+    <div class="box">box2</div>
+    <div class="box">box3</div>
+   </div> 
+   <div class="demo flexend">
+    <div class="box">box1</div>
+    <div class="box">box2</div>
+    <div class="box">box3</div>
+   </div>
+   <div class="demo space">
+    <div class="box">box1</div>
+    <div class="box">box2</div>
+    <div class="box">box3</div>
+   </div>
+   <div class="demo sidebar">
+    <div class="box">Related Links</div>
+    <div class="box">Related Links</div>
+    <div class="box">Related Links</div>
+   </div>  
+   <nav class="demo navbar">
+    <a href="#home">Home</a>
+    <a href="#About">About</a>
+    <a href="#Service">Service</a>
+   </nav>
+   <div class="demo aligncenter">
+    <div class="box">box1</div>
+    <div class="box">box2</div>
+    <div class="box">box3</div>
+   </div>
+   <div class="demo wrap">
+    <div class="box">box1</div>
+    <div class="box">box2</div>
+    <div class="box">box3</div>
+    <div class="box">box4</div>
+    <div class="box">box5</div>
+    <div class="box">box6</div>
+    <div class="box">box7</div>
+    <div class="box">box8</div>
+    <div class="box">box9</div>
+    <div class="box">box10</div>
+    <div class="box">box11</div>
+    <div class="box">box12</div>
+    <div class="box">box13</div>
+    <div class="box">box14</div>
+    <div class="box">box15</div>
+    </div>
+    <div class="demo JAcenter">
+        <div>Card</div>
+    </div>
+    <footer class="demo foot">
+        <div>© 2026 MySite</div>
+    </footer>
+   
+    <div class="flex grow">
+        <div class="item item1">Item</div>
+        <div class="item item2">Item</div>
+        <div class="item item3">Item</div>
+    </div>
+    <div class="flex shrink">
+        <div class="item item1">Item</div>
+        <div class="item item2">Item</div>
+        <div class="item item3">Item</div>
+    </div>
+    <div class="flex basis">
+        <div class="item item1">Item</div>
+        <div class="item item2">Item</div>
+        <div class="item item3">Item</div>
+    </div>
+    <div class="flex all">
+        <div class="item item1">Item</div>
+        <div class="item item2">Item</div>
+        <div class="item item3">Item</div>
+    </div>
+    <div class="demo columnreverse">
+    <div class="box">box1</div>
+    <div class="box">box2</div>
+    <div class="box">box3</div>
+   </div> 
+   <div class="demo alignself">
+    <div class="box1">box1</div>
+    <div class="box2">box2</div>
+    <div class="box3">box3</div>
+   </div> 
+    <div class="demo twocol">
+        <div class="box">column1</div>
+        <div class="box">column2</div>
+    </div>
+    <div class="demo pricecard">
+    <div class="box">199$</div>
+    <div class="box">299$</div>
+    <div class="box">399$</div>
+   </div> 
+   <div class="demo nested">
+    <div class="inner">
+        <div>Item1</div>
+        <div>Item2</div>
+    </div>
+    <div class="inner">
+        <div>Item1</div>
+        <div>Item2</div>
+    </div>
+   </div>
+   <div class="alignstretch">
+    <div class="box1">box1</div>
+    <div class="box2">box2</div>
+   </div> 
+   <div class="demo login">
+    <div>
+      <h3>Login</h3>
+      <input type="text" placeholder="Username"><br><br>
+      <input type="password" placeholder="Password"><br><br>
+      <button>Submit</button>
+    </div>
+  </div>
+     
+</body>
+</html>

@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .demo{
+            display: flex;
+            border: 1px solid black;
+            min-height: 100px;
+            margin: 10px;
+            background: #ccc8;
+        }
+        .demo div{
+            text-align: center;
+            padding: 10px;
+            margin: 5px;
+            background:lightcyan;
+        }
+        .grow div:nth-child(1)
+        {
+            flex-grow: 1;
+            align-self: flex-end;
+        }
+        .grow div:nth-child(2){
+            flex-grow: 2;
+            align-self: center;
+        }
+        .shrink div:nth-child(1){
+            flex-shrink: 1 0 200px;
+        }
+        .shrink div:nth-child(2){
+            flex-shrink: 1 1 200px;
+        }
+        .basis div{
+            flex-basis: 150px;
+        }
+        .order div:nth-child(1){
+            order: 3;            
+        }
+        .align div:nth-child(2){
+            align-self: center;
+        }
+        .nested{
+            display: flex;
+        }
+        .inner{
+            display: flex;
+            flex-direction: column-reverse;
+        }
+        .nav div:nth-child(1){
+            flex-grow: 2;
+        }
+        .nav div:nth-child(2){
+            flex-grow: 2;
+        }
+        .three div:nth-child(even){
+            flex-grow: 2;
+        }
+        .three div:nth-child(odd){
+            flex-grow: 1;
+        }
+        .grid div{
+            flex-basis: 100px;
+        }
+        .grid div:nth-child(3){
+            align-self:baseline;
+            flex: 2 1 150px;
+        }
+        .grid div:nth-child(2){
+            align-self: flex-end;
+        }
+        .card{
+            flex-direction: column;
+            background: lightcoral;
+        }
+        .card img{
+            align-self: center;
+            flex-basis: 150px;
+        }
+        .card .content{
+            flex-grow: 1;
+            background: lightgreen;
+        }
+        .card .footer{
+            background: lightgray;
+            text-align: center;
+        }
+        .wrap{
+            width: 300px;
+            flex-wrap: wrap;
+            flex-direction: row-reverse;
+        }
+        .layout div:nth-child(1){
+            flex-basis: 150px;
+        }
+        .layout div:nth-child(2){
+            flex-grow: 1;
+        }
+        .flexstart{
+            justify-content: flex-start;
+        }
+        .stretch{
+            align-items: stretch;
+            gap: 20px;
+        }
+        .nowrap{
+            flex-wrap: nowrap;
+        }
+        .navbar div:nth-child(1){
+            flex: 1;
+            text-align: left;
+        }
+        .navbar div:nth-child(2){
+            flex: 1;
+            text-align: right;
+        }
+        .navbar li{
+            text-decoration: none;
+        }
+        .dashboard{
+            display: flex;
+        }
+        .dashboard .sidebar{
+            flex-basis: 200px;
+            background: lightgrey
+        }
+        .dashboard .content{
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+        .dashboard .widgets{
+            display: flex;
+            gap: 20px;
+            align-items: center;
+            justify-content: center;
+        }
+        .ycard{
+            flex-direction: column;
+            width: 200px;
+        }
+        .ycard .image{
+            flex-basis: 100px;
+            background: pink;
+        }
+        .ycard .text{
+            flex-grow: 1;
+                background: lightseagreen;
+        }
+        .ycard .button{
+            background: lightgrey;
+            box-shadow: 0 1px 3px;
+        }
+        .login{
+            width: 300px;
+            height: 300px;
+            justify-content: center;
+            align-items: center;
+            background: #eef;
+        }
+        .login form{
+            background: white;
+            padding: 20px;
+            border: 1px solid black;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="demo grow">
+        <div>Item1</div>
+        <div>Item2</div>
+        <div>Item3</div>
+    </div>
+    <div class="demo shrink">
+        <div>Item1</div>
+        <div>Item2</div>
+        <div>Item3</div>
+    </div>
+    <div class="demo basis">
+        <div>Item1</div>
+        <div>Item2</div>
+        <div>Item3</div>
+    </div>
+    <div class="demo order">
+        <div>Item1</div>
+        <div>Item2</div>
+        <div>Item3</div>
+    </div>
+    <div class="demo align">
+        <div>Item1</div>
+        <div>Item2</div>
+        <div>Item3</div>
+    </div>
+    <div class="demo nested">
+        <div>Item1</div>
+        <div class="inner">
+        <div>Item2</div>
+        <div>Item3</div>
+        </div>
+    </div>
+    <div class="demo nav">
+        <div>Menu</div>
+        <div>Logo</div>
+    </div>
+    <div class="demo three">
+        <div>Item1</div>
+        <div>Item2</div>
+        <div>Item3</div>
+    </div>
+     <div class="demo grid">
+        <div>Item1</div>
+        <div>Item2</div>
+        <div>Item3</div>
+    </div>
+    <div class="demo card">
+        <img src="seo.jpg" width="100px" alt="image">
+        <div class="content">
+            <p>Here we provide SEO optimization.</p>
+        </div>
+        <footer class="footer">@2026 All Rights Reserved</footer> 
+    </div>
+    <div class="demo wrap">
+        <div>Item1</div>
+        <div>Item2</div>
+        <div>Item3</div>
+        <div>Item4</div>
+        <div>Item5</div>
+    </div>
+    <div class="demo layout">
+        <div>related links available for content</div>
+        <div>Here we see the side bar and its content with flex basis and grow.</div>
+    </div>
+    <div class="demo flexstart">
+        <div>Here we use Flex Start.</div>
+    </div>
+    <div class="demo stretch">
+        <div>Item1</div>
+        <div>Item2</div>
+    </div>
+    <div class="demo nowrap">
+        <div>Item1</div>
+        <div>Item2</div>
+        <div>Item3</div>
+        <div>Item4</div>
+        <div>Item5</div>
+    </div>
+    <div class="demo navbar">
+        <div>LOGO</div>
+        <div>MENU
+            <li>Pen</li>
+            <li>Pencil</li>
+            <li>Eraser</li>
+        </div>
+    </div>
+    <div class="demo dashboard">
+    <div class="sidebar">Sidebar</div>
+    <div class="content">
+    <div>Main Content</div>
+      <div class="widgets">
+        <div>Widget 1</div>
+        <div>Widget 2</div>
+        <div>Widget 3</div>
+      </div>
+    </div>
+    </div>
+   <div class="demo ycard">
+        <div class="image">IMAGE</div>
+        <div class="content">Text</div>
+        <div class="button">Button</div>       
+    </div>
+    <div class="demo login">
+    <form>
+      <h3>Login</h3>
+      <input type="text" placeholder="Username">
+      <input type="password" placeholder="Password">
+      <button type="submit">Submit</button>
+    </form>
+    </div>
+
+
+
+</body>
+</html>

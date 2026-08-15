@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        h1{
+            color: blue;
+        }
+        article{
+            background-color: aqua;
+        }
+        div{
+            background: rgb(156, 236, 216);
+        }
+        img{
+            border:10px solid rgba(224, 201, 48, 0.5);
+        }
+        a{
+            color: hsl(302, 79%, 72%);
+        }
+        main>p{
+            background: linear-gradient(to top,#e06666,#820202);
+            padding: 20px;
+
+        }
+        .card{
+            width: 200px;
+            height: 150px;
+            text-align: center;
+            align-content: center;
+            background: radial-gradient(circle, #a817d9,#5a0151);
+        }
+        header{
+            background: linear-gradient(rgba(62, 192, 204,1),rgba(177, 92, 205,0.5));
+            height: 40px;
+        }
+        nav ul li:hover{
+            color: hsl(123, 87%, 34%);
+        }
+        body{
+            background: linear-gradient(to top,#e03880,#f195c0);
+        }
+        footer{
+            height: 30px;
+            background: radial-gradient(circle at center,#1edf85,#28d0bc,#16b944,#b7d026,#c91414);
+        }
+        .color-wheel{
+            width: 150px;
+            height: 150px;
+            border-radius: 70%;
+            background: conic-gradient(red,orange,pink,blue,green);
+        }
+        .color-wheel:hover{
+            background: conic-gradient(#b7d026,#ffff66,#66ffcc,#3399ff,#9999ff,#ff66ff);
+        }
+        .progress-ring {
+      width: 120px;
+      height: 120px;
+      border-radius: 70%;
+      text-align: center;
+      align-content: center;
+      background: conic-gradient(#4caf50 0% 75%,#ddd 75% 100% );
+    }
+    </style>
+</head>
+<body>
+        <h1>CSS DAY2 TASK</h1>
+<header>
+   Hello, Its Semi Transparent Fading Header.
+</header>
+    <h2>Change the text color in h1 tag with named colors.</h2>
+    <article>
+        <p>Here am using hexadecimal color change for all the article elements.</p>
+        <section>
+            <p>Will check whether color will apply for section tag also inside the article.</p>
+        </section>
+    </article>
+    <div>
+        <p>RGB means red green blue,it add transperancy control.</p>
+    </div><br>
+    <img src="lion.jpg" alt="Lion is always Lion" height="200" width="350"><br>
+    <a href="css task1.html">css bascic class</a><br>
+    <a href="css task2.html">task</a><br>
+    <main>
+        <p>Here we are using linear gradient backgroun for the main section from top to bottom effect.</p>
+    </main>
+    <div class="card">radial-gradient card</div><br>
+    <section>
+    <div class="progress-ring">75%</div>
+    </section>
+    <nav>
+        <ul>
+        <li>CSS </li>
+        <li>CSS Selectors</li>
+        <li>CSS Box Model</li>
+        <li>CSS Colors</li>
+        </ul>
+    </nav><br>
+    <button class="color-wheel">color button</button><br><br>
+    <footer>
+        RGBA,HSLA,linear-gradient,radial-gradient,conic-gradient all used.
+    </footer>
+    
+</body>
+</html>

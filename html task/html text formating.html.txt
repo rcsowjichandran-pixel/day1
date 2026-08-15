@@ -1,0 +1,102 @@
+HTML5 we are it nowadays
+
+what are all the elements which has
+heading tag
+<h1></h1>
+.
+.
+.
+<h6></h6>
+
+h1 is main head
+h2,h3,h4 sub headings
+
+paragraph tag
+<p></p> it has normal size letter
+
+horizantal tag
+
+<hr></hr>
+it is self closing tag, give horizantal line
+
+br tag break tag
+ to break the line <br>
+
+
+text style tag
+
+<strong></strong>- bold
+<em>italic</em>- emphasized tag
+<mark>highlight</mark> in yellow color
+<small> small text</small>- very small fine text
+<del>deleted text</del>- strike line
+<ins>inserted text</ins>underline the text
+
+
+list<li></li>
+1. ordered list<ol></ol>
+2.unordered list<ul></ul>
+
+<ol>
+
+<li>html</li>
+<li>python</li>
+
+</ol>comes with numberized
+
+<ul>
+<li> html</li>
+<li>python</li>
+</ul> come with bullet point
+
+
+dl-describtion list<dl>
+dt-describtion term
+dd-describtion data
+
+<dl>
+<dt>heading</dt>
+<dd>content data</dd>
+</dl>
+used to give differentiate like
+HTML
+    hypertext markup language
+
+
+links and navigation
+
+anchor tag-<a>tag to navigate from one page to another
+<a href(refereance)="paste the link">flipkart</a>
+we can use it for
+ external link(outside 
+ internal link
+  contact
+email
+telephone we need to give it in "hello"
+
+image and 
+
+<img> to display image - selfclosing tag
+alt- alternative name
+width
+height
+src-source
+<img src="image file name.jpg" alt="birds" width="50" height="90">
+
+Audio and vedio tag
+
+<audio control><source src="file name" type="audio/mpeg"></audio>
+ control means play pause button
+
+<vedio width="320"control>
+<source src="name" type="vedio/mp4">
+</vedio>
+width used to set the size of vedio
+
+embed the data
+
+how to youtube vedio embed
+
+open youtube
+share-embed-copy and pase the vedio link in coding
+iframe tag

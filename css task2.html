@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        
+        }
+        #Main-Title{
+            color: red;
+            text-align: center;
+        }
+        p{
+            line-height:1.5;
+        }
+        .box{
+            width: 200px;
+            height: 100px;
+            background-color: gray;
+        }
+        .bordered{
+            border: 2px solid black;
+                }
+        input[type="text"]
+                {
+                    padding: 10px;
+                    border-radius: 5px;
+                }
+        .box1{
+            width: 200px;
+            height: 200px;
+            background-color: lightgrey;
+            padding: 20px;
+            border: 5px solid black;
+        }
+        tr:nth-child(even){
+            background-color:lightblue;
+        }
+        footer span{
+            font-size: 14px;
+            color:gray;
+            
+        }
+        section>p{
+            color: darkgreen;
+        }
+        h2~p { font-style: oblique;
+
+        }
+        input:focus{
+            background-color: lightyellow;
+        }
+        p::first-letter{
+            font-size: 200%;
+        }
+        ::selection
+        {
+            background-color: orange;
+            color:white
+        }
+        
+    </style>
+</head>
+<body>
+    <div id="Main-Title">
+    <h1>TASK 14-26</h1>
+    </div><br>
+    <h1>Line height set  </h1>
+    <p>This is the first line of todays task</p>
+    <p>This is the line for to set line height</p><br>
+    <div class="box">
+    <h1>Create box</h1>
+    </div><br>
+    <p class="bordered">This is the content to create  solid border with black color.</p><br>
+    <form>
+        
+        <label for="Name">Name:</label>
+        <input type="text" id="Name" name="Name" required placeholder="enter your name">
+
+        <label for="email">Mail ID:</label>
+        <input type="text" id="email" >
+       
+    </form><br>
+    <p class="box1"> Apply box size and border using universal selectore</p><br>
+    <section>
+        <p>Here we are going to use child selector</p>
+        <p>The symbol of child selector is > </p>
+        <div>
+        <p>The child selector only select the direct child.</p>
+        </div>
+    </section>
+    <h2>General Selector</h2>
+    <p>Here we are using general sibiling selector</p>
+    <p>In this selector it select all the p tag</p>
+    <div>
+        <p>The symbol of general selector is ~ </p>
+    </div><br>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>SN</th>
+                <th>Name</th>
+                <th>Class</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Advaidha</td>
+                <td>6th</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Ashmitha</td>
+                <td>UKG</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>Shravani</td>
+                <td>4th</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Nakshathra</td>
+                <td>9th</td>
+            </tr>
+        </tbody>
+    </table><br><br>
+    <footer>
+        <p>These are all using selectors in <span>CSS</span></p>
+    </footer>
+    
+
+</body>
+</html>

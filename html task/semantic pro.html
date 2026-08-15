@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="A sample webpage demonstrating meta tags, Open Graph integration, favicon, and semantic headings.">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="HTML, meta tags, Open Graph, favicon, semantic headings">
+  <meta property="og:title" content="My Sample Webpage">
+  <meta property="og:description" content="Learn how to use meta tags, Open Graph, favicon, and semantic headings in HTML.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://example.com">
+  <meta property="og:image" content="https://example.com/preview.jpg">
+    <title>Document</title>
+    <link rel="icon" type="image/png" href="image/flower">
+</head>
+<body>
+    <header>
+    <h1>My Tech Blog</h1>
+    <p>Sharing knowledge about web development</p>
+  </header>
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">Articles</a>
+    <a href="#">About</a>
+    <a href="#">Contact</a>
+  </nav>
+  <main>
+    <article>
+      <h1>Understanding Semantic HTML</h1>
+      <h2>Why Semantic Tags Matter</h2>
+      <p>Semantic HTML tags like <code>&lt;header&gt;</code>, <code>&lt;article&gt;</code>, and <code>&lt;footer&gt;</code> give meaning to your content, improving accessibility and SEO.</p>
+
+      <h2>Examples of Semantic Tags</h2>
+      <h3>&lt;article&gt;</h3>
+      <p>Used for self-contained content such as blog posts, news stories, or forum entries.</p>
+
+      <h3>&lt;aside&gt;</h3>
+      <p>Used for supplementary content like sidebars, related links, or advertisements.</p>
+    </article>
+    <aside>
+      <h2>Related Articles</h2>
+      <ul>
+        <li><a href="#">Getting Started with HTML</a></li>
+        <li><a href="#">CSS Basics for Beginners</a></li>
+        <li><a href="#">JavaScript Essentials</a></li>
+      </ul>
+    </aside>
+  </main>
+  <footer>
+    <p>&copy; 2026 My Tech Blog | All Rights Reserved</p>
+  </footer>
+
+  <h2>My To-Do List</h2>
+  <form id="taskForm">
+    <input type="checkbox" id="Task">
+  <label for="task">Complete Task:</label><br>
+  <input type="checkbox" id="Mini Pro">
+  <label for="Mini Pro">Mini Project</label><br>
+  <input type="checkbox" id="Inter QA">
+  <label for="Inter QA">Interview QA</label><br>
+  <button type="submit">Submit</button>
+  </form>
+
+<h2>Canvas Drawing App</h2>
+  <div class="controls">
+    <button onclick="drawRectangle()">Draw Rectangle</button>
+    <button onclick="drawCircle()">Draw Circle</button>
+    <button class="red" onclick="setColor('red')">Red</button>
+    <button class="blue" onclick="setColor('blue')">Blue</button>
+    <button class="green" onclick="setColor('green')">Green</button>
+    <button onclick="clearCanvas()">Clear</button>
+  </div>
+  <canvas id="myCanvas" width="500" height="400"></canvas>
+
+  <form id="userForm" aria-label="User Information Form">
+    <h2>Submit Your Info</h2>
+    <label for="name">Name:</label>
+    <input type="text" id="name" aria-required="true" 
+           placeholder="Enter your name" 
+           pattern="[A-Za-z\s]+" required>
+    
+    <label for="age">Age:</label>
+    <input type="number" id="age" aria-required="true" 
+           placeholder="Enter your age" 
+           min="1" max="120" required>
+    
+    <label for="color">Favorite Color:</label>
+    <input type="color" id="color" aria-required="true" required>
+   
+    <button type="submit">Submit</button>
+  </form>
+
+  <h2 style="text-align:center;">Custom SVG Icons</h2>
+  <div class="icon-grid">
+    <!-- Heart Icon -->
+    <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="red">
+      <path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 
+               2 5.42 4.42 3 7.5 3c1.74 0 3.41 0.81 4.5 2.09
+               C13.09 3.81 14.76 3 16.5 3
+               19.58 3 22 5.42 22 8.5
+               c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/>
+    </svg>
+    <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="gold">
+      <path d="M12 17.27L18.18 21
+               16.54 13.97 22 9.24
+               14.81 8.63 12 2
+               9.19 8.63 2 9.24
+               7.46 13.97 5.82 21z"/>
+    </svg>
+    <svg class="icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" fill="gray">
+      <path d="M3 6h18v2H3V6zm2 3h14v12a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V9zm5 2v8h2v-8H10zm4 0v8h2v-8h-2z"/>
+    </svg>
+
+    <h2>vedio embed</h2>
+    <figcaption>Vedio about css</figcaption>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/l0BTo4VGVVs?si=eDSs5bWvR2zXft4P" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <br>
+    <a class="play-button" href="https://www.youtube.com/watch?v=l0BTo4VGVVs" target="-blank">
+        play on YouTube
+    </a><br>
+
+    <form id="customForm">
+    <h2>Booking Form</h2>
+
+    <label for="date">Select Date:</label>
+    <input type="date" id="date" required><br>
+    
+    <label for="price">Price Range (0-100):</label>
+    <input type="range" id="price" min="0" max="100" value="50" step="1"><br>
+    
+    <label for="city">City:</label>
+    <input list="cities" id="city" placeholder="Type a city..." required>
+    <datalist id="cities">
+      <option value="New York">
+      <option value="London">
+      <option value="Paris">
+      <option value="Tokyo">
+      <option value="Sydney">
+    </datalist>
+    <button type="submit">Submit</button>
+  </form>
+
+
+</body>
+</html>

@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .card {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            width: 300px;
+            padding: 15px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            text-align: center;
+        }  
+        .card h3 {
+            font-size:25px;
+        }
+        .card p{
+            font-style: italic;
+        }
+        .card button {
+            margin-top: 10px;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .card button:hover {
+            background-color: #005fa3;
+        } 
+        .landing{
+            background-color: orange;
+            text-align: center;
+            color: white;
+        }
+        .feature{
+            box-sizing: border-box;
+            padding: 30px;
+            margin: 20px auto;
+            border:1px solid white;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        footer{
+            color: white;
+            background-color: gray;
+            padding:10px;
+            text-align: center;
+        }
+        .blog-post{
+            border: 1px solid black;
+            border-radius: 5px;
+            background-color: white;
+            padding: 20px;
+            margin: 20px;
+            max-width: 400px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+        .service h2{
+            background-color: green;
+            color: white;
+            text-align: center;
+        }
+    .service p{
+      text-align: center;
+      padding: 10px 10px;
+      font-weight: bold;
+
+    }
+    .ser{
+      display: flex;
+      border: 1px none;
+      gap: 10px;
+    }
+    .box{
+      border:none;
+      flex: 1 1 200px;    
+      padding: 20px;
+      margin: 10px;
+      text-align: center;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.4);
+    }
+    .box:hover{
+        box-shadow: 1px 2px 2px;
+        background-color: lightgray;
+    }
+    .service-footer{
+      border: 1px solid black;
+      background-color: black;
+      color:white;
+      text-shadow: 1px 0 2px;
+      text-align: center;
+      padding: 10px;
+    }
+    
+    .testimonial-section{
+      box-sizing: border-box;
+      width: 800px;
+      border: 1px solid black;
+      background-color: rgb(53, 53, 108);
+    }
+    .testimonial-section h2{
+      text-align: center;
+      color: white;
+    }
+    .testimonial-cards article{
+      margin: 10px;
+      padding: 10px;
+      border-radius: 4px;
+      background-color: lightblue;
+      border: 2px double black;
+    }
+    .testimonial-cards article:hover{
+      box-shadow: 1px 2px 1px;
+      background-color: rgb(163, 236, 236);
+    }
+    article h3,p{
+      text-align: center;
+    }
+    h1{
+      text-align: center;
+      color: #333;
+    }
+    .teamgrid{
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+    .member{
+      background-color: antiquewhite;
+      box-shadow: 0 2px 1px rgba(0,0,0,0.1);
+      width: 200px;
+      padding: 20px;
+      border-radius: 4px;
+      text-align: center;
+    }
+    .member:hover{
+      box-shadow: 0 2px 4px;
+    }
+ .about-section {
+  display: flexbox;
+  width: 500px;
+  height: 400px;
+  padding: 10px;
+  margin: 20px;
+  border: 2px solid #ddd;
+}
+.about-text {
+  text-align: center;
+  padding: 20px;
+}
+.about-text h2 {
+  background: linear-gradient(135deg, #0077cc, #00cc88);
+  color: white;
+  margin-bottom: 15px;
+}
+.about-text p {
+  line-height: 2;
+  color: #333;
+}
+.about-image{
+  text-align: center;
+}
+.about-image img {
+  padding:10px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+} 
+.about-footer{
+  text-align: center;
+  background-color: #f4f4f9;
+  padding: 10px;
+}
+.about-footer p{
+  color:black;
+}
+
+.comp{
+  margin-bottom: 20px;
+  color: #333;
+}
+.feature-table {
+  width: 80%;
+  margin: 30px auto;
+  border-collapse: collapse;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+.feature-table th,
+.feature-table td {
+  border: 1px solid #ccc;
+  padding: 12px 15px;
+  text-align: center;
+}
+.feature-table th {
+  background-color: #0077cc;
+  color: white;
+}
+.feature-table tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+.highlight {
+  background-color: #ffe0e0;
+}
+
+
+    </style>
+</head>
+<body>
+    <div class="card">
+      <h3>Card Title</h3>
+      <p>This is a simple card description.</p>
+      <button>Read More</button>
+    </div><br>
+    
+    <header class="landing">
+        <h2>Welcome To Our Landing Page</h2>
+        <p><small>Discover amazing features and services.</small></p>
+    </header>
+    <section class="feature">
+        <img src="vetri.jpg" width="200px" alt="image">
+        <h3>Why Choose Us?</h3>
+        <p><small>We provide high-quality servicesto help you grow your business.</small></p>
+    </section>
+    <footer>©2025 Vetri Technology Solution. All rights reserved.</footer><br>
+
+    <article class="blog-post">
+        <h2>Blog Post1</h2>
+        <p>This is the blog about how we learn easily HTML within 2 hours.</p>
+    </article>
+    <article class="blog-post">
+        <h2>Blog Post2</h2>
+        <p>This is the blog about how we learn easily CSS within 4 hours.</p>
+    </article><br>
+
+    <div class="service">
+        <h2>Our Services</h2> 
+        <p>What We Offer</p>
+        <div class="ser">
+        <div class="box service1">
+            <img src="web.jpg" width="100px" alt="web">
+            <h3>Web Development</h3>
+            <p>We build modern responsive websites tailored to your needs.</p>
+        </div>
+        <div class="box service2">
+            <img src="graphic.jpg" width="100px" alt="graphic">
+            <h3>Graphic Design</h3>
+            <p>Our design team creates stunning graphics to bring your vision to life</p>
+        </div>
+        <div class="box service3">
+            <img src="seo.jpg" width="100px" alt="seo">
+            <h3>SEO</h3>
+            <p>Boost your online presencewith our expert SEO optimization services.</p>
+        </div>
+        </div>
+        <footer class="service-footer">©2025 Vetri Technology Solution. All rights reserved.</footer>
+    </div><br>
+
+    <section class="testimonial-section">
+    <h2>What Our Users Say</h2>
+    <div class="testimonial-cards">
+      <article>
+        <p>"This platform made learning web development so easy and fun. The projects are practical and engaging!"</p>
+        <h3>Alice Johnson</h3>
+      </article>
+      <article>
+        <p>"I love the clean design and responsive layouts. Practicing with these mini projects boosted my confidence."</p>
+        <h3>Michael Smith</h3>
+      </article>
+      <article>
+        <p>"The step-by-step guidance and examples helped me understand HTML and CSS concepts clearly."</p>
+        <h3>Priya Sharma</h3>
+      </article>
+    </div>
+  </section><br>
+ <h1>Our Team</h1>
+  <div class="teamgrid">
+    <div class="member">
+      <img src="image/sowjanya.jpg" width="50px" alt="Team member1">
+      <h2>Sowjanya.C</h2>
+      <p>Project Manager</p>
+    </div>
+    <div class="member">
+      <img src="image/sowjanya.jpg" width="50px" alt="Team member2">
+      <h2>Sowjanya.C</h2>
+      <p>Frontend Developer</p>
+    </div>
+    <div class="member">
+      <img src="image/sowjanya.jpg" width="50px" alt="Team member3">
+      <h2>Sowjanya.C</h2>
+      <p>UI/UX Designer</p>
+    </div>
+  </div><br>
+
+  <section class="about-section">
+    <div class="about-image">
+      <img src="vetri.jpg" width="100px" alt="Company Image">
+    </div>
+    <div class="about-text">
+      <h2>Our Mission</h2>
+      <p>
+        We are committed to delivering high-quality solutions that empower businesses 
+        and individuals. Our mission is to innovate, inspire, and impact communities 
+        through technology and creativity.
+      </p>
+    </div>
+    <footer class="about-footer">
+    <p>&copy; 2026 Vetri IT Solutions</p>
+  </footer><br>
+  </section>
+  
+
+   <h1 class="comp">Feature Comparison</h1>
+  <table class="feature-table">
+    <thead>
+      <tr>
+        <th>Feature</th>
+        <th>Product A</th>
+        <th>Product B</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Price</td>
+        <td>$199</td>
+        <td class="highlight">$249</td>
+      </tr>
+      <tr>
+        <td>Battery Life</td>
+        <td class="highlight">8 hours</td>
+        <td>12 hours</td>
+      </tr>
+      <tr>
+        <td>Weight</td>
+        <td>1.2 kg</td>
+        <td class="highlight">1.5 kg</td>
+      </tr>
+      <tr>
+        <td>Warranty</td>
+        <td>1 Year</td>
+        <td>2 Years</td>
+      </tr>
+    </tbody>
+  </table>
+
+   
+
+</body>
+</html>

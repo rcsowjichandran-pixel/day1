@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="/Registration From" method="post">
+<fieldset>
+    <legend>PERSONAL DETAILS</legend>
+    <label for="Name">Name</label>
+    <input type="text" id="Name" required placeholder="firstname">
+    <input type="text" id="Name" required placeholder="lastname"><br><br>
+    <label for="DOB">DOB</label>
+    <input type="date" id="DOB"><br><br>
+    <label for="Email">MAIL ID</label>
+    <input type="email" id="Email" required><br><br>
+    <label for="Pwd">Password</label> 
+    <input type="password" id="pwd" required><br><br>
+    <label for="File">UPLOAD FILE</label>
+    <input type="file" id="File" required><br><br>
+    <label for="clr">COLOR</label>
+    <input type="color" id="clr">
+</fieldset>
+    </form>
+
+    <form>
+        <fieldset>
+            <legend>JOB PORTAL</legend>
+            <label for="Name">Name</label>
+            <input type="text" id="Name" required placeholder="firstname">
+            <input type="text" id="Name" required placeholder="lastname"><br><br>
+            <label for="Email">MAIL ID</label>
+            <input type="email" id="Email" required><br><br>
+            <label for="EXP">Experiance</label>
+            <textarea row="20" cols="20">Enter your Experiance</textarea><br><br>
+            <label for="Position">Select position:</label>
+                <select id="Position" name="position" required>
+                 <option value="">CHOOSE A POSITION</option>   
+                <option value="Manager">Manager</option>
+                <option value="Manager">Sr.Manager</option>
+                <option value="Manager">Ass.Manager</option>
+                <option value="Manager">Deputy Manager</option>
+                </select><br><br>
+            <label for="File">UPLOAD FILE</label>
+            <input type="file" id="File"  name="file" accept=".pdf,.doc,.docx"><br><br>
+        <button type="submit">Subimt the Application</button>
+
+        </fieldset>
+    </form>
+
+    <form>
+        <fieldset>
+            <legend>PROFILE EDITOR FORM</legend>
+            <label for="user-id">USER ID</label>
+            <input type="hidden" name="user-id" value="577"><br><br>
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name"  required><br><br>
+            <label for="email">Mail</label>
+            <input type="email" id="email" name="email" value="rcsowji.chandran@gmail.com" disabled><br><br>
+            <label for="experiance">Level of Experiance</label>
+            <input type="range" id="experiance" name="experiance" min="0" max="15" value="5"><br><br>
+            <button type="submit">Save Changes</button>
+        </fieldset>
+    </form>
+
+    <form>
+        <label for="color">Choose the color</label>
+        <input type="color" id="color" name="color" value="#ff0000">
+    </form><br><br>
+
+    <from>
+        <fieldset><legend>school pepole leader poll</legend>
+            <input type="radio" id="savitha" name="name" value="savitha" required>
+            <label for="savitha">Savitha</label>
+             <input type="radio" id="preethi" name="name" value="preethi" required>
+            <label for="preethi">preethi</label>
+             <input type="radio" id="kanish" name="name" value="kanish" required>
+            <label for="kanish">kanish</label>
+             <input type="radio" id="karthi" name="name" value="karthi" required>
+            <label for="karthi">karthi</label><br>
+            <button type="submit">SUBMIT</button>
+        </fieldset>
+    </from><br><br>
+
+
+ <h2>Choose a country</h2>
+  <form>
+  <label for="country">choose a country</label>
+  <select name="country">
+    <option value="">--Select--</option>
+    <option value="usa">USA</option>
+  <option value="UK">UK</option>
+  <option value="AUS">AUSTRALIA</option>
+</select>
+<button type="submit">SUBMIT</button>
+</form><br>
+
+
+<form><fieldset>
+    <label for="command">FEED UR COMMAND</label>
+    <textarea row="5" cols="30" maxlength="200"></textarea>
+    <small>0 / 200 characters</small><br><br>
+    <button type="submit">SUBMIT</button></fieldset>
+</form>
+
+<form>
+    <h2>AUTOCOMPLETE SEARCH</h2>
+    <fieldset>
+    <label for="browser">Choose a browser:</label>
+    <input list="browsers" id="browser" name="browser" placeholder="Start typing...">
+    <datalist id="browsers">
+      <option>chrome</option>
+      <option value="Firefox">
+      <option value="Safari">
+      <option value="Edge">
+      <option value="Opera">
+    </datalist>
+    <button type="submit">Search</button>
+
+    </fieldset>
+</form><br>
+
+<h2>Edit Your Profile</h2>
+
+  <form action="profile" method="post">
+    <fieldset>
+      <legend>Personal Information</legend>
+      <label for="fullname">Full Name:</label><br>
+      <input type="text" id="fullname" name="fullname" required><br><br>
+      <label for="dob">Date of Birth:</label><br>
+      <input type="date" id="dob" name="dob" required><br><br>
+      <label for="gender">Gender:</label><br>
+      <select id="gender" name="gender">
+        <option value="">--Select--</option>
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+        <option value="other">Other</option>
+      </select><br><br>
+    </fieldset>
+<fieldset>
+      <legend>Contact Information</legend>
+      <label for="email">Email:</label><br>
+      <input type="email" id="email" name="email" required><br><br>
+      <label for="phone">Phone:</label><br>
+      <input type="tel" id="phone" name="phone"><br><br>
+      <button type="submit">Save Profile</button>
+    </fieldset>
+  </form><br><br>
+
+  <form>
+    <fieldset>
+        <legend>delivery form</legend>
+        <label for="payment">select payment method</label>
+        <select id="payment" name="payment" required>
+      <option value="">--Choose a method--</option>
+      <option value="cod">Cash on Delivery</option>
+      <option value="card">Credit/Debit Card</option>
+      <option value="upi">UPI</option>
+      <option value="netbanking">Net Banking</option>
+    </select><br><br>
+
+     <label for="instructions">Special notes</label><br>
+    <textarea id="instructions" name="instructions" rows="4" cols="40" 
+              placeholder="Write any delivery instructions here..."></textarea><br><br>
+<button type="=submit">SUBMIT</button>
+    </fieldset>
+  </form><br>
+
+  <form>
+    <fieldset><legend>PATTERN USED</legend>
+    <label for="username">Username</label>
+    <input type="text" id="username" name="username" pattern="A-Za-z{3}">
+    <button type="submit">SUBMIT</button>
+    </fieldset>
+  </form><br>
+  <form>
+    <fieldset><legend>LOGIN FORM</legend>
+    <label for="email">MAIL</label>
+    <input type="text" id="email" name="email" required>
+    <label for="pwd">PASSWORD</label>
+    <input type="password" id="password" name="password" minlength="8" title="password minium must have 8 characters">
+    <button type="submit">SUBMIT</button> 
+</fieldset>
+  </form><br><br>
+<form>
+    <fieldset>
+        <legend>SURVAY FORM</legend>
+        <label for="userid">USERID</label>
+        <input type="text" id="userid" name="userid"  value="SOWJI24" readonly><br><br>
+        <label for="feedback">feedback survay</label>
+        <select id="feedback" name="feedback">
+            <option value="">-select---</option>
+            <option value="good">good</option>
+            <option value="satisfied">satisfied</option>
+            <option value="very satisfied">very satisfied</option>
+        </select><br>
+        <label for="product">list of products</label>
+        <select id="phone" name="product">
+            <option value="">--select--</option>
+            <option value="iphone 13">iphone13</option>
+            <option value="iphne 15">iphone15</option>
+            <option value="iphone 16" disabled>iphone16</option>
+        </select>
+    </fieldset>
+</form><br><br>
+<form>
+    <fieldset>
+        <legend>QUIZ</legend>
+        <label for="q1">Who won the last football world cup?</label>
+        <input type="text" id="q1" name="q1" placeholder="Argentina" autofocus required><br>
+        <label for="q2">Who is the creater of claude?</label>
+        <input type="text" id="q2" name="q2" placeholder="Anthropy" required><br>
+        <label for="q3">which is known as pink city?</label>
+        <input type="text" id="q3" name="q3" placeholder="Jaipur" required><br>
+        <button type="submit">SUBMIT</button>
+    </fieldset>
+</form><br><br>
+<form>
+    <fieldset><legend>USER SETTING FORM</legend>
+        <label for="email">Mail:</label>
+        <input type="email" id="email" name="email" placeholder="enter mail id"><br>
+        <label for="rank">Rake us 1-10:</label>
+        <input type="number" id="rank" name="rank" min="1" max="10" required><br>
+        <label for="zip">ZIP CODE</label>
+        <input type="text" id="zip" name="zip" pattern="[1-10]{6}" placeholder="e.g 123456"><br>
+        <button type="submit">SUBMIT</button>
+    </fieldset>
+</form>
+</body>
+</html>

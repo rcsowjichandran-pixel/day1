@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    /*Portfoli Page*/
+    <header>
+        <h1>Welcome to my portfolio</h1>
+    </header>
+    <nav style="text-align: center;">
+        <a href="#about">About Me</a>
+        <a href="#skills">Skills</a>
+        <a href="#education">Education</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact me">Contact Me</a>
+    </nav>
+    <section id="profile">
+        <img src="image/sowjanya.jpg" width="100px" alt="my profile picture">
+    </section>
+    <section id="about">
+        <h2>About Me</h2>
+        <p><blockquote>Hello!, Am sowjanya ,an aspiring web developer learning HTML and CSS.</blockquote></p>
+    </section>
+    <section id="skills">
+        <h2>Skills</h2>
+        <ul>
+            <li>HTML</li>
+            <li>CSS</li>
+        </ul>
+    </section>
+    <section id="education">
+        <h2>Education</h2>
+        <table border="1">
+            <tr>
+                <th>Year</th>
+                <th>Course</th>
+                <th >University</th>
+            </tr>
+            <tr>
+                <td>2010</td>
+                <td>B.Sc IT</td>
+                <td rowspan="2" align="center">Anna University</td>
+            </tr>
+            <tr>
+                <td>2012</td>
+                <td>M.Sc IT</td>
+             
+            </tr>
+        </table>
+    </section>
+    <section id="projects">
+        <h2>Projects</h2>
+        <p>Here are some mini projects i did during my learing periods.</p>
+        <ul>
+            <li>Registration Form</li>
+            <li>Portfolio Page</li>
+            <li>News Letter Signup form</li>
+        </ul>
+    </section>
+    <section id="contact me">
+        <h2>Contact Me</h2>
+        <p>Sowjanyaaipythonjune@vtslearners.com</p>
+        <p>Phone:9843918957</p>
+    </section>
+    <footer>
+        <p>@copy; 2026 Sowjanya. All Rights Reserved</p>
+    </footer><br><hr>
+
+    /*Project 2*/         
+<fieldset>
+    <legend><h1><strong>Student Registration form</strong></h1></legend>
+    <form>
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" name="name" required><br><br>
+
+        <label for="email">Email Id</label>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="mobile">Mobile No:</label>
+        <input type="tel" id="mobile" name="mobile" required><br><br>
+
+        <label for="DOB">Date Of Birth</label>
+        <input type="date" id="DOB" name="DOB" required><br><br>
+
+        <label>Gender:</label>
+        <input type="radio" id="male" name="gender" value="male">
+        <label for="male">Male</label>
+        <input type="radio" id="female" name="gender" value="female">
+        <label for="female">Female</label><br><br>
+
+        <label for="course">Courses:</label>
+        <select id="course" name="course">
+            <option>---select---</option>
+            <option value="bsc">B.Sc CS</option>
+            <option value="bsc">B.Sc IT</option>
+            <option value="bsc">B.Sc Maths</option>
+            <option value="bsc">B.Sc Phy</option>
+            <option value="bsc">BCA</option>
+        </select><br><br>
+
+        <label>Hobbies:</label>
+        <input type="checkbox" id="music" name="hobbies" vale="Music">
+        <label for="music">Music</label>
+        <input type="checkbox" id="sports" name="hobbies" vale="Sports">
+        <label for="sports">Sports</label>  <br><br>
+        <label for="address">Address:</label>
+        <textarea id="address" name="address" rows="4" cols="40"></textarea><br><br>
+        
+
+        <label for="pwd">Password</label>
+        <input type="password" id="pwd" name="pwd" required><br><br>
+
+        <input type="submit" value="submit">
+        <input type="reset" value="reset">
+    </form>
+</fieldset><hr>
+
+/* project 3*/
+
+<header>
+    <h1 style="text-align: center;">Delicious Bites</h1>
+</header>
+<section id="banner">
+    <img src="delicious.jpg" alt="Restaurant Banner" width="1200px" height="300px">
+</section>
+<section id="Aboutus">
+    <h2>About Us</h2>
+    <p><blockquote>'Welcome to the Delicious Bites!We serve authentic dishes made with fresh ingredients.Ours mission is to bring joy to your buds.'</blockquote></p>
+</section>
+<section id="menu">
+    <h2>Menu Card</h2>
+    <table border="1">
+        <tr>
+            <th>Dishe</th>
+            <th>Category</th>
+            <th>Price</th>
+        </tr>
+        <tr>
+            <td>Paneer Butter Masala</td>
+            <td>Main course</td>
+            <td>₹250</td>
+        </tr>
+        <tr>
+            <td>Veg Biryani</td>
+            <td>Main Course</td>
+            <td>₹200</td>
+        </tr>
+        <tr>
+            <td>Gulab Jamun</td>
+            <td>Dessert</td>
+            <td>₹80</td>
+        </tr>
+    </table>
+</section>
+<section id="special">
+    <h2><mark>Todays's Special</mark></h2>
+    <ol>
+        <em>
+        <li>Cheese Garlic Naan</li>
+        <li>Pepper Corn Fry</li>
+        <li>Chocolate Lava Cake</li>
+        </em>
+    </ol>
+</section>
+<section id="contact">
+    <h2>Contact Us</h2>
+    <p>Email:contact@deliciousbites.com</p>
+    <p>Phone:9864468998</p>
+    <p>Address:123,Purasawalkam,Chennai.</p>
+</section>
+<section id="map">
+    <a href="https://maps.app.goo.gl/cH1xUoXx4aDF2JAU8" target="_blank">Locate Us</a>
+</section>
+<footer>
+    <p style="text-align: center;"><small>@copy; 2026 Delicious Bites Restaurant. All rights reserved.</small></p>
+</footer><br><hr>
+
+/*project 4*/
+
+<header>
+    <h1>Product Page</h1>
+</header>
+<fieldset>
+<section id="product">
+    <p style="text-align: center;">
+    <img src="headphone.jpg" alt="heddphone" width="200px">
+    </p>
+</section>
+<section id="product-name">
+    <h2 style="text-align: center;">Stylish Wireless Headphone</h2>
+</section>
+<section id="price">
+    <h3 style="text-align: center;">Price</h3>
+    <p style="text-align: center;"><strong><mark>₹3,499</mark></strong></p>
+</section>
+</fieldset>
+<section id="description">
+    <h3>Description</h3>
+    <p><blockquote>premium sound quality with our stylish wireless headphones. Perfect for music lovers and professionals on the go.</blockquote></p>
+</section>
+
+<section id="features">
+    <h3>Features</h3>
+    <ul>
+      <li>Bluetooth 5.0 connectivity</li>
+      <li>Noise cancellation</li>
+      <li>20 hours battery life</li>
+      <li>Comfortable ear cushions</li>
+    </ul>
+</section>
+<section id="sepc">
+    <table border="1">
+      <tr>
+        <th>Specification</th>
+        <th>Details</th>
+      </tr>
+      <tr>
+        <td>Color</td>
+        <td>Black</td>
+      </tr>
+      <tr>
+        <td>Weight</td>
+        <td>250g</td>
+      </tr>
+      <tr>
+        <td>Charging Time</td>
+        <td>2 hours</td>
+      </tr>
+      <tr>
+        <td>Warranty</td>
+        <td>1 Year</td>
+      </tr>
+    </table>
+</section><br>
+<section id="buy">
+    <button>Buy Now</button>
+</section>
+<section id="reviews">
+    <h2>Customer Reviews</h2>
+    <p><strong>Priya:</strong> “Amazing sound quality and very comfortable!”</p>
+    <p><strong>Rahul:</strong> “Battery lasts all day, perfect for travel.”</p>
+    <p><strong>Anita:</strong> “Stylish design, worth the price.”</p>
+</section><hr>
+
+/*project 5*/
+
+<header>
+    <h1>College Admission Webpage</h1>
+</header>
+
+<nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="course">Courses</a>
+    <a href="#admission">Admission</a>
+    <a href="#facilities">Facilities</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<section id="About">
+    <h2>About Us</h2>
+    <p> <blockquote> provide high quality of education and curriculum in engineering,science and management.Our mission is to empower students with knowledgeand skills for a sucessful future.</blockquote></p>
+</section>
+<section id="course">
+    <h2>Courses Offered</h2>
+    <ul>
+        <li>B.Sc Computer Science</li>
+        <li> BCA</li>
+        <li>B.Sc Information Technology</li>
+        <li>B.Tech IT</li>
+        <li>MBA</li>
+    </ul>
+</section>
+<section id="admission">
+    <h2>Admission Form</h2>
+    <label for="name">Enter your Name:</label>
+    <input type="text" id="name" name="name" placeholder="enter name" required><br><br>
+
+    <lable for="email">Enter Mail id:</lable>
+    <input type="email" id="email" name="email" required><br><br>
+
+    <lable for="dob">DOB:</lable>
+    <input type="date" id="dob" name="dob" required><br><br>
+
+    <label for="course">Select Course:</label>
+    <select id="courses" name="course">   
+        <option>---Select course---</option>     
+        <option value="B.Sc">B.Sc Computer Scienct</option> 
+        <option value="BCA">BCA</option>
+        <option value="B.Sc">B.Sc Information Technology</option>
+        <option value="B.Tech">B.Tech IT</option>
+        <option value="MBA">MBA</option>
+    </select>
+    <input type="submit" value="submit">
+</section>
+<section id="facilities">
+    <h2>Facilities</h2>
+    <p>Our college provides world-class facilities including:</p>
+    <ul>
+      <li>Modern Computer Labs</li>
+      <li>Library with Digital Resources</li>
+      <li>Sports Complex</li>
+      <li>Hostel Accommodation</li>
+      <li>Placement Cell</li>
+    </ul>
+</section>
+<section id="contact">
+    <h2>Contact Details</h2>
+    <p>Email: admissions@college.com</p>
+    <p>Phone: +91 9876543210</p>
+    <p>Address: 456 Knowledge Avenue, Chennai</p>
+</section>
+<footer>
+    <p style="text-align: center;"><small>"copy; 2026 College of Technology. All rights reserved.</small></p>
+</footer><hr>
+
+/*project 6*/
+
+<header>
+    <h1>Job Application Form</h1>
+</header>
+
+<form>
+    <label for="name">Applicant Name:</label>
+    <input type="text" id="name" name="name" required><br><br>
+
+    <label for="email">Mail ID:</label>
+    <input type="email" id="email" name="email" required><br><br>
+
+    <label for="mobile">Mobile No:</label>
+    <input type="tel" id="mobile" name="mobile" required><br><br>
+
+    <lable for="dob">Date Of Birth:</lable>
+    <input type="date" id="dob" name="dob" required><br><br>
+
+    <label>Gender:</label>
+    <input type="radio" id="male" name="gender" value="male">
+    <label for="male">Male</label>
+    <input type="radio" id="female" name="gender" value="female">
+    <label for="female">Female</label><br><br>
+
+    <label for="quali">Qualification:</label>
+    <input type="text" id="quali" name="quali" required><br><br>
+
+    <label for="exp">Experiance:</label>
+    <input type="number" id="exp" name="exp" min=0 max=15 required><br><br>
+
+    <label for="skill">Skills</label>
+    <textarea id="skill" name="skill" row="4" cols="30"></textarea><br><br>
+
+    <label for="res">Upload Resume</label>
+    <input type="file" id="res" name="res" accept=".pdf,.doc,.docx"><br><br>
+
+    <label for="loca">Preferred Location:</label>
+    <select id="loca" name="loca">
+      <option value="chennai">Chennai</option>
+      <option value="bangalore">Bangalore</option>
+      <option value="hyderabad">Coimbatore</option>
+    </select><br><br>
+    
+    <input type="submit" value="Submit Application">
+</form><hr>
+
+/* project 7*/
+
+<header>
+    <h1>Hospital Website</h1>
+</header>
+
+<h1 style="text-align: center;">RS Health Care 24/7*</h1>
+<p style="text-align: center;">
+    <img src="hospital.jpg" alt="hospital logo" width="200px">
+</p>
+
+<section id="about">
+    <h2>About Us</h2>
+    <p><blockquote> Health Care is a multi-specialty healthcare institution dedicated to providing world-class medical services with compassion and care.</blockquote></p>
+</section>
+<section id="departments">
+    <h2>Departments</h2>
+    <ul>
+      <li>Cardiology</li>
+      <li>Neurology</li>
+      <li>Orthopedics</li>
+      <li>Pediatrics</li>
+      <li>Dermatology</li>
+    </ul>
+  </section>
+  <section id="doctors">
+    <h2>Doctors Availability</h2>
+    <table border="1" cellpadding="5">
+      <tr>
+        <th>Doctor</th>
+        <th>Specialization</th>
+        <th>Available Days</th>
+      </tr>
+      <tr>
+        <td>Dr. Shravani</td>
+        <td>Cardiologist</td>
+        <td>Mon, Wed, Fri</td>
+      </tr>
+      <tr>
+        <td>Dr. Ashmitha</td>
+        <td>Neurologist</td>
+        <td>Tue, Thu, Sat</td>
+      </tr>
+      <tr>
+        <td>Dr. Advaidha</td>
+        <td>Pediatrician</td>
+        <td>Daily</td>
+      </tr>
+    </table>
+  </section>
+
+  <section id="appointment">
+    <h2>Book an Appointment</h2>
+    <form>
+      <label for="name">Full Name:</label><br>
+      <input type="text" id="name" name="name" required><br><br>
+
+      <label for="mobile">Mobile Number:</label><br>
+      <input type="tel" id="mobile" name="mobile" required><br><br>
+
+      <label for="department">Select Department:</label><br>
+      <select id="department" name="department">
+        <option>---Select----</option>
+        <option value="cardiology">Cardiology</option>
+        <option value="neurology">Neurology</option>
+        <option value="orthopedics">Orthopedics</option>
+        <option value="pediatrics">Pediatrics</option>
+        <option value="dermatology">Dermatology</option>
+      </select><br><br>
+
+      <label for="date">Preferred Date:</label><br>
+      <input type="date" id="date" name="date" required><br><br>
+
+      <input type="submit" value="Book Appointment">
+    </form>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Information</h2>
+    <p>Email: RSHealthcare@hospital.com</p>
+    <p>Phone: +91 9876543210</p>
+    <p>Address: 789 Health Avenue, Chennai</p>
+  </section>
+
+  <footer>
+    <p style="text-align: center;"><small>@copy; 2026 RSHealthCare Hospital. All rights reserved.</small></p>
+  </footer><hr>
+
+  /* project 8 */
+
+  <header>
+    <h1>Travel Agency Website</h1>
+  </header>
+
+  <h1 style="text-align: center;">RS Travel Agency</h1>
+  <p style="text-align: center;">
+  <img src="travel.jpg" alt="banner" width="700px" height="300px">
+  </p>
+  <section id="list">
+    <h2>Travel Destinations</h2>
+    <ul>
+      <li>Paris, France</li>
+      <li>Tokyo, Japan</li>
+      <li>New York, USA</li>
+      <li>Dubai, UAE</li>
+      <li>Bali, Indonesia</li>
+    </ul>
+  </section>
+
+  <section id="packages">
+    <h2>Tour Packages</h2>
+    <table border="1">
+      <tr>
+        <th>Package</th>
+        <th>Duration</th>
+        <th>Price with offer</th>
+      </tr>
+      <tr>
+        <td>European Highlights</td>
+        <td>10 Days</td>
+        <td><del>₹1,20,000</del>     ₹1,10,000</td>
+      </tr>
+      <tr>
+        <td>Asian Adventure</td>
+        <td>7 Days</td>
+        <td><del>₹80,000</del>    ₹70,000</td>
+      </tr>
+      <tr>
+        <td>Luxury Dubai</td>
+        <td>5 Days</td>
+        <td><del>₹60,000</del>     ₹50,000</td>
+      </tr>
+    </table>
+  </section>
+  <section id="booking">
+    <h2>Book Your Trip</h2>
+    <form>
+      <label for="name">Full Name:</label><br>
+      <input type="text" id="name" name="name" required><br><br>
+
+      <label for="email">Email:</label><br>
+      <input type="email" id="email" name="email" required><br><br>
+
+      <label for="mobile">Mobile Number:</label><br>
+      <input type="tel" id="mobile" name="mobile" required><br><br>
+
+      <label for="destination">Select Destination:</label><br>
+      <select id="destination" name="destination">
+        <option>---select---</option>
+        <option value="paris">Paris</option>
+        <option value="tokyo">Tokyo</option>
+        <option value="newyork">New York</option>
+        <option value="dubai">Dubai</option>
+        <option value="bali">Bali</option>
+      </select><br><br>
+      <label for="date">Travel Date:</label><br>
+      <input type="date" id="date" name="date" required><br><br>
+
+      <input type="submit" value="Book Now">
+    </form>
+  </section>
+   <section id="contact">
+    <h2>Contact Us</h2>
+    <p>Email: Rstravel@globetrotters.com</p>
+    <p>Phone: +91 9876543210</p>
+    <p>Address: 123 Travel Street, Chennai</p>
+  </section>
+
+  <footer>
+    <p style="text-align: center;"><small>@copy; 2026 RS Travel Agency. All rights reserved.</small></p>
+  </footer>
+
+
+
+
+
+</body>
+</html>

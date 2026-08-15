@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #scrollnav{
+            position: fixed;
+            top:0;
+            width: 100%;
+            padding: 15px;
+            text-align: center;
+            background: #b5e15e;
+        }
+        #scrollnav a{
+            text-decoration: none;
+            font-weight:bold;
+            margin: 15px;
+        }
+        div{
+            height: 50vh;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+        }
+        .home{
+            background-color: antiquewhite;
+        }
+        .about{
+            background-color: aquamarine;
+        }
+        .service{
+            height: 100vh;
+            background:linear-gradient(to left,green,lightgreen);
+        }
+        .service h3{
+            text-align: center;
+            padding: 20px 40px;
+        }
+        .service-grid {
+            display: grid;
+            grid-template-columns:1fr 1fr 1fr;
+            gap: 20px;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        .servicebox {
+            width: 300px;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }  
+        .servicebox:hover {
+            transform: scale(1.05);
+        }
+        .contact{
+            background-color: aquamarine;
+        }
+        .hero{
+            box-shadow: 0 2px 5px rgba(0,0,0,0.9);
+            width: 100vw;
+            height: 100vh;
+            padding: 30px 20px;
+            margin: 50px;
+            background: url('vetri.jpg') no-repeat;
+            background-size:cover;  
+            justify-content: center;
+            align-items: center;  
+            text-align: center;        
+        }
+        .hero h1{
+            text-align: center;
+            color: rgb(220, 75, 7);
+            font-size: 3rem;
+            font-weight: bold;
+            text-shadow: 2px 1px 2px rgb(198, 198, 16);
+        }
+        .hero button{
+            padding: 12px 25px;
+            font-size: 1rem;
+            border: none;
+            border-radius: 5px;
+            background: #ff5722;
+            color: white;
+            cursor: pointer;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+            
+        }
+        .hero button:hover{
+            font-size: 1.5rem;
+            transform: scale(1.05);
+        }
+        .blog{
+            max-width: 1000px;
+            height: 400px;
+            margin: 20px;
+            box-sizing:border-box;  
+            box-shadow: 1px 2px 2px gray;
+            background-color: aliceblue;
+        }
+        .blog1{
+            background:linear-gradient(to right,#f17070,#ca7373);
+            padding: 5px 5px;
+        }
+        .blog1 h2{
+            font-size: 1rem;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        article{
+            width: 700px;
+            box-shadow: 2px 2px 2px rgba(0,0,4,0.9);
+            border-radius: 10px;      
+        }
+        .blog2{
+            padding: 10px 10px;
+            background-color:grey;
+            font-size: 1rem;
+            text-shadow: 2px 9px 4px white;
+            text-align: center;
+        }
+        .pricing-section{
+            text-align: center;
+            padding: 20px 10px;
+        }
+        .pricing.section h1{
+            margin-bottom: 20px;
+            color:#333
+        }
+        .pricing-plan{
+            display:grid;
+            grid-template-columns: 2fr 2fr 2fr;
+            justify-content: center;
+            gap:10px;
+        }
+        .plan{
+            border-radius: 10px;
+            background: white;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+            padding: 10px;
+            width: 380px;
+        }
+        .plan:hover{
+            box-shadow: 0 0 20px;
+        }
+        .plan h2{
+            margin-top: 0;
+        }
+        .price{
+            font-size: 2rem;
+            text-shadow: 2px 2px 2px rgba(0,0,0,0.2);
+        }
+        .plan li{
+            list-style: none;
+        }
+        .plan button{
+            padding:10px 10px;
+            font-size: 1rem;
+            border: none;
+            border-radius: 5px;
+            background: #007bff;
+            color: white;
+            cursor: pointer;
+        }
+         .plan button:hover {
+            background: #0056b3;
+            transform: scale(1.05);
+        }
+        .contact1{
+            box-shadow: 2px 1px 4px;
+            background: linear-gradient(to top,blue,seagreen);
+            padding: 60px 40px;
+            width: 650px;
+        }
+        .con-form{
+            display: flexbox;
+            padding: 30px 30px;
+            margin: 50px;
+            width: 500px;
+            justify-content: center;
+            align-items: center;
+            background: white;
+            padding: 20px 20px;
+            box-shadow: 2px 1px 4px;      
+        }
+        .con-form h2{
+            text-align: center;
+        }
+        .con-form label{
+            display: block;
+            margin: 10px;
+            font-weight: bold;
+        }
+        .con-form input:focus{
+            background-color: aquamarine;
+            border: none;
+            width: 100%;
+            padding: 10px;
+        }
+        .con-form textarea:focus{
+            background-color:aquamarine ;
+            border: none;
+            width: 100%;
+            padding:10px;
+        }
+        .contact button{
+            background-color: bisque;
+            font-size: 15px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            cursor: pointer;    
+        }
+        .contact1 button:hover{
+            background-color: blue;
+            transform: scale(1.05);
+        }
+        .newsletter{
+      position: relative;
+      background-color: grey;
+      width: 100%;
+      height: 50vh;
+      width: 100vw;
+      display: flex;
+      justify-content: center; 
+      background: url(cover.jpg)no-repeat;
+
+    }
+    .newscontent{
+      text-align: center;
+      padding: 40px 20px;
+      width: 50vw;
+    }
+    .newscontent h2{
+      font-size: 2rem;
+      font-weight: bold;
+      text-shadow: 2px 1px 1px;
+      margin-bottom: 20px;
+    }
+    .newsform{
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+    }
+    .newsform input{
+      flex: 1;
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+    }
+    .newsform button{
+      background: red;
+      color: white;
+      cursor: pointer;
+      border: none;
+      border-radius: 5px;
+      font-size: 1rem;
+    }
+    .newsform button:hover{
+      transform: scale(1.1);    
+    }
+    </style>
+</head>
+<body>
+    <header id="scrollnav">
+        <a href="#Home">Home</a>
+        <a href="#About">About</a>
+        <a href="#Services">Services</a>
+        <a href="#Contact">Contact</a>
+    </header><br><br>
+    <div class="home">🏠 Welcome to Home</div>
+    <div class="about">ℹ️About Us</div>
+    <div class="service">
+        <h3>💼Our services</h3>
+        <div class="service-grid">
+            <div class="servicebox">
+                <h5>Hotel Management</h5>
+                <p>We provide good and healthy food andgood hospitality for our customer.</p>
+            </div>
+            <div class="servicebox">
+                <h5>Event Management</h5>
+                <p>We provide massive success in our event Management service.</p>
+            </div>
+            <div class="servicebox">
+                <h5>Property Management</h5>
+                <p>We have highly serviced area in many places with reasonable price.</p>
+            </div>
+    </div>
+    </div>
+    <div class="contact">📞Contact Us</div><br>
+
+    <header class="hero">
+        <h1>Welcome to Our website</h1>
+        <button type="btn">Get Started</button>
+    </header><br>
+
+    <section class="blog">
+        <header class="blog1">
+        <h1>My Blog</h1>
+        <p>Strong thoughts and ideas</p>
+        </header><br>
+        <article>
+            <h2>Blog post1</h2>
+            <p>Once you decided to do one thing do it now itself,don't procrastinate.</p>
+            </article>
+            <article>
+            <h2>Blog Post2</h2>
+            <p>Do whatever you want with wholehearted of trust.</p>
+        </article>
+        <footer class="blog2">
+            <p>@2026 My Blog. All rights reserved.</p>
+        </footer>
+    </section><br>
+
+    <section class="pricing-section">
+        <h1> Choose Your Plan</h1>
+        <div class="pricing-plan">
+            <div class="plan">
+                <h2>Basic</h2>
+                <p class="price">199$/mnth</p>
+                <li>✔ 5 Projects</li>
+                <li>✔ Basic Support</li>
+                <li>✔ Community Access</li>
+                <button>Choose Plan</button>               
+            </div>
+            <div class="plan">
+                <h2>Standard</h2>
+                <p class="price">499$/mnth</p>
+                <li>✔ 20 Projects</li>
+                <li>✔ Priority Support</li>
+                <li>✔ Advanced Tools</li>
+                <button>Choose Plan</button>
+            </div>
+            <div class="plan">
+                <h2>Pro</h2>
+                <p class="price">899$/mnth</p>
+                <li>✔ Unlimited Projects</li>
+                <li>✔ 24/7 Support</li>
+                <li>✔ Exclusive Features</li>
+                <button>Choose Plan</button>
+            </div>
+        </div>
+    </section><br>
+
+    <section class="contact1">
+        <form class="con-form">
+            <h2>Contact us</h2>
+            <label for="Name">Name</label>
+            <input type="text" id="name" placeholder="Enter your name" required>
+
+            <label for="email">Email</label>
+            <input type="email" id="email" placeholder="enter mail id"required>
+
+            <label for="message">Message</label>
+            <textarea id="message" placeholder="write your message" required></textarea><br><br>
+
+            <button type="submit">Send Message</button>
+        </form>
+    </section><br><br>
+
+    <section class="newsletter">
+        <div class="newscontent">
+            <h2>Subscribe Our Newsletter</h2>
+            <form class="newsform">
+                <input type="email" placeholder="Enter mail id" required>
+                <button type="submit">Sign Up</button>
+            </form>
+        </div>
+    </section>
+
+
+
+
+</body>
+</html>

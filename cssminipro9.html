@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*gallery*/
+        h1{
+            text-align: center;
+            font-size: 25px;
+            color:white;
+            background: black;
+        }
+        .gallery{
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            gap: 15px;
+        }
+        .gallery img{
+            box-shadow: 5px 4px 8px rgba(0,0,0,0.8);
+            transition: transform 0.3 ease;
+        }
+        .gallery img:hover{
+            transform: scale(1.05);
+        }
+        /*pricing Table*/
+
+    .pricetable{
+      display: grid;
+      grid-template-columns: repeat(3,1fr);
+      gap: 15px;
+      margin: 40px;
+      box-shadow: 0 6px 7px rgba(0,0,0,0.6);
+      border: 2px solid #ddd;
+    }
+    @media(max-width:600px){
+        .pricetable{
+            display: grid;
+            grid-template-columns: 1fr;
+        }
+    }
+    .pricetable div{
+      text-align: center;
+      padding: 20px;
+      border-radius: 10px;
+      border: 2px solid #ddd;
+    }
+    .pricetable div:hover{
+      transform: scale(1.05);
+      box-shadow: 0 6px 8px rgba(0,0,0,0.6);
+    }
+    .pricetable h2{
+      font-size: 28px;
+      background: black;
+      color: white;
+    }
+    .price{
+      font-size: 25px;
+      color: green;
+    }
+    li{
+      list-style: none;
+    }
+    button{
+      background: green;
+      color: white;
+      font-size: 20px;
+      border-radius: 5px;
+    }
+    button:hover{
+      box-shadow: 0 2px 8px rgba(0,0,0,0.9);
+      transition: 0.5 ease;
+    }     
+    footer{
+        text-align: center;
+        background: black;
+        color:white;
+        margin:40px;
+    }
+    /*photo gallery with fig*/ 
+
+    .photos{
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            gap: 15px;
+        }
+        figure{
+            text-align: center;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0px 4px 6px rgba(0,0,0,0.7);
+        }
+        .photos figcaption{
+            padding: 10px;
+            background: #f8f8f8;
+            font-size: 25px;
+            font-weight: bold;
+            text-align: center;
+        }
+        .photos img:hover{
+            transform: scale(1.05);
+        }
+       
+    </style>
+</head>
+<body>
+    /*photo gallery*/
+
+    <h1>Photo Gallery Design</h1>
+    <div class="gallery">
+        <img src="flower1.jpg" width="200px" alt="pht1">
+        <img src="flower1.jpg" width="200px" alt="pht2">
+        <img src="flower1.jpg" width="200px" alt="pht3">
+        <img src="flower1.jpg" width="200px" alt="pht4">
+        <img src="flower1.jpg" width="200px" alt="pht5">
+        <img src="flower1.jpg" width="200px" alt="pht6">
+    </div>
+
+    /*pricing table*/
+    <h1>Pricing Table</h1>
+     <div class="pricetable">
+        <div class="Basic">
+            <h2>Basic</h2>
+            <h3 class="price">₹999/Month</h3>
+            <ul>
+            <li>✔ 10GB Storage</li>
+            <li>✔ Email Support</li>
+            <li>X Custom Domain</li>
+            </ul>
+            <button>Choose Plan</button>
+        </div>
+        <div class="Standard">
+            <h2>Standard</h2>
+            <h3 class="price">₹1999/Month</h3>
+            <ul>
+            <li>✔ 50GB Storage</li>
+            <li>✔ Priority Support</li>
+            <li>✔ Custom Domain</li>
+            </ul>
+            <button>Choose Plan</button>
+        </div>
+        <div class="Premium">
+            <h2>Premium</h2>
+            <h3 class="price">₹2999/Month</h3>
+            <ul>
+            <li>✔ Unlimited Storage</li>
+            <li>✔ 24/7 Support</li>
+            <li>✔ Custom Domain & Analytics</li>
+            </ul>     
+            <button>Choose Plan</button>
+        </div>
+    </div>
+     <footer><small>@2026 Pricing table All rights reserved.</small></footer>
+
+     /*photo gallery*/ 
+
+     <h1>Photo Gallery with caption</h1>
+     <div class="photos">
+        <figure>
+            <img src="flower2.jpg" width="200px"  alt="flower1">
+            <figcaption>Beautiful Flower</figcaption>
+        </figure>
+        <figure>
+            <img src="flower3.jpg" width="200px" alt="flower2">
+            <figcaption>Colorful Flower</figcaption>
+        </figure>
+        <figure>
+            <img src="flower4.jpg" width="200px" alt="flower3">
+            <figcaption>Fragnance Maker</figcaption>
+        </figure>
+     </div>
+
+     /* Dashboard*/ 
+
+     <div class="dashboard">
+    <!-- Sidebar -->
+    <div class="sidebar">
+      <h2>Menu</h2>
+      <ul>
+        <li>🏠 Home</li>
+        <li>📊 Analytics</li>
+        <li>⚙️ Settings</li>
+        <li>🚪 Logout</li>
+      </ul>
+    </div>
+
+    <div class="header">
+      <h1>Dashboard</h1>
+    </div>
+    <div class="main">
+      <h2>Welcome to the Dashboard</h2>
+      <p>This is a responsive dashboard layout using CSS Grid.</p>
+      <div class="cards">
+        <div class="card">📈 Sales Report</div>
+        <div class="card">👥 User Statistics</div>
+        <div class="card">💰 Revenue</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

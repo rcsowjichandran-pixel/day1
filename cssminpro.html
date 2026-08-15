@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="minipro.css">
+    <link rel="stylesheet" href="minipro.css">
+    <style>
+        button{background-color:aqua;}
+        .internal{background-color: bisque;}
+        .mini th{background-color: gray;}
+        .mini tr:nth-child(even){
+            background-color: lightcyan;
+        }
+        .noon{font-weight: bolder;background-color: aqua;font-family: Arial, Helvetica, sans-serif;}
+        nav li a:hover{background-color: coral;font-size: larger;}
+        #comparison-table tr:nth-child(odd){
+            background-color:cornflowerblue;
+        }
+        #comparison-table th{background-color: blanchedalmond;}
+    </style>
+</head>
+<body>
+    <fieldset>
+    <h2>BUTTON STYLES SHOWCASE</h2><br>
+    <button>INLINE CSS </button><br><br>
+    <button class="internal">INTERNAL CSS</button><br><br>
+    <button id="external">EXTERNAL CSS</button><br>
+    </fieldset><br>
+<fieldset>
+    <legend>MINI PROJECT 2 TABLE OF EMPLOYEE DETAILS</legend>
+    <table border="1" style="border-collapse:collapse; width:50%; " class="mini">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Department</th>
+                <th>Salary</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td style="color: red;">101</td>
+                <td>Sri</td>
+                <td>Marketing</td>
+                <td>$60,000</td>
+            </tr>
+            <tr>
+                <td style="color: red;">102</td>
+                <td>Ramesh</td>
+                <td>IT</td>
+                <td>$75,000</td>
+            </tr>
+            <tr>
+                <td style="color: red;">103</td>
+                <td>Saravanan</td>
+                <td>Finance</td>
+                <td>$70,000</td>
+            </tr>
+            <tr>
+                <td style="color: red;">104</td>
+                <td>Saranya</td>
+                <td>HR</td>
+                <td>$65,000</td>
+            </tr>
+            <tr>
+                <td style="color: red;">105</td>
+                <td>Chandran</td>
+                <td>Operations</td>
+                <td>$68,000</td>
+            </tr>
+        </tbody>
+    </table>
+</fieldset><br>
+<fieldset><legend>TO DO LIST</legend>
+<h2>TODAY LIST</h2>
+<ul style="color: blueviolet;">
+    <li>Finish Homework Task</li>
+<li>Pickup My younger daughter</li>
+</ul>
+<ul class="noon"><li>Have to Feed Lunch for her</li>
+<li>Clean Home</li>
+<li>Call my friend</li></ul>
+<ul id="eve"><li>Learn some new tech in html n css</li>
+<li>Go for walk</li></ul>
+</fieldset><br>
+<h2>NAVIGATION MENU</h2>
+<nav>
+    <li><a href="#HOME">Home</a></li>
+    <li><a href="ABOUT">About</a></li>
+    <li><a href="SERVICE">Service</a></li>
+    <li><a href="https://www.shutterstock.com/shutterstock/videos/3795626373/preview/stock-footage-green-nature-of-mountain-landscape-with-river-waterfall-in-summer-forest-park-outdoors-view-on.webm" target="_blank" alt="nature">Watch link</a></li>
+</nav>
+<table border="1" id="comparison-table">
+    <thead>
+      <tr>
+        <th>Features</th>
+        <th>Basic Plan</th>
+        <th class="best-plan">Pro Plan ⭐</th>
+        <th>Premium Plan</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Storage</td>
+            <td>10GB</td>
+            <td class="best-plan">100GB</td>
+            <td>1TB</td>
+        </tr>
+        <tr>
+            <td>Support</td>
+            <td>x</td>
+            <td class="best-plan">✓</td>
+            <td>✓</td>
+        </tr>
+        <tr>
+            <td>Price</td>
+            <td>₹499/mo</td>
+            <td class="best-plan">₹999/mo</td>
+            <td>₹1999/mo</td>
+        </tr>
+    </tbody>
+</table><br>
+<div class="form">
+    <div class="box">LOGIN</div>
+    <label for="email">Email ID:</label>
+    <input type="text" required placeholder="username"><br>
+    <label for="password">Password:</label>
+    <input type="password" required ><br>
+    <button type="button" class="btn">LOGIN</button><br><br>
+    <div class="box">SIGNUP</div>
+    <label for="Name">Enter Your Name:</label>
+    <input type="text" required placeholder="Enter your name"><br>
+    <label for="email">Email ID:</label>
+    <input type="text" required placeholder="username"><br>
+    <label for="password">Password:</label>
+    <input type="password" required ><br>
+    <button type="submit" class="btn">SIGNUP</button>
+
+</div>
+
+<div class="pricing-container">
+<div class="card basic">
+      <h3>Basic</h3>
+      <p class="price">$9/mo</p>
+      <ul>
+        <li>✔ 10GB Storage</li>
+        <li>✔ Email Support</li>
+        <li>✘ Advanced Features</li>
+      </ul>
+      <button>Choose Plan</button>
+    </div>
+    <div class="card featured">
+      <h3>Pro</h3>
+      <p class="price">$29/mo</p>
+      <ul>
+        <li>✔ 100GB Storage</li>
+        <li>✔ Priority Support</li>
+        <li>✔ Advanced Features</li>
+      </ul>
+      <button>Best Plan</button>
+    </div>
+    <div class="card premium">
+      <h3>Premium</h3>
+      <p class="price">$59/mo</p>
+      <ul>
+        <li>✔ 1TB Storage</li>
+        <li>✔ 24/7 Support</li>
+        <li>✔ All Features</li>
+      </ul>
+      <button>Choose Plan</button>
+    </div>
+  </div><br><br>
+
+  <div class="gallary">
+    <img src="image/exter.jpg" alt="exter">
+    <img src="image/i20.jpg" alt="i20">
+    <img src="image/oneplus.jpg" alt="oneplus">
+  </div>
+
+  </body>
+</html>

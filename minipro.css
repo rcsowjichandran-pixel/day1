@@ -1,0 +1,92 @@
+#external{background-color: violet;}
+#eve{font-style: oblique; color: brown;}
+nav {color:chartreuse; font-style: italic;}
+li::before{content: "✿";}
+.bi-x-circle{
+    color: red;
+}
+#comparison-table .best-plan{
+    background-color: chartreuse;
+}
+.btn{
+    background-color: cornflowerblue;
+}
+.form{
+  display: flexbox;
+  border: 2px solid black;
+  width: 300px;
+  height: 250px;
+  background-color: aqua;
+  gap: 20px;
+}
+div>.box{display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.pricing-container{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));;
+  width:850px;
+}
+button{
+  background-color: aliceblue;
+}
+button:hover{
+    background-color: blue;
+  font-size: larger;
+  border-radius: 20px;
+}
+.card{
+  width: 200px;
+  height: 250px;
+  margin: 5px;
+  border-radius: 20px;
+  padding: 10px;
+}
+ul{
+  list-style: none;
+}
+.card:hover{
+  transform: scale(1.05);
+}
+.price {
+  font-size: 24px;
+  margin: 10px 0;
+}
+.basic{
+  border: 2px;
+  background-color: rgb(136, 220, 100);
+  box-shadow: 0 8px 20px
+}
+.featured{
+  border: 2px;
+  background-color: rgb(206, 79, 79);
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px
+}
+.premium{
+  background-color: bisque;
+  box-shadow: 0 8px 20px
+}
+.gallary{
+  display: grid;
+  grid-template-columns: repeat(autofit,minmax(250px,1fr));
+  gap: 15px;
+}
+.gallary {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .gallery {
+    grid-template-columns: repeat(3, 1fr);
+  }
+.gallary img{ 
+  width: 50%;
+  height: 250px;
+  object-fit:cover;
+  border-radius: 5px;
+
+}
+.gallary img:hover {
+  transform: scale(1.05);
+  filter: grayscale(50%);
+}
