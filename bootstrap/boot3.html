@@ -1,0 +1,637 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">🎓 Student Portal</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <!-- Register Button triggers Modal -->
+            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#registerModal">
+              Register
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Registration Modal -->
+  <div class="modal fade" id="registerModal" tabindex="-1" aria-labelledby="registerModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h5 class="modal-title" id="registerModalLabel">Student Registration Form</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+
+        <!-- Modal Body -->
+        <div class="modal-body">
+          <form>
+            <!-- Student Name -->
+            <div class="mb-3">
+              <label for="studentName" class="form-label">Student Name</label>
+              <input type="text" class="form-control" id="studentName" required>
+            </div>
+
+            <!-- Email -->
+            <div class="mb-3">
+              <label for="email" class="form-label">Email</label>
+              <input type="email" class="form-control" id="email" required>
+            </div>
+
+            <!-- Password -->
+            <div class="mb-3">
+              <label for="password" class="form-label">Password</label>
+              <input type="password" class="form-control" id="password" required>
+            </div>
+
+            <!-- Phone Number -->
+            <div class="mb-3">
+              <label for="phone" class="form-label">Phone Number</label>
+              <input type="tel" class="form-control" id="phone" required>
+            </div>
+
+            <!-- Gender -->
+            <div class="mb-3">
+              <label class="form-label">Gender</label><br>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="gender" id="male" value="Male">
+                <label class="form-check-label" for="male">Male</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="gender" id="female" value="Female">
+                <label class="form-check-label" for="female">Female</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="gender" id="other" value="Other">
+                <label class="form-check-label" for="other">Other</label>
+              </div>
+            </div>
+
+            <!-- Course Dropdown -->
+            <div class="mb-3">
+              <label for="course" class="form-label">Course</label>
+              <select class="form-select" id="course">
+                <option selected disabled>Choose a course</option>
+                <option value="bsc">B.Sc Computer Science</option>
+                <option value="bca">BCA</option>
+                <option value="msc">M.Sc Computer Science</option>
+                <option value="mba">MBA</option>
+              </select>
+            </div>
+
+            <!-- Skills Checkboxes -->
+            <div class="mb-3">
+              <label class="form-label">Skills</label><br>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="html" value="HTML">
+                <label class="form-check-label" for="html">HTML</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="css" value="CSS">
+                <label class="form-check-label" for="css">CSS</label>
+              </div>
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="bootstrap" value="Bootstrap">
+                <label class="form-check-label" for="bootstrap">Bootstrap</label>
+              </div>
+            </div>
+
+            <!-- Address -->
+            <div class="mb-3">
+              <label for="address" class="form-label">Address</label>
+              <textarea class="form-control" id="address" rows="3"></textarea>
+            </div>
+          </form>
+        </div>
+
+        <!-- Modal Footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-success">Register</button>
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+/* job application*/ 
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">💼 Job Portal</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <!-- Apply Now Button triggers Modal -->
+            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#applyModal">
+              Apply Now
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Application Modal -->
+  <div class="modal fade" id="applyModal" tabindex="-1" aria-labelledby="applyModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h5 class="modal-title" id="applyModalLabel">Online Job Application Form</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+
+        <!-- Modal Body -->
+        <div class="modal-body">
+          <form>
+            <div class="row">
+              <!-- Full Name -->
+              <div class="col-md-6 mb-3">
+                <label for="fullName" class="form-label">Full Name</label>
+                <input type="text" class="form-control" id="fullName" required>
+              </div>
+
+              <!-- Email -->
+              <div class="col-md-6 mb-3">
+                <label for="email" class="form-label">Email</label>
+                <input type="email" class="form-control" id="email" required>
+              </div>
+            </div>
+
+            <div class="row">
+              <!-- Phone Number -->
+              <div class="col-md-6 mb-3">
+                <label for="phone" class="form-label">Phone Number</label>
+                <input type="tel" class="form-control" id="phone" required>
+              </div>
+
+              <!-- Qualification -->
+              <div class="col-md-6 mb-3">
+                <label for="qualification" class="form-label">Qualification</label>
+                <input type="text" class="form-control" id="qualification" required>
+              </div>
+            </div>
+
+            <div class="row">
+              <!-- Experience -->
+              <div class="col-md-6 mb-3">
+                <label for="experience" class="form-label">Experience (in years)</label>
+                <input type="number" class="form-control" id="experience" min="0">
+              </div>
+
+              <!-- Skills -->
+              <div class="col-md-6 mb-3">
+                <label for="skills" class="form-label">Skills</label>
+                <input type="text" class="form-control" id="skills" placeholder="e.g. HTML, CSS, Bootstrap">
+              </div>
+            </div>
+
+            <!-- Resume Upload -->
+            <div class="mb-3">
+              <label for="resume" class="form-label">Upload Resume</label>
+              <input type="file" class="form-control" id="resume" accept=".pdf,.doc,.docx">
+            </div>
+
+            <!-- Cover Letter -->
+            <div class="mb-3">
+              <label for="coverLetter" class="form-label">Cover Letter</label>
+              <textarea class="form-control" id="coverLetter" rows="4"></textarea>
+            </div>
+          </form>
+        </div>
+
+        <!-- Modal Footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-success">Submit Application</button>
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancel</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+  /* online course enrollment*/  
+
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">📚 Course Portal</a>
+    </div>
+  </nav>
+
+  <!-- Courses Section -->
+  <div class="container my-5">
+    <h2 class="text-center mb-4">Available Courses</h2>
+    <div class="row g-4">
+
+      <!-- Course Card -->
+      <div class="col-md-3">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5 class="card-title">Web Development</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Duration: 3 Months</h6>
+            <p class="card-text">Learn HTML, CSS, JavaScript, and Bootstrap to build responsive websites.</p>
+            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#enrollModal" data-course="Web Development">Enroll Now</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Course Card -->
+      <div class="col-md-3">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5 class="card-title">Python Programming</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Duration: 2 Months</h6>
+            <p class="card-text">Master Python basics, data structures, and object-oriented programming.</p>
+            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#enrollModal" data-course="Python Programming">Enroll Now</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Course Card -->
+      <div class="col-md-3">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5 class="card-title">Data Science</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Duration: 4 Months</h6>
+            <p class="card-text">Learn data analysis, visualization, and machine learning techniques.</p>
+            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#enrollModal" data-course="Data Science">Enroll Now</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Course Card -->
+      <div class="col-md-3">
+        <div class="card h-100">
+          <div class="card-body">
+            <h5 class="card-title">Digital Marketing</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Duration: 2 Months</h6>
+            <p class="card-text">Understand SEO, social media marketing, and online advertising strategies.</p>
+            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#enrollModal" data-course="Digital Marketing">Enroll Now</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Enrollment Modal -->
+  <div class="modal fade" id="enrollModal" tabindex="-1" aria-labelledby="enrollModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h5 class="modal-title" id="enrollModalLabel">Course Enrollment Form</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+
+        <!-- Modal Body -->
+        <div class="modal-body">
+          <form>
+            <!-- Student Name -->
+            <div class="mb-3">
+              <label for="studentName" class="form-label">Student Name</label>
+              <input type="text" class="form-control" id="studentName" required>
+            </div>
+
+            <!-- Email -->
+            <div class="mb-3">
+              <label for="email" class="form-label">Email</label>
+              <input type="email" class="form-control" id="email" required>
+            </div>
+
+            <!-- Phone -->
+            <div class="mb-3">
+              <label for="phone" class="form-label">Phone</label>
+              <input type="tel" class="form-control" id="phone" required>
+            </div>
+
+            <!-- Course Name -->
+            <div class="mb-3">
+              <label for="courseName" class="form-label">Course Name</label>
+              <input type="text" class="form-control" id="courseName" readonly>
+            </div>
+
+            <!-- Learning Mode -->
+            <div class="mb-3">
+              <label class="form-label">Learning Mode</label><br>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="mode" id="online" value="Online">
+                <label class="form-check-label" for="online">Online</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="mode" id="offline" value="Offline">
+                <label class="form-check-label" for="offline">Offline</label>
+              </div>
+            </div>
+
+            <!-- Preferred Batch -->
+            <div class="mb-3">
+              <label for="batch" class="form-label">Preferred Batch</label>
+              <select class="form-select" id="batch">
+                <option selected disabled>Choose a batch</option>
+                <option value="morning">Morning</option>
+                <option value="afternoon">Afternoon</option>
+                <option value="evening">Evening</option>
+              </select>
+            </div>
+          </form>
+        </div>
+
+        <!-- Modal Footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-success">Enroll</button>
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  /* hospital appoinment*/ 
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">🏥 CityCare Hospital</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Doctors</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Departments</a></li>
+          <li class="nav-item"><a class="nav-link" href="#">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Doctors Section -->
+  <div class="container my-5">
+    <h2 class="text-center mb-4">Our Doctors</h2>
+    <div class="row g-4">
+
+      <!-- Doctor Card -->
+      <div class="col-md-3">
+        <div class="card h-100">
+          <div class="card-body text-center">
+            <h5 class="card-title">Dr. Meera Sharma</h5>
+            <p class="card-text">Cardiologist<br>Experience: 12 years</p>
+            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#appointmentModal" data-doctor="Dr. Meera Sharma">Book Appointment</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Doctor Card -->
+      <div class="col-md-3">
+        <div class="card h-100">
+          <div class="card-body text-center">
+            <h5 class="card-title">Dr. Rajesh Kumar</h5>
+            <p class="card-text">Neurologist<br>Experience: 10 years</p>
+            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#appointmentModal" data-doctor="Dr. Rajesh Kumar">Book Appointment</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Doctor Card -->
+      <div class="col-md-3">
+        <div class="card h-100">
+          <div class="card-body text-center">
+            <h5 class="card-title">Dr. Anita Rao</h5>
+            <p class="card-text">Pediatrician<br>Experience: 8 years</p>
+            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#appointmentModal" data-doctor="Dr. Anita Rao">Book Appointment</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Doctor Card -->
+      <div class="col-md-3">
+        <div class="card h-100">
+          <div class="card-body text-center">
+            <h5 class="card-title">Dr. Arjun Patel</h5>
+            <p class="card-text">Orthopedic Surgeon<br>Experience: 15 years</p>
+            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#appointmentModal" data-doctor="Dr. Arjun Patel">Book Appointment</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Appointment Modal -->
+  <div class="modal fade" id="appointmentModal" tabindex="-1" aria-labelledby="appointmentModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h5 class="modal-title" id="appointmentModalLabel">Book Appointment</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+
+        <!-- Modal Body -->
+        <div class="modal-body">
+          <form>
+            <!-- Patient Name -->
+            <div class="mb-3">
+              <label for="patientName" class="form-label">Patient Name</label>
+              <input type="text" class="form-control" id="patientName" required>
+            </div>
+
+            <!-- Email -->
+            <div class="mb-3">
+              <label for="email" class="form-label">Email</label>
+              <input type="email" class="form-control" id="email" required>
+            </div>
+
+            <!-- Phone -->
+            <div class="mb-3">
+              <label for="phone" class="form-label">Phone</label>
+              <input type="tel" class="form-control" id="phone" required>
+            </div>
+
+            <!-- Doctor Name -->
+            <div class="mb-3">
+              <label for="doctorName" class="form-label">Doctor Name</label>
+              <input type="text" class="form-control" id="doctorName" readonly>
+            </div>
+
+            <!-- Appointment Date -->
+            <div class="mb-3">
+              <label for="date" class="form-label">Appointment Date</label>
+              <input type="date" class="form-control" id="date" required>
+            </div>
+
+            <!-- Appointment Time -->
+            <div class="mb-3">
+              <label for="time" class="form-label">Appointment Time</label>
+              <input type="time" class="form-control" id="time" required>
+            </div>
+
+            <!-- Reason for Visit -->
+            <div class="mb-3">
+              <label for="reason" class="form-label">Reason for Visit</label>
+              <textarea class="form-control" id="reason" rows="3"></textarea>
+            </div>
+          </form>
+        </div>
+
+        <!-- Modal Footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-success">Book Appointment</button>
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+  /*customer feedback*/ 
+
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">⭐ Feedback Portal</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <!-- Feedback Button triggers Modal -->
+            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#feedbackModal">
+              Give Feedback
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Feedback Modal -->
+  <div class="modal fade" id="feedbackModal" tabindex="-1" aria-labelledby="feedbackModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h5 class="modal-title" id="feedbackModalLabel">Customer Feedback Form</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+        </div>
+
+        <!-- Modal Body -->
+        <div class="modal-body">
+          <form id="feedbackForm">
+            <!-- Customer Name -->
+            <div class="mb-3">
+              <label for="customerName" class="form-label">Customer Name</label>
+              <input type="text" class="form-control" id="customerName" required>
+            </div>
+
+            <!-- Email -->
+            <div class="mb-3">
+              <label for="email" class="form-label">Email</label>
+              <input type="email" class="form-control" id="email" required>
+            </div>
+
+            <!-- Rating -->
+            <div class="mb-3">
+              <label class="form-label">Rating</label><br>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="rating" id="rate1" value="1">
+                <label class="form-check-label" for="rate1">1</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="rating" id="rate2" value="2">
+                <label class="form-check-label" for="rate2">2</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="rating" id="rate3" value="3">
+                <label class="form-check-label" for="rate3">3</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="rating" id="rate4" value="4">
+                <label class="form-check-label" for="rate4">4</label>
+              </div>
+              <div class="form-check form-check-inline">
+                <input class="form-check-input" type="radio" name="rating" id="rate5" value="5">
+                <label class="form-check-label" for="rate5">5</label>
+              </div>
+            </div>
+
+            <!-- Service Type Dropdown -->
+            <div class="mb-3">
+              <label for="serviceType" class="form-label">Service Type</label>
+              <select class="form-select" id="serviceType">
+                <option selected disabled>Choose a service</option>
+                <option value="support">Customer Support</option>
+                <option value="delivery">Delivery Service</option>
+                <option value="product">Product Quality</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+
+            <!-- Feedback Textarea -->
+            <div class="mb-3">
+              <label for="feedback" class="form-label">Feedback</label>
+              <textarea class="form-control" id="feedback" rows="3" required></textarea>
+            </div>
+
+            <!-- Terms Checkbox -->
+            <div class="mb-3 form-check">
+              <input type="checkbox" class="form-check-input" id="terms" required>
+              <label class="form-check-label" for="terms">I agree to the terms and conditions</label>
+            </div>
+          </form>
+        </div>
+
+        <!-- Modal Footer -->
+        <div class="modal-footer">
+          <button type="submit" form="feedbackForm" class="btn btn-success">Submit Feedback</button>
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Success Alert -->
+  <div class="container mt-4" id="alertContainer" style="display:none;">
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+      ⭐ Thank you for your valuable feedback!
+      <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+    </div>
+  </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
