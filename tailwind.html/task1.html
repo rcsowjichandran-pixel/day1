@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Profile Page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+
+    <nav class="flex items-center justify-between bg-blue-600 p-4 shadow-md">
+    <h1 class="text-white text-xl font-bold">🎓 Student Name</h1>
+    <button class="text-white md:hidden">☰</button>
+    <ul class="hidden md:flex space-x-6 text-white">
+      <li><a href="#" class="hover:text-gray-200">Home</a></li>
+      <li><a href="#" class="hover:text-gray-200">Profile</a></li>
+      <li><a href="#" class="hover:text-gray-200">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Profile Card -->
+  <div class="flex justify-center mt-10 px-4">
+    <div class="bg-white rounded-lg shadow-lg p-6 max-w-md w-full md:max-w-lg lg:max-w-xl">
+      <!-- Photo -->
+      <div class="flex justify-center">
+        <img src="https://fontawesome.com/icons/classic/thin/user" alt="Student Photo" class="w-32 h-32 rounded-full shadow-md">
+      </div>
+
+      <!-- Name + Course -->
+      <div class="text-center mt-4">
+        <h2 class="text-2xl font-bold text-gray-800">John Doe</h2>
+        <p class="text-gray-600">B.Sc. Computer Science</p>
+      </div>
+
+      <!-- Description -->
+      <p class="text-gray-700 mt-4 text-center">
+        Passionate student learning web development and building responsive projects with HTML, CSS, and Tailwind.
+      </p>
+
+      <!-- Buttons -->
+      <div class="flex justify-center space-x-4 mt-6">
+        <button class="bg-blue-500 text-white px-4 py-2 rounded-md shadow hover:bg-blue-600">
+          Edit Profile
+        </button>
+        <button class="bg-green-500 text-white px-4 py-2 rounded-md shadow hover:bg-green-600">
+          Contact
+        </button>
+      </div>
+    </div>
+  </div>
+    
+</body>
+</html>

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Online Course Landing Page</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+  
+  <nav class="flex items-center justify-between bg-blue-600 p-4 shadow-md sticky top-0 z-50">
+    <h1 class="text-white text-xl font-bold">🎓 EduLearn</h1>
+    <button class="text-white md:hidden onclick="toggleMenu()">☰</button>
+    <ul id="navLinks" class="hidden md:flex space-x-6 text-white">
+      <li><a href="#" class="hover:text-gray-200">Home</a></li>
+      <li><a href="#courses" class="hover:text-gray-200">Courses</a></li>
+      <li><a href="#trainers" class="hover:text-gray-200">Trainers</a></li>
+      <li><a href="#contact" class="hover:text-gray-200">Contact</a></li>
+    </ul>
+    
+  </nav>
+  <section class="flex flex-col items-center text-center py-16 bg-gradient-to-r from-blue-500 to-purple-600 text-white">
+    <h2 class="text-4xl font-bold">Learn Full Stack Development</h2>
+    <p class="mt-4 max-w-xl">Master HTML, CSS, JavaScript, React, Node.js, and more with our expert trainers.</p>
+    <button class="mt-6 bg-white text-blue-600 px-6 py-2 rounded-md shadow hover:bg-gray-200">
+      Enroll Now
+    </button>
+  </section>
+
+  <section id="courses" class="container mx-auto py-12 px-4">
+    <h3 class="text-2xl font-bold mb-6 text-center">Our Courses</h3>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+
+
+      <div class="bg-white rounded-lg shadow-md p-4 hover:shadow-xl transition">
+        <h4 class="text-lg font-bold text-blue-600">Frontend Development</h4>
+        <p class="text-gray-600 mt-2">Learn HTML, CSS, JavaScript, and React.</p>
+        <p class="text-gray-700 mt-2">Duration: 3 Months</p>
+        <p class="text-green-600 font-semibold mt-2">₹5000</p>
+        <button class="mt-4 w-full bg-blue-500 text-white py-2 rounded-md shadow hover:bg-blue-600">
+          Enroll
+        </button>
+      </div>
+
+      <div class="bg-white rounded-lg shadow-md p-4 hover:shadow-xl transition">
+        <h4 class="text-lg font-bold text-purple-600">Backend Development</h4>
+        <p class="text-gray-600 mt-2">Master Node.js, Express, and MongoDB.</p>
+        <p class="text-gray-700 mt-2">Duration: 4 Months</p>
+        <p class="text-green-600 font-semibold mt-2">₹6000</p>
+        <button class="mt-4 w-full bg-purple-500 text-white py-2 rounded-md shadow hover:bg-purple-600">
+          Enroll
+        </button>
+      </div>
+
+      <div class="bg-white rounded-lg shadow-md p-4 hover:shadow-xl transition">
+        <h4 class="text-lg font-bold text-red-600">Full Stack Development</h4>
+        <p class="text-gray-600 mt-2">Combine frontend and backend skills.</p>
+        <p class="text-gray-700 mt-2">Duration: 6 Months</p>
+        <p class="text-green-600 font-semibold mt-2">₹9000</p>
+        <button class="mt-4 w-full bg-red-500 text-white py-2 rounded-md shadow hover:bg-red-600">
+          Enroll
+        </button>
+      </div>
+
+      <div class="bg-white rounded-lg shadow-md p-4 hover:shadow-xl transition">
+        <h4 class="text-lg font-bold text-green-600">UI/UX Design</h4>
+        <p class="text-gray-600 mt-2">Learn design principles and Figma.</p>
+        <p class="text-gray-700 mt-2">Duration: 2 Months</p>
+        <p class="text-green-600 font-semibold mt-2">₹4000</p>
+        <button class="mt-4 w-full bg-green-500 text-white py-2 rounded-md shadow hover:bg-green-600">
+          Enroll
+        </button>
+      </div>
+
+    </div>
+  </section>
+
+  
+  <section class="bg-gray-200 py-12 px-4">
+    <h3 class="text-2xl font-bold mb-6 text-center">Why Choose Us?</h3>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 text-center">
+      <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition">
+        <h4 class="text-lg font-bold text-blue-600">Expert Trainers</h4>
+        <p class="text-gray-600 mt-2">Learn from industry professionals with years of experience.</p>
+      </div>
+      <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition">
+        <h4 class="text-lg font-bold text-purple-600">Flexible Learning</h4>
+        <p class="text-gray-600 mt-2">Choose online or offline modes to suit your schedule.</p>
+      </div>
+      <div class="bg-white rounded-lg shadow-md p-6 hover:shadow-lg transition">
+        <h4 class="text-lg font-bold text-green-600">Affordable Pricing</h4>
+        <p class="text-gray-600 mt-2">Get high-quality education at reasonable prices.</p>
+      </div>
+    </div>
+  </section>
+
+  
+  <section id="contact" class="container mx-auto py-12 px-4">
+    <h3 class="text-2xl font-bold mb-6 text-center">Contact Us</h3>
+    <p class="text-center text-gray-700">📧 Email: <a href="mailto:info@edulearn.com" class="text-blue-600 hover:underline">info@edulearn.com</a></p>
+    <p class="text-center text-gray-700 mt-2">📞 Phone: +91 98765 43210</p>
+  </section>
+
+ 
+  <footer class="bg-blue-600 text-white text-center py-4 mt-8">
+    <p>&copy; 2026 EduLearn. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>

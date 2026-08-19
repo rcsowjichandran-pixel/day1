@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Personal Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 text-gray-800">
+
+  <!-- Navbar -->
+  <nav class="flex items-center justify-between bg-blue-600 p-4 shadow-md">
+    <h1 class="text-white text-xl font-bold">🌟 My Portfolio</h1>
+    <ul class="hidden md:flex space-x-6 text-white">
+      <li><a href="#about" class="hover:text-gray-200">About</a></li>
+      <li><a href="#skills" class="hover:text-gray-200">Skills</a></li>
+      <li><a href="#projects" class="hover:text-gray-200">Projects</a></li>
+      <li><a href="#contact" class="hover:text-gray-200">Contact</a></li>
+    </ul>
+    <button class="text-white md:hidden">☰</button>
+  </nav>
+
+
+  <section class="flex flex-col items-center text-center py-16 bg-gradient-to-r from-blue-500 to-purple-600 text-white">
+    <img src="" alt="Profile Picture" class="w-32 h-32 rounded-full border-4 border-white shadow-lg">
+    <h2 class="text-4xl font-bold">Sowjanya</h2>
+    <p class="text-xl mt-2">Beginner Web Developer</p>
+    <p class="mt-4 max-w-xl">I am passionate about building responsive websites using HTML, CSS, Bootstrap, and Tailwind CSS.</p>
+    <button class="mt-6 bg-white text-blue-600 px-6 py-2 rounded-md shadow hover:bg-gray-200">
+      Download CV
+    </button>
+  </section>
+
+  <!-- About Me -->
+  <section id="about" class="container mx-auto py-12 px-4">
+    <h3 class="text-2xl font-bold mb-4">About Me</h3>
+    <p class="text-gray-700 leading-relaxed">
+      I am learning modern web development and enjoy creating small projects to strengthen my skills. My focus is on building clean, responsive, and user-friendly designs.
+    </p>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="container mx-auto py-12 px-4">
+    <h3 class="text-2xl font-bold mb-6">Skills</h3>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="bg-white rounded-lg shadow-md p-6 text-center hover:shadow-lg transition">
+        <h4 class="text-lg font-bold text-blue-600">HTML</h4>
+        <p class="text-gray-600 mt-2">Semantic structure and accessibility.</p>
+      </div>
+      <div class="bg-white rounded-lg shadow-md p-6 text-center hover:shadow-lg transition">
+        <h4 class="text-lg font-bold text-green-600">CSS</h4>
+        <p class="text-gray-600 mt-2">Flexbox, Grid, and responsive layouts.</p>
+      </div>
+      <div class="bg-white rounded-lg shadow-md p-6 text-center hover:shadow-lg transition">
+        <h4 class="text-lg font-bold text-purple-600">Bootstrap</h4>
+        <p class="text-gray-600 mt-2">UI components and responsive design.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="container mx-auto py-12 px-4">
+    <h3 class="text-2xl font-bold mb-6">Projects</h3>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div class="bg-white rounded-lg shadow-md p-4 hover:shadow-lg transition">
+        <img src="project1.jpg" alt="Project 1" class="w-full h-40 object-cover rounded-md">
+        <h4 class="text-lg font-bold mt-4">Portfolio Website</h4>
+        <p class="text-gray-600">A responsive personal portfolio built with HTML and CSS.</p>
+      </div>
+      <div class="bg-white rounded-lg shadow-md p-4 hover:shadow-lg transition">
+        <img src="project2.jpg" alt="Project 2" class="w-full h-40 object-cover rounded-md">
+        <h4 class="text-lg font-bold mt-4">Student Portal</h4>
+        <p class="text-gray-600">A Bootstrap-based student registration portal.</p>
+      </div>
+      <div class="bg-white rounded-lg shadow-md p-4 hover:shadow-lg transition">
+        <img src="project3.jpg" alt="Project 3" class="w-full h-40 object-cover rounded-md">
+        <h4 class="text-lg font-bold mt-4">Food Menu Page</h4>
+        <p class="text-gray-600">A Tailwind CSS food menu with responsive grid.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="container mx-auto py-12 px-4">
+    <h3 class="text-2xl font-bold mb-6">Contact</h3>
+    <p class="text-gray-700">Feel free to reach out for collaboration or project discussions.</p>
+    <p class="mt-2">📧 Email: <a href="mailto:sowjichandran@gmail.com" class="text-blue-600 hover:underline">sowjichandran@gmail.com</a></p>
+  </section>
+
+  
+  <footer class="bg-blue-600 text-white text-center py-4 mt-8">
+    <p>&copy; 2026 Sowjanya. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
