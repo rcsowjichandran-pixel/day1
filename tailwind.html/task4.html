@@ -1,96 +1,230 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Personal Portfolio</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Sowjanya Chandran | Portfolio</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  body { font-family: 'Inter', sans-serif; }
+  h1, h2, h3, .font-display { font-family: 'Sora', sans-serif; }
+</style>
 </head>
-<body class="bg-gray-100 text-gray-800">
+<body class="bg-white text-neutral-800">
 
-  <!-- Navbar -->
-  <nav class="flex items-center justify-between bg-blue-600 p-4 shadow-md">
-    <h1 class="text-white text-xl font-bold">🌟 My Portfolio</h1>
-    <ul class="hidden md:flex space-x-6 text-white">
-      <li><a href="#about" class="hover:text-gray-200">About</a></li>
-      <li><a href="#skills" class="hover:text-gray-200">Skills</a></li>
-      <li><a href="#projects" class="hover:text-gray-200">Projects</a></li>
-      <li><a href="#contact" class="hover:text-gray-200">Contact</a></li>
-    </ul>
-    <button class="text-white md:hidden">☰</button>
+  <!-- NAVBAR -->
+  <nav class="bg-white/90 backdrop-blur border-b border-neutral-200 sticky top-0 z-50">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between py-4">
+        <span class="font-display text-xl font-bold text-neutral-900">
+          Maya<span class="text-violet-600">.</span>
+        </span>
+        <ul class="flex flex-col sm:flex-row gap-2 sm:gap-8 mt-3 sm:mt-0 text-sm font-medium text-neutral-600">
+          <li><a href="#home" class="block py-1 sm:py-0 hover:text-violet-600 transition-colors duration-200">Home</a></li>
+          <li><a href="#about" class="block py-1 sm:py-0 hover:text-violet-600 transition-colors duration-200">About</a></li>
+          <li><a href="#skills" class="block py-1 sm:py-0 hover:text-violet-600 transition-colors duration-200">Skills</a></li>
+          <li><a href="#projects" class="block py-1 sm:py-0 hover:text-violet-600 transition-colors duration-200">Projects</a></li>
+          <li><a href="#contact" class="block py-1 sm:py-0 hover:text-violet-600 transition-colors duration-200">Contact</a></li>
+        </ul>
+      </div>
+    </div>
   </nav>
 
-
-  <section class="flex flex-col items-center text-center py-16 bg-gradient-to-r from-blue-500 to-purple-600 text-white">
-    <img src="" alt="Profile Picture" class="w-32 h-32 rounded-full border-4 border-white shadow-lg">
-    <h2 class="text-4xl font-bold">Sowjanya</h2>
-    <p class="text-xl mt-2">Beginner Web Developer</p>
-    <p class="mt-4 max-w-xl">I am passionate about building responsive websites using HTML, CSS, Bootstrap, and Tailwind CSS.</p>
-    <button class="mt-6 bg-white text-blue-600 px-6 py-2 rounded-md shadow hover:bg-gray-200">
-      Download CV
-    </button>
-  </section>
-
-  <!-- About Me -->
-  <section id="about" class="container mx-auto py-12 px-4">
-    <h3 class="text-2xl font-bold mb-4">About Me</h3>
-    <p class="text-gray-700 leading-relaxed">
-      I am learning modern web development and enjoy creating small projects to strengthen my skills. My focus is on building clean, responsive, and user-friendly designs.
-    </p>
-  </section>
-
-  <!-- Skills Section -->
-  <section id="skills" class="container mx-auto py-12 px-4">
-    <h3 class="text-2xl font-bold mb-6">Skills</h3>
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-      <div class="bg-white rounded-lg shadow-md p-6 text-center hover:shadow-lg transition">
-        <h4 class="text-lg font-bold text-blue-600">HTML</h4>
-        <p class="text-gray-600 mt-2">Semantic structure and accessibility.</p>
+  <!-- HERO -->
+  <header id="home" class="bg-gradient-to-b from-violet-50 to-white">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 py-16 md:py-24 text-center">
+      <p class="text-violet-600 font-semibold text-sm sm:text-base tracking-wide uppercase">Welcome to my portfolio</p>
+      <h1 class="font-display text-3xl sm:text-5xl lg:text-6xl font-extrabold text-neutral-900 mt-3 leading-tight">
+        Hi, Sowjanya Chandran
+      </h1>
+      <h2 class="text-lg sm:text-2xl lg:text-3xl font-semibold text-neutral-500 mt-3">
+        AI Python FullstackDeveloper
+      </h2>
+      <p class="text-sm sm:text-base text-neutral-500 mt-5 max-w-xl mx-auto">
+        I design and build clean, user-centered digital products — turning complex problems
+        into simple, elegant interfaces that people love to use.
+      </p>
+      <div class="mt-8 flex flex-col sm:flex-row justify-center gap-3">
+        <a href="#" class="bg-violet-600 text-white font-semibold px-6 py-3 rounded-lg shadow-md hover:bg-violet-700 hover:scale-105 active:scale-95 transition-all duration-200">
+          📄 Download CV
+        </a>
+        <a href="#projects" class="bg-white text-violet-600 font-semibold px-6 py-3 rounded-lg border-2 border-violet-600 hover:bg-violet-50 hover:scale-105 active:scale-95 transition-all duration-200">
+          View Projects
+        </a>
       </div>
-      <div class="bg-white rounded-lg shadow-md p-6 text-center hover:shadow-lg transition">
-        <h4 class="text-lg font-bold text-green-600">CSS</h4>
-        <p class="text-gray-600 mt-2">Flexbox, Grid, and responsive layouts.</p>
-      </div>
-      <div class="bg-white rounded-lg shadow-md p-6 text-center hover:shadow-lg transition">
-        <h4 class="text-lg font-bold text-purple-600">Bootstrap</h4>
-        <p class="text-gray-600 mt-2">UI components and responsive design.</p>
+    </div>
+  </header>
+
+  <!-- ABOUT ME -->
+  <section id="about" class="max-w-6xl mx-auto px-4 sm:px-6 py-14 md:py-20">
+    <div class="flex flex-col md:flex-row items-center gap-8 md:gap-14">
+      <img
+        src="https://images.unsplash.com/photo-1580489944761-15a19d654956?w=500&h=500&fit=crop&crop=faces"
+        alt="Sowjanya chandran"
+        class="w-40 h-40 sm:w-56 sm:h-56 rounded-2xl object-cover shadow-lg border-4 border-violet-100 flex-shrink-0"
+      />
+      <div class="flex-1 text-center md:text-left">
+        <h2 class="text-2xl sm:text-3xl font-bold text-neutral-900 font-display">About Me</h2>
+        <p class="text-sm sm:text-base text-neutral-500 mt-4 leading-relaxed">
+          I'm a designer-developer hybrid with 5+ years of experience crafting digital products
+          for startups and agencies. I care deeply about accessibility, performance, and design
+          systems that scale. When I'm not designing, you'll find me sketching, hiking, or
+          experimenting with new front-end frameworks.
+        </p>
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 mt-6">
+          <div class="text-center p-3 rounded-xl bg-violet-50">
+            <p class="text-xl sm:text-2xl font-bold text-violet-600">5+</p>
+            <p class="text-xs text-neutral-500 mt-1">Years Exp.</p>
+          </div>
+          <div class="text-center p-3 rounded-xl bg-violet-50">
+            <p class="text-xl sm:text-2xl font-bold text-violet-600">40+</p>
+            <p class="text-xs text-neutral-500 mt-1">Projects</p>
+          </div>
+          <div class="text-center p-3 rounded-xl bg-violet-50">
+            <p class="text-xl sm:text-2xl font-bold text-violet-600">15+</p>
+            <p class="text-xs text-neutral-500 mt-1">Clients</p>
+          </div>
+          <div class="text-center p-3 rounded-xl bg-violet-50">
+            <p class="text-xl sm:text-2xl font-bold text-violet-600">3</p>
+            <p class="text-xs text-neutral-500 mt-1">Awards</p>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- Projects Section -->
-  <section id="projects" class="container mx-auto py-12 px-4">
-    <h3 class="text-2xl font-bold mb-6">Projects</h3>
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-      <div class="bg-white rounded-lg shadow-md p-4 hover:shadow-lg transition">
-        <img src="project1.jpg" alt="Project 1" class="w-full h-40 object-cover rounded-md">
-        <h4 class="text-lg font-bold mt-4">Portfolio Website</h4>
-        <p class="text-gray-600">A responsive personal portfolio built with HTML and CSS.</p>
-      </div>
-      <div class="bg-white rounded-lg shadow-md p-4 hover:shadow-lg transition">
-        <img src="project2.jpg" alt="Project 2" class="w-full h-40 object-cover rounded-md">
-        <h4 class="text-lg font-bold mt-4">Student Portal</h4>
-        <p class="text-gray-600">A Bootstrap-based student registration portal.</p>
-      </div>
-      <div class="bg-white rounded-lg shadow-md p-4 hover:shadow-lg transition">
-        <img src="project3.jpg" alt="Project 3" class="w-full h-40 object-cover rounded-md">
-        <h4 class="text-lg font-bold mt-4">Food Menu Page</h4>
-        <p class="text-gray-600">A Tailwind CSS food menu with responsive grid.</p>
+  <!-- SKILLS -->
+  <section id="skills" class="bg-neutral-50 py-14 md:py-20">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <h2 class="text-2xl sm:text-3xl font-bold text-neutral-900 font-display text-center">Skills</h2>
+      <p class="text-neutral-500 text-center mt-2 text-sm sm:text-base">Tools & technologies I use daily</p>
+
+      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6 mt-10">
+        <div class="bg-white rounded-xl shadow-sm border border-neutral-200 p-5 text-center hover:shadow-md hover:border-violet-300 hover:-translate-y-1 transition-all duration-200">
+          <div class="text-3xl mb-2">🎨</div>
+          <h3 class="font-semibold text-sm">HTML</h3>
+        </div>
+        <div class="bg-white rounded-xl shadow-sm border border-neutral-200 p-5 text-center hover:shadow-md hover:border-violet-300 hover:-translate-y-1 transition-all duration-200">
+          <div class="text-3xl mb-2">⚛️</div>
+          <h3 class="font-semibold text-sm">CSS</h3>
+        </div>
+        <div class="bg-white rounded-xl shadow-sm border border-neutral-200 p-5 text-center hover:shadow-md hover:border-violet-300 hover:-translate-y-1 transition-all duration-200">
+          <div class="text-3xl mb-2">💨</div>
+          <h3 class="font-semibold text-sm">Tailwind CSS</h3>
+        </div>
+        <div class="bg-white rounded-xl shadow-sm border border-neutral-200 p-5 text-center hover:shadow-md hover:border-violet-300 hover:-translate-y-1 transition-all duration-200">
+          <div class="text-3xl mb-2">📜</div>
+          <h3 class="font-semibold text-sm">JavaScript</h3>
+        </div>
+        <div class="bg-white rounded-xl shadow-sm border border-neutral-200 p-5 text-center hover:shadow-md hover:border-violet-300 hover:-translate-y-1 transition-all duration-200">
+          <div class="text-3xl mb-2">🧩</div>
+          <h3 class="font-semibold text-sm">Bootstrap</h3>
+        </div>
+        <div class="bg-white rounded-xl shadow-sm border border-neutral-200 p-5 text-center hover:shadow-md hover:border-violet-300 hover:-translate-y-1 transition-all duration-200">
+          <div class="text-3xl mb-2">🔧</div>
+          <h3 class="font-semibold text-sm">Git & GitHub</h3>
+        </div>
+        <div class="bg-white rounded-xl shadow-sm border border-neutral-200 p-5 text-center hover:shadow-md hover:border-violet-300 hover:-translate-y-1 transition-all duration-200">
+          <div class="text-3xl mb-2">📱</div>
+          <h3 class="font-semibold text-sm">Responsive Design</h3>
+        </div>
       </div>
     </div>
-  </section>
-
-  <!-- Contact Section -->
-  <section id="contact" class="container mx-auto py-12 px-4">
-    <h3 class="text-2xl font-bold mb-6">Contact</h3>
-    <p class="text-gray-700">Feel free to reach out for collaboration or project discussions.</p>
-    <p class="mt-2">📧 Email: <a href="mailto:sowjichandran@gmail.com" class="text-blue-600 hover:underline">sowjichandran@gmail.com</a></p>
   </section>
 
   
-  <footer class="bg-blue-600 text-white text-center py-4 mt-8">
-    <p>&copy; 2026 Sowjanya. All rights reserved.</p>
-  </footer>
+  <section id="projects" class="max-w-6xl mx-auto px-4 sm:px-6 py-14 md:py-20">
+    <h2 class="text-2xl sm:text-3xl font-bold text-neutral-900 font-display text-center">Projects</h2>
+    <p class="text-neutral-500 text-center mt-2 text-sm sm:text-base">A selection of recent work</p>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mt-10">
+
+      <div class="bg-white rounded-2xl shadow-md border border-neutral-100 overflow-hidden flex flex-col hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+        <img src="https://images.unsplash.com/photo-1559028006-448665bd7c7f?w=500&h=350&fit=crop" alt="Finance App Redesign" class="w-full h-44 object-cover" />
+        <div class="p-5 flex flex-col flex-1">
+          <h3 class="text-lg font-semibold text-neutral-900">Finance App Redesign</h3>
+          <p class="text-sm text-neutral-500 mt-2 flex-1">A complete UX overhaul of a personal finance app, improving onboarding conversion by 34%.</p>
+          <div class="flex flex-wrap gap-2 mt-3">
+            <span class="text-xs bg-violet-50 text-violet-600 px-2 py-1 rounded-full">Figma</span>
+            <span class="text-xs bg-violet-50 text-violet-600 px-2 py-1 rounded-full">UX Research</span>
+          </div>
+          <a href="#" class="mt-4 text-center bg-violet-600 text-white font-medium py-2 rounded-lg hover:bg-violet-700 hover:scale-105 active:scale-95 transition-all duration-200">
+            View Case Study
+          </a>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-2xl shadow-md border border-neutral-100 overflow-hidden flex flex-col hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+        <img src="https://images.unsplash.com/photo-1547658719-da2b51169166?w=500&h=350&fit=crop" alt="E-Learning Platform" class="w-full h-44 object-cover" />
+        <div class="p-5 flex flex-col flex-1">
+          <h3 class="text-lg font-semibold text-neutral-900">E-Learning Platform</h3>
+          <p class="text-sm text-neutral-500 mt-2 flex-1">Built a responsive learning dashboard with course tracking, quizzes, and progress analytics.</p>
+          <div class="flex flex-wrap gap-2 mt-3">
+            <span class="text-xs bg-violet-50 text-violet-600 px-2 py-1 rounded-full">React</span>
+            <span class="text-xs bg-violet-50 text-violet-600 px-2 py-1 rounded-full">Tailwind</span>
+          </div>
+          <a href="#" class="mt-4 text-center bg-violet-600 text-white font-medium py-2 rounded-lg hover:bg-violet-700 hover:scale-105 active:scale-95 transition-all duration-200">
+            View Case Study
+          </a>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-2xl shadow-md border border-neutral-100 overflow-hidden flex flex-col hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=500&h=350&fit=crop" alt="Design System" class="w-full h-44 object-cover" />
+        <div class="p-5 flex flex-col flex-1">
+          <h3 class="text-lg font-semibold text-neutral-900">Component Design System</h3>
+          <p class="text-sm text-neutral-500 mt-2 flex-1">Created a reusable design system and component library adopted across 6 product teams.</p>
+          <div class="flex flex-wrap gap-2 mt-3">
+            <span class="text-xs bg-violet-50 text-violet-600 px-2 py-1 rounded-full">Figma</span>
+            <span class="text-xs bg-violet-50 text-violet-600 px-2 py-1 rounded-full">Storybook</span>
+          </div>
+          <a href="#" class="mt-4 text-center bg-violet-600 text-white font-medium py-2 rounded-lg hover:bg-violet-700 hover:scale-105 active:scale-95 transition-all duration-200">
+            View Case Study
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="bg-neutral-900 text-neutral-100 py-14 md:py-20">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 text-center">
+      <h2 class="text-2xl sm:text-3xl font-bold font-display">Let's Work Together</h2>
+      <p class="text-neutral-400 mt-3 text-sm sm:text-base">
+        Have a project in mind? I'd love to hear about it — drop me a message below.
+      </p>
+
+      <form class="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-4 text-left">
+        <div class="sm:col-span-1">
+          <label class="text-xs text-neutral-400">Name</label>
+          <input type="text" placeholder="Your name" class="w-full mt-1 px-4 py-2.5 rounded-lg bg-neutral-800 border border-neutral-700 text-sm focus:outline-none focus:border-violet-500 transition-colors duration-200" />
+        </div>
+        <div class="sm:col-span-1">
+          <label class="text-xs text-neutral-400">Email</label>
+          <input type="email" placeholder="you@example.com" class="w-full mt-1 px-4 py-2.5 rounded-lg bg-neutral-800 border border-neutral-700 text-sm focus:outline-none focus:border-violet-500 transition-colors duration-200" />
+        </div>
+        <div class="sm:col-span-2">
+          <label class="text-xs text-neutral-400">Message</label>
+          <textarea rows="4" placeholder="Tell me about your project..." class="w-full mt-1 px-4 py-2.5 rounded-lg bg-neutral-800 border border-neutral-700 text-sm focus:outline-none focus:border-violet-500 transition-colors duration-200"></textarea>
+        </div>
+        <div class="sm:col-span-2 text-center">
+          <button type="button" class="bg-violet-600 text-white font-semibold px-8 py-3 rounded-lg hover:bg-violet-700 hover:scale-105 active:scale-95 transition-all duration-200">
+            Send Message
+          </button>
+        </div>
+      </form>
+
+      <div class="flex justify-center gap-6 mt-10 text-sm text-neutral-400">
+        <a href="#" class="hover:text-violet-400 transition-colors duration-200">GitHub</a>
+        <a href="#" class="hover:text-violet-400 transition-colors duration-200">LinkedIn</a>
+        <a href="#" class="hover:text-violet-400 transition-colors duration-200">Dribbble</a>
+      </div>
+      <p class="text-neutral-600 text-xs mt-8">&copy; 2026 Maya Chen. All rights reserved.</p>
+    </div>
+  </section>
 
 </body>
 </html>

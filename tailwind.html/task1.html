@@ -1,53 +1,98 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Student Profile Page</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Priya Sharma | Student Profile</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  body { font-family: 'Poppins', sans-serif; }
+</style>
 </head>
-<body class="bg-gray-100">
+<body class="bg-emerald-50 text-gray-800 min-h-screen">
 
-    <nav class="flex items-center justify-between bg-blue-600 p-4 shadow-md">
-    <h1 class="text-white text-xl font-bold">🎓 Student Name</h1>
-    <button class="text-white md:hidden">☰</button>
-    <ul class="hidden md:flex space-x-6 text-white">
-      <li><a href="#" class="hover:text-gray-200">Home</a></li>
-      <li><a href="#" class="hover:text-gray-200">Profile</a></li>
-      <li><a href="#" class="hover:text-gray-200">Contact</a></li>
-    </ul>
-  </nav>
-
-  <!-- Profile Card -->
-  <div class="flex justify-center mt-10 px-4">
-    <div class="bg-white rounded-lg shadow-lg p-6 max-w-md w-full md:max-w-lg lg:max-w-xl">
-      <!-- Photo -->
-      <div class="flex justify-center">
-        <img src="https://fontawesome.com/icons/classic/thin/user" alt="Student Photo" class="w-32 h-32 rounded-full shadow-md">
-      </div>
-
-      <!-- Name + Course -->
-      <div class="text-center mt-4">
-        <h2 class="text-2xl font-bold text-gray-800">John Doe</h2>
-        <p class="text-gray-600">B.Sc. Computer Science</p>
-      </div>
-
-      <!-- Description -->
-      <p class="text-gray-700 mt-4 text-center">
-        Passionate student learning web development and building responsive projects with HTML, CSS, and Tailwind.
-      </p>
-
-      <!-- Buttons -->
-      <div class="flex justify-center space-x-4 mt-6">
-        <button class="bg-blue-500 text-white px-4 py-2 rounded-md shadow hover:bg-blue-600">
-          Edit Profile
-        </button>
-        <button class="bg-green-500 text-white px-4 py-2 rounded-md shadow hover:bg-green-600">
-          Contact
-        </button>
+  
+  <nav class="bg-white shadow-md sticky top-0 z-50">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6">
+      <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between py-4">
+        <span class="flex items-center gap-2 text-xl font-bold text-emerald-600">
+          🎓 Priya Sharma
+        </span>
+        <ul class="flex flex-col sm:flex-row gap-2 sm:gap-8 mt-3 sm:mt-0 text-sm font-medium text-gray-600">
+          <li><a href="#profile" class="block py-1 sm:py-0 hover:text-emerald-600 transition-colors duration-200">Profile</a></li>
+          <li><a href="#academics" class="block py-1 sm:py-0 hover:text-emerald-600 transition-colors duration-200">Academics</a></li>
+          <li><a href="#contact" class="block py-1 sm:py-0 hover:text-emerald-600 transition-colors duration-200">Contact</a></li>
+        </ul>
       </div>
     </div>
-  </div>
+  </nav>
+
+  
+  <main id="profile" class="max-w-5xl mx-auto px-4 sm:px-6 py-10 md:py-16">
+
+    <div class="bg-white rounded-2xl shadow-lg p-6 md:p-10 flex flex-col md:flex-row items-center md:items-start gap-6 md:gap-10">
+      <!-- Photo -->
+      <img
+        src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=400&h=400&fit=crop&crop=faces"
+        alt="Priya Sharma"
+        class="w-32 h-32 md:w-44 md:h-44 lg:w-52 lg:h-52 rounded-full object-cover border-4 border-emerald-400 shadow-md flex-shrink-0"
+      />
+
+      <!-- Info -->
+      <div class="flex-1 text-center md:text-left">
+        <h1 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-gray-900">Priya Sharma</h1>
+        <p class="text-emerald-600 font-semibold text-base sm:text-lg mt-1">
+          M.Sc in Information Techniology-2012 Passed Out. 
+        </p>
+        <p class="text-sm sm:text-base text-gray-500 mt-4 max-w-2xl">
+          Passionate computer science student with a keen interest in web development and
+          machine learning. Active member of the college coding club, enjoys building side
+          projects and participating in hackathons.
+        </p>
+
+        
+        <div class="flex flex-wrap justify-center md:justify-start gap-3 mt-5 text-xs sm:text-sm">
+          <span class="bg-emerald-50 text-emerald-700 px-3 py-1 rounded-full font-medium">📍 Chennai, India</span>
+          <span class="bg-emerald-50 text-emerald-700 px-3 py-1 rounded-full font-medium">🎂 Roll No: CS21045</span>
+          <span class="bg-emerald-50 text-emerald-700 px-3 py-1 rounded-full font-medium">⭐ CGPA: 8.7</span>
+        </div>
+
+        
+        <div class="flex flex-col sm:flex-row justify-center md:justify-start gap-3 mt-6">
+          <button class="bg-emerald-600 text-white font-medium px-6 py-2.5 rounded-lg shadow-md hover:bg-emerald-700 hover:scale-105 active:scale-95 transition-all duration-200">
+            Edit Profile
+          </button>
+          <button class="bg-white text-emerald-600 font-medium px-6 py-2.5 rounded-lg border-2 border-emerald-600 hover:bg-emerald-50 hover:scale-105 active:scale-95 transition-all duration-200">
+            Contact
+          </button>
+        </div>
+      </div>
+    </div>
+
     
+    <div id="academics" class="grid grid-cols-1 sm:grid-cols-3 gap-4 md:gap-6 mt-8">
+      <div class="bg-white rounded-xl shadow-md p-5 text-center hover:shadow-lg transition-shadow duration-200">
+        <p class="text-2xl font-bold text-emerald-600">2</p>
+        <p class="text-sm text-gray-500 mt-1">Course In Progress</p>
+      </div>
+      <div class="bg-white rounded-xl shadow-md p-5 text-center hover:shadow-lg transition-shadow duration-200">
+        <p class="text-2xl font-bold text-emerald-600">4</p>
+        <p class="text-sm text-gray-500 mt-1">Projects Built</p>
+      </div>
+      <div class="bg-white rounded-xl shadow-md p-5 text-center hover:shadow-lg transition-shadow duration-200">
+        <p class="text-2xl font-bold text-emerald-600">3</p>
+        <p class="text-sm text-gray-500 mt-1">Hackathons Attended</p>
+      </div>
+    </div>
+
+  </main>
+
+  
+  <footer id="contact" class="bg-emerald-700 text-emerald-50 text-center py-6 px-4 text-sm mt-10">
+    <p>priya.sharma@student.edu &nbsp;|&nbsp; &copy; 2026 Student Portal</p>
+  </footer>
+
 </body>
 </html>

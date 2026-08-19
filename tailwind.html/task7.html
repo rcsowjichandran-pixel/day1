@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Sowjanya Chandran | Portfolio</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  body { font-family: 'Poppins', sans-serif; }
+</style>
+</head>
+<body class="bg-slate-950 text-slate-100">
+
+  <!-- NAVBAR -->
+  <nav class="bg-slate-900/90 backdrop-blur sticky top-0 z-50 border-b border-slate-800">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between py-4">
+        <span class="text-xl font-bold tracking-tight text-white">
+          Sowjanya<span class="text-teal-400">.C</span>
+        </span>
+        <ul class="flex flex-col sm:flex-row gap-2 sm:gap-8 mt-3 sm:mt-0 text-sm font-medium text-slate-300">
+          <li><a href="#home" class="block py-1 sm:py-0 hover:text-teal-400 transition-colors duration-200">Home</a></li>
+          <li><a href="#about" class="block py-1 sm:py-0 hover:text-teal-400 transition-colors duration-200">About</a></li>
+          <li><a href="#skills" class="block py-1 sm:py-0 hover:text-teal-400 transition-colors duration-200">Skills</a></li>
+          <li><a href="#projects" class="block py-1 sm:py-0 hover:text-teal-400 transition-colors duration-200">Projects</a></li>
+          <li><a href="#contact" class="block py-1 sm:py-0 hover:text-teal-400 transition-colors duration-200">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <header id="home" class="max-w-6xl mx-auto px-4 sm:px-6 py-14 md:py-24">
+    <div class="flex flex-col md:flex-row items-center md:items-center gap-8 md:gap-14 text-center md:text-left">
+
+      <!-- Profile Image -->
+      <img
+        src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=500&h=500&fit=crop&crop=faces"
+        alt="Sowjanya Chandran"
+        class="w-40 h-40 sm:w-52 sm:h-52 md:w-64 md:h-64 rounded-full object-cover border-4 border-teal-400 shadow-lg shadow-teal-500/20 flex-shrink-0"
+      />
+
+      <!-- Info -->
+      <div class="flex-1">
+        <p class="text-teal-400 font-medium text-sm sm:text-base mb-2">Hi, my name is</p>
+        <h1 class="text-3xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight">
+          Sowjanya Chandran
+        </h1>
+        <h2 class="text-xl sm:text-2xl lg:text-3xl font-semibold text-slate-400 mt-2">
+          Aspiring AI & Python Fullstack Developer
+        </h2>
+        <p class="text-sm sm:text-base text-slate-400 mt-4 max-w-xl mx-auto md:mx-0">
+          MSc IT graduate (2012) currently upskilling through an AI & Python Fullstack
+          Development course. Building hands-on mini projects — from portfolios to forms
+          to shopping pages — to sharpen my frontend and backend skills.
+        </p>
+        <div class="mt-6">
+          <a href="#projects" class="inline-block bg-teal-400 text-slate-950 font-semibold px-6 py-3 rounded-lg hover:bg-teal-300 hover:scale-105 active:scale-95 transition-all duration-200 shadow-lg shadow-teal-500/20">
+            View My Work
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ABOUT -->
+  <section id="about" class="max-w-6xl mx-auto px-4 sm:px-6 py-10 md:py-14">
+    <div class="bg-slate-900 border border-slate-800 rounded-2xl p-6 sm:p-8 md:p-10">
+      <h2 class="text-2xl sm:text-3xl font-bold text-white text-center md:text-left">About Me</h2>
+      <p class="text-sm sm:text-base text-slate-400 mt-4 leading-relaxed text-center md:text-left">
+        I completed my MSc in Information Technology in 2012 and have now returned to
+        learning to pivot into tech development — training in Python, AI/ML concepts, and
+        fullstack web development. I'm currently building a portfolio of mini projects,
+        including a personal portfolio site, a registration form, and a shopping page, to
+        apply what I'm learning and grow into a job-ready fullstack developer.
+      </p>
+
+      <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 mt-6">
+        <div class="text-center p-3 rounded-xl bg-slate-800/60">
+          <p class="text-lg sm:text-xl font-bold text-teal-400">2012</p>
+          <p class="text-xs text-slate-400 mt-1">MSc IT Graduate</p>
+        </div>
+        <div class="text-center p-3 rounded-xl bg-slate-800/60">
+          <p class="text-lg sm:text-xl font-bold text-teal-400">3</p>
+          <p class="text-xs text-slate-400 mt-1">Mini Projects</p>
+        </div>
+        <div class="text-center p-3 rounded-xl bg-slate-800/60">
+          <p class="text-lg sm:text-xl font-bold text-teal-400">AI</p>
+          <p class="text-xs text-slate-400 mt-1">& Python Focus</p>
+        </div>
+        <div class="text-center p-3 rounded-xl bg-slate-800/60">
+          <p class="text-lg sm:text-xl font-bold text-teal-400">100%</p>
+          <p class="text-xs text-slate-400 mt-1">Learning Mode</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills" class="max-w-6xl mx-auto px-4 sm:px-6 py-14 md:py-20">
+    <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-white text-center">My Skills</h2>
+    <p class="text-slate-400 text-center mt-2 text-sm sm:text-base">Technologies I'm learning and working with</p>
+
+    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6 mt-10">
+
+      <div class="bg-slate-900 border border-slate-800 rounded-xl p-5 text-center hover:border-teal-400 hover:-translate-y-1 transition-all duration-200">
+        <div class="text-3xl sm:text-4xl mb-2">🐍</div>
+        <h3 class="font-semibold text-sm sm:text-base">Python</h3>
+      </div>
+
+      <div class="bg-slate-900 border border-slate-800 rounded-xl p-5 text-center hover:border-teal-400 hover:-translate-y-1 transition-all duration-200">
+        <div class="text-3xl sm:text-4xl mb-2">🌐</div>
+        <h3 class="font-semibold text-sm sm:text-base">HTML & CSS</h3>
+      </div>
+
+      <div class="bg-slate-900 border border-slate-800 rounded-xl p-5 text-center hover:border-teal-400 hover:-translate-y-1 transition-all duration-200">
+        <div class="text-3xl sm:text-4xl mb-2">📜</div>
+        <h3 class="font-semibold text-sm sm:text-base">JavaScript</h3>
+      </div>
+
+      <div class="bg-slate-900 border border-slate-800 rounded-xl p-5 text-center hover:border-teal-400 hover:-translate-y-1 transition-all duration-200">
+        <div class="text-3xl sm:text-4xl mb-2">💨</div>
+        <h3 class="font-semibold text-sm sm:text-base">Tailwind CSS</h3>
+      </div>
+
+      <div class="bg-slate-900 border border-slate-800 rounded-xl p-5 text-center hover:border-teal-400 hover:-translate-y-1 transition-all duration-200">
+        <div class="text-3xl sm:text-4xl mb-2">⚛️</div>
+        <h3 class="font-semibold text-sm sm:text-base">React (Learning)</h3>
+      </div>
+
+      <div class="bg-slate-900 border border-slate-800 rounded-xl p-5 text-center hover:border-teal-400 hover:-translate-y-1 transition-all duration-200">
+        <div class="text-3xl sm:text-4xl mb-2">⚡</div>
+        <h3 class="font-semibold text-sm sm:text-base">FastAPI (Learning)</h3>
+      </div>
+
+      <div class="bg-slate-900 border border-slate-800 rounded-xl p-5 text-center hover:border-teal-400 hover:-translate-y-1 transition-all duration-200">
+        <div class="text-3xl sm:text-4xl mb-2">🧠</div>
+        <h3 class="font-semibold text-sm sm:text-base">AI/ML Basics</h3>
+      </div>
+
+      <div class="bg-slate-900 border border-slate-800 rounded-xl p-5 text-center hover:border-teal-400 hover:-translate-y-1 transition-all duration-200">
+        <div class="text-3xl sm:text-4xl mb-2">🔧</div>
+        <h3 class="font-semibold text-sm sm:text-base">Git & GitHub</h3>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="max-w-6xl mx-auto px-4 sm:px-6 py-14 md:py-20">
+    <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bold text-white text-center">Mini Projects</h2>
+    <p class="text-slate-400 text-center mt-2 text-sm sm:text-base">Hands-on projects from my AI & Python Fullstack course</p>
+
+    <!-- Mobile: 1 col stacked | Tablet md: 2 col grid | Desktop lg: 4 col row -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-10">
+
+      <!-- Project 1 -->
+      <div class="bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden flex flex-col hover:border-teal-400 hover:-translate-y-1 transition-all duration-300 lg:col-span-2">
+        <img src="https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=700&h=400&fit=crop" alt="Personal Portfolio Website" class="w-full h-48 object-cover" />
+        <div class="p-5 flex flex-col flex-1">
+          <h3 class="text-lg sm:text-xl font-semibold text-white">Personal Portfolio Website</h3>
+          <p class="text-sm text-slate-400 mt-2 flex-1">A fully responsive portfolio built with Tailwind CSS to showcase my skills, background, and mini projects as I transition into fullstack development.</p>
+          <div class="flex flex-wrap gap-2 mt-3">
+            <span class="text-xs bg-slate-800 text-teal-400 px-2 py-1 rounded">HTML</span>
+            <span class="text-xs bg-slate-800 text-teal-400 px-2 py-1 rounded">Tailwind CSS</span>
+            <span class="text-xs bg-slate-800 text-teal-400 px-2 py-1 rounded">Responsive Design</span>
+          </div>
+          <a href="#" class="mt-4 inline-block text-center bg-teal-400 text-slate-950 font-semibold py-2 rounded-lg hover:bg-teal-300 hover:scale-105 active:scale-95 transition-all duration-200">
+            View Project
+          </a>
+        </div>
+      </div>
+
+      <!-- Project 2 -->
+      <div class="bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden flex flex-col hover:border-teal-400 hover:-translate-y-1 transition-all duration-300">
+        <img src="https://images.unsplash.com/photo-1586281380349-632531db7ed4?w=500&h=400&fit=crop" alt="Registration Form" class="w-full h-40 object-cover" />
+        <div class="p-5 flex flex-col flex-1">
+          <h3 class="text-lg font-semibold text-white">Registration Form</h3>
+          <p class="text-sm text-slate-400 mt-2 flex-1">A clean, validated sign-up form with responsive layout, built to practice forms, input styling, and Tailwind utilities.</p>
+          <div class="flex flex-wrap gap-2 mt-3">
+            <span class="text-xs bg-slate-800 text-teal-400 px-2 py-1 rounded">HTML</span>
+            <span class="text-xs bg-slate-800 text-teal-400 px-2 py-1 rounded">Tailwind CSS</span>
+          </div>
+          <a href="#" class="mt-4 inline-block text-center bg-teal-400 text-slate-950 font-semibold py-2 rounded-lg hover:bg-teal-300 hover:scale-105 active:scale-95 transition-all duration-200">
+            View Project
+          </a>
+        </div>
+      </div>
+
+      <!-- Project 3 -->
+      <div class="bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden flex flex-col hover:border-teal-400 hover:-translate-y-1 transition-all duration-300">
+        <img src="https://images.unsplash.com/photo-1472851294608-062f824d29cc?w=500&h=400&fit=crop" alt="Shopping Page" class="w-full h-40 object-cover" />
+        <div class="p-5 flex flex-col flex-1">
+          <h3 class="text-lg font-semibold text-white">Shopping Page</h3>
+          <p class="text-sm text-slate-400 mt-2 flex-1">A responsive product listing page with a card grid layout, hover effects, and Buy Now buttons.</p>
+          <div class="flex flex-wrap gap-2 mt-3">
+            <span class="text-xs bg-slate-800 text-teal-400 px-2 py-1 rounded">HTML</span>
+            <span class="text-xs bg-slate-800 text-teal-400 px-2 py-1 rounded">Tailwind CSS</span>
+          </div>
+          <a href="#" class="mt-4 inline-block text-center bg-teal-400 text-slate-950 font-semibold py-2 rounded-lg hover:bg-teal-300 hover:scale-105 active:scale-95 transition-all duration-200">
+            View Project
+          </a>
+        </div>
+      </div>
+
+      <!-- Project 4 -->
+      <div class="bg-slate-900 border border-slate-800 rounded-2xl overflow-hidden flex flex-col hover:border-teal-400 hover:-translate-y-1 transition-all duration-300 lg:col-span-2">
+        <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=700&h=400&fit=crop" alt="Food Menu Website" class="w-full h-48 object-cover" />
+        <div class="p-5 flex flex-col flex-1">
+          <h3 class="text-lg sm:text-xl font-semibold text-white">Food Menu Website</h3>
+          <p class="text-sm text-slate-400 mt-2 flex-1">A restaurant-style menu page with a responsive card grid, food images, pricing, and Order Now buttons — practice for real-world grid layouts.</p>
+          <div class="flex flex-wrap gap-2 mt-3">
+            <span class="text-xs bg-slate-800 text-teal-400 px-2 py-1 rounded">HTML</span>
+            <span class="text-xs bg-slate-800 text-teal-400 px-2 py-1 rounded">Tailwind CSS</span>
+            <span class="text-xs bg-slate-800 text-teal-400 px-2 py-1 rounded">Grid Layout</span>
+          </div>
+          <a href="#" class="mt-4 inline-block text-center bg-teal-400 text-slate-950 font-semibold py-2 rounded-lg hover:bg-teal-300 hover:scale-105 active:scale-95 transition-all duration-200">
+            View Project
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CONTACT / FOOTER -->
+  <footer id="contact" class="border-t border-slate-800 mt-10">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 py-10 text-center">
+      <h2 class="text-xl sm:text-2xl font-bold text-white">Let's Connect</h2>
+      <p class="text-slate-400 text-sm mt-2">sowjanya.chandran@example.com</p>
+      <div class="flex justify-center gap-5 mt-4 text-slate-400 text-sm">
+        <a href="#" class="hover:text-teal-400 transition-colors duration-200">GitHub</a>
+        <a href="#" class="hover:text-teal-400 transition-colors duration-200">LinkedIn</a>
+      </div>
+      <p class="text-slate-600 text-xs mt-6">&copy; 2026 Sowjanya Chandran. All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
