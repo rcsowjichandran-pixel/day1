@@ -1,148 +1,183 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Bella Cucina | Restaurant Menu</title>
-<script src="https://cdn.tailwindcss.com"></script>
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
-<style>
-  body { font-family: 'Poppins', sans-serif; }
-  h1, h2, .font-display { font-family: 'Playfair Display', serif; }
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Course Portal</title>
+    <!-- Bootstrap 5 CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        #courses, #trainers, #about, #contact {
+            scroll-margin-top: 70px;
+        }
+    </style>
 </head>
-<body class="bg-orange-50 text-gray-800">
-
-  <!-- NAVBAR -->
-  <nav class="bg-orange-900 text-white sticky top-0 z-50 shadow-lg">
-    <div class="max-w-6xl mx-auto px-4">
-      <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between py-4">
-        <div class="flex items-center justify-between">
-          <span class="font-display text-2xl font-bold tracking-wide">🍽️ Bella Cucina</span>
-          <!-- mobile menu could go here, kept simple/static per requirements -->
+<body>
+ 
+    <!-- 1. Navbar Section -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#">🎓 EduSpark</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#courses">Courses</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#trainers">Trainers</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
         </div>
-        <ul class="flex flex-col sm:flex-row gap-2 sm:gap-6 mt-3 sm:mt-0 text-sm sm:text-base font-medium">
-          <li><a href="#home" class="block py-2 sm:py-0 px-2 rounded hover:text-orange-300 hover:bg-orange-800 sm:hover:bg-transparent transition-colors duration-200">Home</a></li>
-          <li><a href="#menu" class="block py-2 sm:py-0 px-2 rounded hover:text-orange-300 hover:bg-orange-800 sm:hover:bg-transparent transition-colors duration-200">Menu</a></li>
-          <li><a href="#about" class="block py-2 sm:py-0 px-2 rounded hover:text-orange-300 hover:bg-orange-800 sm:hover:bg-transparent transition-colors duration-200">About</a></li>
-          <li><a href="#contact" class="block py-2 sm:py-0 px-2 rounded hover:text-orange-300 hover:bg-orange-800 sm:hover:bg-transparent transition-colors duration-200">Contact</a></li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-
-  <!-- HEADING / HERO -->
-  <header id="home" class="text-center py-10 sm:py-14 lg:py-20 px-4 bg-gradient-to-b from-orange-100 to-orange-50">
-    <h1 class="font-display text-3xl sm:text-5xl lg:text-6xl font-bold text-orange-900 leading-tight">
-      Our Delicious Menu
-    </h1>
-    <p class="mt-3 sm:mt-4 text-sm sm:text-lg text-gray-600 max-w-xl mx-auto">
-      Fresh ingredients, bold flavors, and dishes made with love — handpicked favorites just for you.
-    </p>
-  </header>
-
-  <!-- MENU GRID -->
-  <main id="menu" class="max-w-6xl mx-auto px-4 pb-16">
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
-
-      <!-- Card 1 -->
-      <div class="bg-white rounded-2xl shadow-md overflow-hidden flex flex-col hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
-        <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=600&h=400&fit=crop" alt="Classic Cheeseburger" class="w-full h-48 object-cover" />
-        <div class="p-5 flex flex-col flex-1">
-          <div class="flex items-start justify-between gap-2">
-            <h3 class="text-lg sm:text-xl font-semibold text-gray-900">Classic Cheeseburger</h3>
-            <span class="text-orange-600 font-bold text-lg whitespace-nowrap">$8.99</span>
-          </div>
-          <p class="text-sm text-gray-500 mt-2 flex-1">Juicy beef patty, melted cheddar, lettuce, tomato & our secret house sauce.</p>
-          <button class="mt-4 w-full bg-orange-600 text-white py-2 rounded-lg font-medium hover:bg-orange-700 hover:scale-105 active:scale-95 transition-all duration-200">
-            Order Now
-          </button>
+    </nav>
+ 
+    <!-- Hero Section -->
+    <header class="bg-primary text-white text-center py-5 mb-5">
+        <div class="container">
+            <h1 class="display-4 fw-bold">Advance Your Skills with Our Expert Courses</h1>
+            <p class="lead">Discover top-rated courses designed to fast-track your career in tech and design.</p>
+            <a href="#courses" class="btn btn-warning btn-lg fw-bold mt-3">Explore Courses</a>
         </div>
-      </div>
-
-      <!-- Card 2 -->
-      <div class="bg-white rounded-2xl shadow-md overflow-hidden flex flex-col hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
-        <img src="https://images.unsplash.com/photo-1565299624946-b28f40a0ae38?w=600&h=400&fit=crop" alt="Margherita Pizza" class="w-full h-48 object-cover" />
-        <div class="p-5 flex flex-col flex-1">
-          <div class="flex items-start justify-between gap-2">
-            <h3 class="text-lg sm:text-xl font-semibold text-gray-900">Margherita Pizza</h3>
-            <span class="text-orange-600 font-bold text-lg whitespace-nowrap">$11.50</span>
-          </div>
-          <p class="text-sm text-gray-500 mt-2 flex-1">Wood-fired crust topped with San Marzano tomatoes, fresh mozzarella & basil.</p>
-          <button class="mt-4 w-full bg-orange-600 text-white py-2 rounded-lg font-medium hover:bg-orange-700 hover:scale-105 active:scale-95 transition-all duration-200">
-            Order Now
-          </button>
+    </header>
+ 
+    <!-- 2. Courses Section -->
+    <main class="container my-5" id="courses">
+        <div class="text-center mb-5">
+            <h2 class="fw-bold">Our Featured Courses</h2>
+            <p class="text-muted">Choose from our wide variety of industry-aligned programs</p>
         </div>
-      </div>
-
-      <!-- Card 3 -->
-      <div class="bg-white rounded-2xl shadow-md overflow-hidden flex flex-col hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
-        <img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=600&h=400&fit=crop" alt="Caesar Salad" class="w-full h-48 object-cover" />
-        <div class="p-5 flex flex-col flex-1">
-          <div class="flex items-start justify-between gap-2">
-            <h3 class="text-lg sm:text-xl font-semibold text-gray-900">Caesar Salad</h3>
-            <span class="text-orange-600 font-bold text-lg whitespace-nowrap">$7.25</span>
-          </div>
-          <p class="text-sm text-gray-500 mt-2 flex-1">Crisp romaine, parmesan shavings, garlic croutons & creamy Caesar dressing.</p>
-          <button class="mt-4 w-full bg-orange-600 text-white py-2 rounded-lg font-medium hover:bg-orange-700 hover:scale-105 active:scale-95 transition-all duration-200">
-            Order Now
-          </button>
+ 
+        <div class="row g-4">
+            <!-- Course Card 1 -->
+            <div class="col-md-4">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title fw-bold">Full-Stack Web Development</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Duration: 6 Months</h6>
+                        <p class="card-text flex-grow-1">Learn HTML, CSS, JavaScript, Node.js, and React to build dynamic, modern web applications from scratch.</p>
+                        <div class="d-flex flex-column align-items-center gap-2 mt-3">
+                            <a href="#" class="btn btn-primary w-50">View Course</a>
+                            <a href="#" class="btn btn-success w-50">Enroll Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+ 
+            <!-- Course Card 2 -->
+            <div class="col-md-4">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title fw-bold">Data Science & Machine Learning</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Duration: 4 Months</h6>
+                        <p class="card-text flex-grow-1">Master Python, Pandas, data visualization, and core machine learning algorithms to become a data analyst.</p>
+                        <div class="d-flex flex-column align-items-center gap-2 mt-3">
+                            <a href="#" class="btn btn-primary w-50">View Course</a>
+                            <a href="#" class="btn btn-success w-50">Enroll Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+ 
+            <!-- Course Card 3 -->
+            <div class="col-md-4">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title fw-bold">UI/UX Design Masterclass</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Duration: 3 Months</h6>
+                        <p class="card-text flex-grow-1">Understand wireframing, user research, prototyping, and design systems using industry tools like Figma.</p>
+                        <div class="d-flex flex-column align-items-center gap-2 mt-3">
+                            <a href="#" class="btn btn-primary w-50">View Course</a>
+                            <a href="#" class="btn btn-success w-50">Enroll Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+ 
+            <!-- Course Card 4 -->
+            <div class="col-md-4">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title fw-bold">Cloud Computing & AWS</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Duration: 3 Months</h6>
+                        <p class="card-text flex-grow-1">Gain deep insights into cloud architecture, serverless computing, and deploy scalable applications on AWS.</p>
+                        <div class="d-flex flex-column align-items-center gap-2 mt-3">
+                            <a href="#" class="btn btn-primary w-50">View Course</a>
+                            <a href="#" class="btn btn-warning text-dark fw-bold w-50">Enroll Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+ 
+            <!-- Course Card 5 -->
+            <div class="col-md-4">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title fw-bold">Cybersecurity Fundamentals</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Duration: 5 Months</h6>
+                        <p class="card-text flex-grow-1">Learn network security, ethical hacking techniques, vulnerability assessment, and threat mitigation strategies.</p>
+                        <div class="d-flex flex-column align-items-center gap-2 mt-3">
+                            <a href="#" class="btn btn-primary w-50">View Course</a>
+                            <a href="#" class="btn btn-success w-50">Enroll Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+ 
+            <!-- Course Card 6 -->
+            <div class="col-md-4">
+                <div class="card h-100 shadow-sm">
+                    <div class="card-body d-flex flex-column">
+                        <h5 class="card-title fw-bold">Mobile App Development</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">Duration: 4 Months</h6>
+                        <p class="card-text flex-grow-1">Build cross-platform mobile apps for iOS and Android using Flutter and modern mobile design frameworks.</p>
+                        <div class="d-flex flex-column align-items-center gap-2 mt-3">
+                            <a href="#" class="btn btn-primary w-50">View Course</a>
+                            <a href="#" class="btn btn-warning text-dark fw-bold w-50">Enroll Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-
-      <!-- Card 4 -->
-      <div class="bg-white rounded-2xl shadow-md overflow-hidden flex flex-col hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
-        <img src="https://images.unsplash.com/photo-1551183053-bf91a1d81141?w=600&h=400&fit=crop" alt="Grilled Salmon" class="w-full h-48 object-cover" />
-        <div class="p-5 flex flex-col flex-1">
-          <div class="flex items-start justify-between gap-2">
-            <h3 class="text-lg sm:text-xl font-semibold text-gray-900">Grilled Salmon</h3>
-            <span class="text-orange-600 font-bold text-lg whitespace-nowrap">$14.99</span>
-          </div>
-          <p class="text-sm text-gray-500 mt-2 flex-1">Atlantic salmon grilled to perfection, served with lemon butter sauce & veggies.</p>
-          <button class="mt-4 w-full bg-orange-600 text-white py-2 rounded-lg font-medium hover:bg-orange-700 hover:scale-105 active:scale-95 transition-all duration-200">
-            Order Now
-          </button>
+    </main>
+ 
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-4 mt-5">
+        <div class="container">
+            <p class="mb-0">&copy; 2026 EduSpark Student Course Portal. All Rights Reserved.</p>
         </div>
-      </div>
-
-      <!-- Card 5 -->
-      <div class="bg-white rounded-2xl shadow-md overflow-hidden flex flex-col hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
-        <img src="https://images.unsplash.com/photo-1521305916504-4a1121188589?w=600&h=400&fit=crop" alt="Creamy Alfredo Pasta" class="w-full h-48 object-cover" />
-        <div class="p-5 flex flex-col flex-1">
-          <div class="flex items-start justify-between gap-2">
-            <h3 class="text-lg sm:text-xl font-semibold text-gray-900">Creamy Alfredo Pasta</h3>
-            <span class="text-orange-600 font-bold text-lg whitespace-nowrap">$10.75</span>
-          </div>
-          <p class="text-sm text-gray-500 mt-2 flex-1">Fettuccine tossed in a rich parmesan cream sauce with grilled chicken.</p>
-          <button class="mt-4 w-full bg-orange-600 text-white py-2 rounded-lg font-medium hover:bg-orange-700 hover:scale-105 active:scale-95 transition-all duration-200">
-            Order Now
-          </button>
-        </div>
-      </div>
-
-      <!-- Card 6 -->
-      <div class="bg-white rounded-2xl shadow-md overflow-hidden flex flex-col hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
-        <img src="https://images.unsplash.com/photo-1624353365286-3f8d62daad51?w=600&h=400&fit=crop" alt="Chocolate Lava Cake" class="w-full h-48 object-cover" />
-        <div class="p-5 flex flex-col flex-1">
-          <div class="flex items-start justify-between gap-2">
-            <h3 class="text-lg sm:text-xl font-semibold text-gray-900">Chocolate Lava Cake</h3>
-            <span class="text-orange-600 font-bold text-lg whitespace-nowrap">$6.50</span>
-          </div>
-          <p class="text-sm text-gray-500 mt-2 flex-1">Warm chocolate cake with a molten center, served with vanilla ice cream.</p>
-          <button class="mt-4 w-full bg-orange-600 text-white py-2 rounded-lg font-medium hover:bg-orange-700 hover:scale-105 active:scale-95 transition-all duration-200">
-            Order Now
-          </button>
-        </div>
-      </div>
-
-    </div>
-  </main>
-
-  <!-- FOOTER -->
-  <footer id="contact" class="bg-orange-900 text-orange-100 text-center py-6 px-4 text-sm">
-    <p>&copy; 2026 Bella Cucina. All rights reserved. 🍝</p>
-  </footer>
-
+    </footer>
+ 
+    <!-- Bootstrap 5 JS Bundle CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+   
+    Close the mobile menu before scrolling to an anchor
+    <script>
+        document.querySelectorAll('.navbar-nav a').forEach(link => {
+            link.addEventListener('click', event => {
+                const targetSelector = link.getAttribute('href');
+                const navbarToggle = document.querySelector('.navbar-toggler');
+                const navbarCollapse = document.querySelector('.navbar-collapse');
+ 
+                if (!targetSelector || targetSelector === '#') {
+                    return;
+                }
+ 
+                const target = document.querySelector(targetSelector);
+                event.preventDefault();
+                if (navbarCollapse.classList.contains('show')) {
+                    navbarCollapse.addEventListener('hidden.bs.collapse', () => {
+                        target.scrollIntoView();
+                        history.pushState(null, '', link.getAttribute('href'));
+                    }, { once: true });
+                    navbarToggle.click();
+                } else {
+                    target.scrollIntoView();
+                    history.pushState(null, '', link.getAttribute('href'));
+                }
+            });
+        });
+    </script>
 </body>
 </html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Simple Navbar</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="../dist/output.css">
+</head>
+<body class="bg-gray-100">
+
+  <!-- Navbar -->
+  <nav class="bg-navBg p-4 shadow-md">
+    <div class="container mx-auto flex flex-col sm:flex-row sm:items-center sm:justify-between">
+      <!-- Logo -->
+      <h1 class="text-navText text-2xl font-bold">MySite</h1>
+
+      <!-- Menu -->
+      <ul class="flex flex-col sm:flex-row sm:space-x-navX mt-4 sm:mt-0">
+        <li><a href="#" class="text-navText text-nav hover:text-navHover transition">Home</a></li>
+        <li><a href="#" class="text-navText text-nav hover:text-navHover transition">About</a></li>
+        <li><a href="#" class="text-navText text-nav hover:text-navHover transition">Services</a></li>
+        <li><a href="#" class="text-navText text-nav hover:text-navHover transition">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+</body>
+</html>
