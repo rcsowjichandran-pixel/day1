@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Safe API Data Renderer</title>
+  <style>
+    body { font-family: Arial; padding: 20px; background: #f4f4f4; }
+    .card { background: #fff; padding: 15px; margin: 10px 0; border-radius: 6px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+    h2 { margin: 0 0 10px; }
+    p { margin: 5px 0; }
+  </style>
+</head>
+<body>
+
+  <h2>🌐 Safe API Data Renderer</h2>
+  <div id="userContainer"></div>
+
+  <script>
+    // Simulated API response (sometimes incomplete)
+    const apiResponse = [
+      { username: "alice", profile: { bio: "Frontend Developer", location: "Chennai" } },
+      { username: "bob" }, // Missing profile
+      { username: "charlie", profile: { bio: "Python Fullstack Developer" } }
+    ];
+
+    function renderUsers(users) {
+      const container = document.getElementById("userContainer");
+      container.innerHTML = "";
+
+      users.forEach(user => {
+        const card = document.createElement("div");
+        card.className = "card";
+
+        // Safe rendering with optional chaining
+        const bio = user?.profile?.bio ?? "Bio not available";
+        const location = user?.profile?.location ?? "Location not available";
+
+        card.innerHTML = `
+          <h2>@${user.username}</h2>
+          <p><strong>Bio:</strong> ${bio}</p>
+          <p><strong>Location:</strong> ${location}</p>
+        `;
+
+        container.appendChild(card);
+      });
+    }
+
+    // Render on page load
+    renderUsers(apiResponse);
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Social Media Profile Object</title>
+  <style>
+    body { font-family: Arial; padding: 20px; background: #f4f4f4; }
+    input, textarea { padding: 8px; margin: 5px 0; width: 300px; }
+    button { padding: 8px 12px; margin: 5px; cursor: pointer; }
+    .profile { background: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+    h2 { margin-top: 0; }
+    ul { list-style: none; padding: 0; }
+    li { background: #e9ecef; margin: 5px 0; padding: 8px; border-radius: 4px; }
+  </style>
+</head>
+<body>
+
+  <div class="profile">
+    <h2 id="username">👤 sowjanya_chandran</h2>
+    <p id="bio">Python Fullstack Developer | Learning Bootstrap & Tailwind</p>
+    <p><strong>Followers:</strong> <span id="followers">120</span></p>
+
+    <h3>Posts</h3>
+    <ul id="postList"></ul>
+
+    <h3>Add Post</h3>
+    <input type="text" id="newPost" placeholder="Write something...">
+    <button onclick="profile.addPost()">Add Post</button>
+
+    <h3>Update Bio</h3>
+    <textarea id="newBio" placeholder="Enter new bio..."></textarea><br>
+    <button onclick="profile.updateBio()">Update Bio</button>
+  </div>
+
+  <script>
+    // Social Media Profile Object
+    const profile = {
+      username: "sowjanya_chandran",
+      bio: "Python Fullstack Developer | Learning Bootstrap & Tailwind",
+      posts: [],
+      followers: 120,
+
+      // Method: Add Post
+      addPost: function() {
+        const content = document.getElementById("newPost").value.trim();
+        if (content) {
+          this.posts.push(content);
+          document.getElementById("newPost").value = "";
+          renderProfile();
+        }
+      },
+
+      // Method: Update Bio
+      updateBio: function() {
+        const newBio = document.getElementById("newBio").value.trim();
+        if (newBio) {
+          this.bio = newBio;
+          document.getElementById("newBio").value = "";
+          renderProfile();
+        }
+      }
+    };
+
+    // Render Profile Data
+    function renderProfile() {
+      document.getElementById("username").textContent = "👤 " + profile.username;
+      document.getElementById("bio").textContent = profile.bio;
+      document.getElementById("followers").textContent = profile.followers;
+
+      const postList = document.getElementById("postList");
+      postList.innerHTML = "";
+      profile.posts.forEach(post => {
+        const li = document.createElement("li");
+        li.textContent = post;
+        postList.appendChild(li);
+      });
+    }
+
+    // Initial render
+    renderProfile();
+  </script>
+
+</body>
+</html>

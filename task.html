@@ -6,6 +6,7 @@
   <title>Sowjanya's Food Blog</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
   <style>
     body { font-family: 'Lato', sans-serif; }
     
@@ -1404,6 +1405,398 @@
         grid-template-columns: 1fr;
       }
     }
+
+    /* ---------- Home feed ---------- */
+    .home-feed-section {
+      padding: 0 40px 78px;
+      background: #fff;
+    }
+    .home-feed-inner {
+      max-width: 1240px;
+      margin: 0 auto;
+    }
+    .home-feed-title {
+      margin-bottom: 24px;
+      color: #241315;
+      font-size: clamp(28px, 4vw, 38px);
+      font-weight: 900;
+      letter-spacing: -1px;
+    }
+    .latest-blog-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 28px;
+    }
+    .latest-blog-card {
+      overflow: hidden;
+      border: 1px solid #E5E7EB;
+      border-radius: 20px;
+      background: #fff;
+      box-shadow: 0 4px 18px rgba(36, 19, 21, .06);
+      transition: transform .25s ease, box-shadow .25s ease;
+    }
+    .latest-blog-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 16px 28px rgba(36, 19, 21, .14);
+    }
+    .latest-blog-image {
+      position: relative;
+      height: 230px;
+      overflow: hidden;
+    }
+    .latest-blog-image img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover;
+      transition: transform .45s ease;
+    }
+    .latest-blog-card:hover .latest-blog-image img { transform: scale(1.06); }
+    .latest-blog-tag {
+      position: absolute;
+      top: 16px;
+      left: 16px;
+      border-radius: 999px;
+      padding: 7px 13px;
+      background: #FF4D57;
+      color: #fff;
+      font-size: 13px;
+      font-weight: 700;
+    }
+    .latest-blog-body { padding: 21px 22px 23px; }
+    .latest-blog-body h3 { color: #241315; font-size: 21px; font-weight: 900; }
+    .latest-blog-body p { min-height: 48px; margin-top: 9px; color: #6B7280; font-size: 15px; line-height: 1.5; }
+    .latest-blog-link { display: inline-block; margin-top: 18px; color: #FF4D57; font-size: 16px; font-weight: 800; text-decoration: none; }
+    .latest-blog-link:hover { text-decoration: underline; }
+    .categories-section { padding-bottom: 88px; }
+    .category-showcase {
+      display: flex;
+      width: 100%;
+      min-height: 360px;
+      gap: 16px;
+      overflow: hidden;
+    }
+    .showcase-category {
+      position: relative;
+      min-width: 0;
+      flex: 1;
+      overflow: hidden;
+      border-radius: 22px;
+      color: #fff;
+      text-decoration: none;
+      box-shadow: 0 5px 16px rgba(36, 19, 21, .12);
+      transition: flex .45s cubic-bezier(.2,.75,.25,1), transform .3s ease, box-shadow .3s ease;
+    }
+    .showcase-category:nth-child(3) { flex: 2.8; }
+    .showcase-category img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover;
+      transform: scale(1.12);
+      transition: transform .45s ease;
+    }
+    .showcase-category::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(transparent 44%, rgba(17, 12, 9, .08) 58%, rgba(17, 12, 9, .78));
+    }
+    .showcase-category span {
+      position: absolute;
+      z-index: 1;
+      right: 14px;
+      bottom: 17px;
+      left: 14px;
+      text-align: center;
+      font-size: clamp(15px, 1.5vw, 22px);
+      font-weight: 900;
+      text-shadow: 0 2px 8px rgba(0,0,0,.3);
+    }
+    .showcase-category:hover {
+      flex: 3.2;
+      transform: translateY(-5px);
+      box-shadow: 0 16px 28px rgba(36, 19, 21, .2);
+    }
+    .showcase-category:hover img { transform: scale(1.01); }
+    .blog-only .home-feed-section { display: none; }
+    @media (max-width: 800px) {
+      .latest-blog-grid { grid-template-columns: 1fr; }
+      .category-showcase { min-height: 300px; gap: 10px; }
+      .showcase-category, .showcase-category:nth-child(3) { flex: 1; }
+      .showcase-category:hover { flex: 2.4; }
+    }
+    @media (max-width: 600px) {
+      .home-feed-section { padding: 0 20px 56px; }
+      .latest-blog-image { height: 200px; }
+      .latest-blog-body { padding: 18px; }
+      .category-showcase { min-height: 260px; gap: 7px; }
+      .showcase-category { border-radius: 14px; }
+      .showcase-category span { right: 4px; bottom: 12px; left: 4px; font-size: 12px; }
+    }
+
+    /* ---------- Community, newsletter and footer ---------- */
+    .join-section { padding: 12px 40px 82px; background: #fff; }
+    .join-layout { display: grid; grid-template-columns: minmax(360px, 1fr) minmax(0, 1.15fr); align-items: center; gap: 42px; max-width: 1240px; margin: 0 auto; }
+    .join-visual-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 22px; padding: 30px; border-radius: 20px; background: #fff7f6; }
+    .join-visual-card { position: relative; height: 225px; overflow: hidden; border-radius: 38px; }
+    .join-visual-card img { width: 100%; height: 100%; display: block; object-fit: cover; }
+    .join-visual-card::after { content: ''; position: absolute; inset: 0; background: rgba(255,250,246,.38); }
+    .join-icon { position: absolute; z-index: 1; top: 50%; left: 50%; display: grid; width: 104px; height: 104px; place-items: center; transform: translate(-50%, -50%); border-radius: 25px; background: rgba(255,255,255,.94); box-shadow: 0 8px 22px rgba(36,19,21,.12); color: #F45B5B; font-size: 51px; }
+    .join-content h2 { margin-bottom: 52px; color: #111827; text-align: center; font-size: clamp(34px, 4vw, 48px); font-weight: 400; }
+    .join-intro { margin-bottom: 25px; color: #111827; font-size: clamp(22px, 2.3vw, 31px); line-height: 1.25; }
+    .join-benefits { display: grid; gap: 22px; }
+    .join-benefit { display: grid; grid-template-columns: 50px 1fr; gap: 18px; align-items: start; }
+    .benefit-number { display: grid; width: 42px; height: 42px; place-items: center; border-radius: 4px; background: #FF4D57; color: #fff; font-size: 26px; }
+    .join-benefit h3 { color: #111827; font-size: 19px; font-weight: 700; }
+    .join-benefit p { margin-top: 5px; color: #374151; font-size: 15px; line-height: 1.45; }
+    .join-button { margin-top: 29px; border: 0; border-radius: 999px; padding: 15px 58px; background: #FF4D57; color: #fff; font: inherit; font-size: 18px; cursor: pointer; transition: background .2s ease, transform .2s ease; }
+    .join-button:hover { transform: translateY(-2px); background: #E33E48; }
+    .newsletter-section { padding: 0 40px 104px; background: #fff; }
+    .newsletter-box { max-width: 1240px; margin: 0 auto; border-radius: 26px; padding: 36px 28px 20px; background: #FF4D57; color: #fff; text-align: center; }
+    .newsletter-box h2 { font-size: clamp(28px, 3vw, 39px); font-weight: 900; }
+    .newsletter-box > p { max-width: 760px; margin: 12px auto 28px; font-size: 16px; line-height: 1.4; }
+    .home-newsletter-form { display: flex; max-width: 775px; margin: 0 auto; gap: 32px; }
+    .home-newsletter-form input { min-width: 0; flex: 1; border: 0; border-radius: 999px; padding: 16px 28px; color: #374151; font: inherit; font-size: 17px; outline: none; }
+    .home-newsletter-form button { min-width: 235px; border: 0; border-radius: 999px; padding: 15px 25px; background: #fff; color: #FF4D57; font: inherit; font-size: 17px; cursor: pointer; }
+    .home-newsletter-form button:hover { background: #FFF1F2; }
+    .newsletter-message { min-height: 20px; margin: 12px 0 0; font-weight: 700; }
+    .newsletter-privacy { margin-top: 14px; font-size: 14px; }
+    .site-footer { padding: 58px 40px 16px; background: #FF4D57; color: #fff; }
+    .footer-grid { display: grid; grid-template-columns: 1.2fr .85fr .9fr 1.45fr; gap: 48px; max-width: 1240px; margin: 0 auto; }
+    .footer-brand img { width: 150px; height: 120px; object-fit: contain; object-position: left center; }
+    .footer-brand p { margin-top: 14px; line-height: 2.15; }
+    .footer-heading { margin-bottom: 20px; font-size: 24px; font-weight: 900; }
+    .footer-links { display: grid; gap: 14px; }
+    .footer-links a { color: #fff; text-decoration: none; }
+    .footer-links a:hover { text-decoration: underline; }
+    .footer-newsletter p { margin-bottom: 26px; line-height: 1.5; }
+    .footer-form { display: flex; gap: 14px; }
+    .footer-form input { width: 100%; min-width: 0; border: 0; border-radius: 999px; padding: 14px 18px; color: #374151; font: inherit; }
+    .footer-form button { border: 0; border-radius: 999px; padding: 13px 22px; background: #fff; color: #FF4D57; font: inherit; white-space: nowrap; cursor: pointer; }
+    .footer-bottom { max-width: 1240px; margin: 44px auto 0; padding-top: 16px; border-top: 1px solid rgba(255,255,255,.42); text-align: center; }
+    .blog-only .join-section, .blog-only .newsletter-section, .blog-only .site-footer { display: none; }
+    @media (max-width: 950px) {
+      .join-layout { grid-template-columns: 1fr; }
+      .join-content h2 { margin-bottom: 25px; }
+      .footer-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 600px) {
+      .join-section, .newsletter-section, .site-footer { padding-right: 20px; padding-left: 20px; }
+      .join-visual-grid { gap: 12px; padding: 15px; }
+      .join-visual-card { height: 160px; border-radius: 23px; }
+      .join-icon { width: 70px; height: 70px; border-radius: 18px; font-size: 34px; }
+      .join-benefit { grid-template-columns: 43px 1fr; gap: 11px; }
+      .benefit-number { width: 37px; height: 37px; font-size: 21px; }
+      .join-button { width: 100%; padding: 14px 18px; }
+      .newsletter-section { padding-bottom: 64px; }
+      .newsletter-box { padding: 29px 18px 18px; }
+      .home-newsletter-form, .footer-form { flex-direction: column; gap: 12px; }
+      .home-newsletter-form button { width: 100%; }
+      .footer-grid { grid-template-columns: 1fr; gap: 35px; }
+    }
+
+    /* Compact newsletter and footer */
+    .newsletter-section { padding-bottom: 70px; }
+    .newsletter-box { max-width: 1120px; border-radius: 18px; padding: 25px 24px 16px; }
+    .newsletter-box h2 { font-size: clamp(24px, 2.7vw, 31px); }
+    .newsletter-box > p { margin: 8px auto 18px; font-size: 14px; }
+    .home-newsletter-form { max-width: 650px; gap: 18px; }
+    .home-newsletter-form input { padding: 13px 22px; font-size: 15px; }
+    .home-newsletter-form button { min-width: 190px; padding: 12px 21px; font-size: 15px; }
+    .newsletter-privacy { margin-top: 9px; font-size: 13px; }
+    .site-footer { padding-top: 42px; }
+    .footer-grid { gap: 35px; }
+    .footer-brand img { width: 125px; height: 95px; }
+    .footer-brand p, .footer-links, .footer-newsletter p { font-size: 14px; }
+    .footer-brand p { margin-top: 7px; line-height: 1.9; }
+    .footer-heading { margin-bottom: 15px; font-size: 20px; }
+    .footer-links { gap: 10px; }
+    .footer-newsletter p { margin-bottom: 16px; }
+    .footer-form input { padding: 11px 15px; }
+    .footer-form button { padding: 11px 17px; }
+    .footer-bottom { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; max-width: 1240px; margin-top: 28px; padding-top: 14px; font-size: 14px; }
+    .footer-legal { grid-column: 2; line-height: 1.75; }
+    .footer-social { grid-column: 3; justify-self: end; display: flex; align-items: center; gap: 12px; }
+    .footer-social span { font-weight: 700; }
+    .social-links { display: flex; align-items: center; gap: 10px; }
+    .social-link { display: grid; width: 28px; height: 28px; place-items: center; border: 1px solid rgba(255,255,255,.8); border-radius: 50%; color: #fff; font-weight: 900; line-height: 1; text-decoration: none; transition: background .2s ease, color .2s ease; }
+    .social-link:hover { background: #fff; color: #FF4D57; }
+
+    .social-link { font-family: "Font Awesome 6 Brands"; font-size: 0; }
+    .social-link::before { font-size: 17px; }
+    .social-link:nth-child(1)::before { content: "\f39e"; }
+    .social-link:nth-child(2)::before { content: "\f16d"; }
+    .social-link:nth-child(3)::before { content: "\f167"; }
+    .social-link:nth-child(4)::before { content: "\f099"; }
+
+    /* Interactive Why Join visuals */
+    .join-visual-grid { box-shadow: inset 0 0 0 1px rgba(255,77,87,.06); }
+    .join-visual-card { cursor: default; transition: transform .35s ease, box-shadow .35s ease; }
+    .join-visual-card::before { content: attr(data-label); position: absolute; z-index: 2; right: 15px; bottom: 13px; left: 15px; color: #fff; font-size: 13px; font-weight: 800; letter-spacing: .04em; opacity: 0; transform: translateY(8px); transition: opacity .3s ease, transform .3s ease; text-align: center; text-shadow: 0 2px 7px rgba(0,0,0,.4); }
+    .join-visual-card:hover { transform: translateY(-6px) scale(1.02); box-shadow: 0 15px 24px rgba(36,19,21,.18); }
+    .join-visual-card:hover::before { opacity: 1; transform: translateY(0); }
+    .join-visual-card:hover img { transform: scale(1.1); filter: saturate(1.1); }
+    .join-visual-card img { transition: transform .55s ease, filter .55s ease; }
+    .join-icon { transition: transform .35s ease, background .35s ease; animation: joinIconFloat 3.2s ease-in-out infinite; }
+    .join-visual-card:hover .join-icon { transform: translate(-50%, -56%) rotate(-6deg) scale(.92); background: #fff; }
+    .join-benefit { padding: 8px; border-radius: 10px; transition: transform .25s ease, background .25s ease; }
+    .join-benefit:hover { transform: translateX(8px); background: #FFF5F5; }
+    @keyframes joinIconFloat { 0%,100% { margin-top: 0; } 50% { margin-top: -7px; } }
+
+    /* Blog library view */
+    .blog-library { display: none; padding: 30px 26px 75px; background: #fff; }
+    .blog-only #trendingSection { display: none; }
+    .blog-only .blog-library { display: block; }
+    .blog-only .site-footer { display: none; }
+    .blog-library-inner { max-width: 1320px; margin: 0 auto; }
+    .blog-library-top { display: flex; align-items: center; justify-content: space-between; gap: 24px; margin-bottom: 42px; }
+    .blog-library-top h1 { color: #111827; font-size: 32px; font-weight: 400; }
+    .blog-library-top h1 span { margin-left: 14px; font-size: 20px; }
+    .blog-pagination { display: flex; align-items: center; gap: 17px; color: #667085; }
+    .blog-pagination strong { color: #111827; }
+    .blog-pagination .current-page { display: grid; width: 30px; height: 30px; place-items: center; border-radius: 5px; background: #FF4D57; color: #fff; }
+    .blog-library-layout { display: grid; grid-template-columns: minmax(0, 1.75fr) minmax(280px, .75fr); gap: 40px; align-items: start; }
+    .blog-post-list { display: grid; gap: 28px; }
+    .blog-list-card { display: grid; grid-template-columns: 290px minmax(0, 1fr); gap: 22px; min-height: 270px; overflow: hidden; border: 1px solid #D6D9DF; border-radius: 22px; padding: 22px; background: #fff; }
+    .blog-list-card img { width: 100%; height: 100%; min-height: 220px; border-radius: 18px; object-fit: cover; }
+    .blog-list-card-content { display: flex; flex-direction: column; align-items: flex-start; padding: 2px 0; }
+    .blog-list-date { color: #FF4D57; font-size: 15px; }
+    .blog-list-card h2 { margin-top: 22px; color: #A42E32; font-size: clamp(24px, 2.3vw, 31px); font-weight: 400; line-height: 1.18; }
+    .blog-list-card p { max-width: 540px; margin-top: 20px; color: #1F2937; font-size: 16px; line-height: 1.7; }
+    .blog-list-meta { margin-top: auto; color: #6B7280; font-size: 15px; line-height: 2.05; }
+    .blog-read-button { margin-top: 16px; border: 0; border-radius: 999px; padding: 10px 42px; background: #FF4D57; color: #fff; font: inherit; font-size: 17px; cursor: pointer; }
+    .blog-sidebar { display: grid; gap: 44px; }
+    .blog-sidebar-card { border: 1px solid #FF7780; border-radius: 18px; padding: 58px 36px; text-align: center; }
+    .blog-sidebar-card h2 { color: #111827; font-size: 28px; font-weight: 400; }
+    .blog-sidebar-card p { margin: 32px auto 0; color: #111827; font-size: 16px; line-height: 1.95; }
+    .blog-sidebar-button { margin-top: 32px; border: 0; border-radius: 999px; padding: 13px 35px; background: #FF4D57; color: #fff; font: inherit; font-size: 20px; cursor: pointer; }
+    .blog-author-card { padding: 35px 40px 50px; }
+    .blog-author-card img { width: 100%; height: 270px; object-fit: cover; }
+    .blog-author-card h3 { margin-top: 36px; color: #111827; font-size: 17px; font-weight: 400; }
+    .blog-author-card h2 { margin-top: 15px; color: #FF4D57; font-family: cursive; font-size: 35px; font-weight: 400; }
+    .blog-author-card p { margin-top: 18px; line-height: 1.65; }
+    @media (max-width: 900px) {
+      .blog-library-layout { grid-template-columns: 1fr; }
+      .blog-sidebar { grid-template-columns: repeat(2, 1fr); gap: 20px; }
+      .blog-sidebar-card { padding: 35px 24px; }
+    }
+    @media (max-width: 650px) {
+      .footer-bottom { grid-template-columns: 1fr; gap: 13px; text-align: center; }
+      .footer-legal, .footer-social { grid-column: auto; justify-self: center; }
+      .blog-library { padding: 24px 16px 55px; }
+      .blog-library-top { align-items: flex-start; flex-direction: column; margin-bottom: 28px; }
+      .blog-pagination { gap: 10px; font-size: 14px; }
+      .blog-list-card { grid-template-columns: 1fr; min-height: 0; padding: 15px; gap: 15px; }
+      .blog-list-card img { height: 205px; min-height: 0; }
+      .blog-list-card h2 { margin-top: 12px; }
+      .blog-list-card p { margin-top: 12px; }
+      .blog-list-meta { margin-top: 12px; }
+      .blog-sidebar { grid-template-columns: 1fr; }
+    }
+
+    /* Blog header and footer */
+    .blog-page-hero { display: none; min-height: 235px; place-items: center; position: relative; overflow: hidden; padding: 44px 20px; background: linear-gradient(rgba(255,255,255,.76), rgba(255,255,255,.76)), url('food blog/ChatGPT Image Feb 27, 2026, 12_26_43 PM.png') center/cover; text-align: center; }
+    .blog-page-hero h1 { color: #111827; font-size: clamp(31px, 4vw, 43px); font-weight: 400; }
+    .blog-page-hero p { margin-top: 12px; color: #1F2937; font-size: 16px; }
+    .blog-only .blog-page-hero { display: grid; }
+    .blog-only .navbar-inner { padding-top: 9px; padding-bottom: 9px; }
+    .blog-only .navbar-brand > img { width: 60px; height: 60px; }
+    .blog-only .navbar-links { gap: 17px; }
+    .blog-only .navbar-links a, .blog-only .navbar-links button { font-size: 14px; }
+    .blog-only .blog-library { padding-top: 24px; }
+    .blog-only .blog-library-top h1 { font-size: 27px; }
+    .blog-only .blog-pagination { font-size: 14px; }
+    .blog-only .blog-list-card { grid-template-columns: 235px minmax(0, 1fr); min-height: 225px; gap: 18px; padding: 17px; border-radius: 18px; }
+    .blog-only .blog-list-card img { min-height: 188px; border-radius: 14px; }
+    .blog-only .blog-list-date { font-size: 13px; }
+    .blog-only .blog-list-card h2 { margin-top: 13px; font-size: clamp(21px, 2.1vw, 27px); }
+    .blog-only .blog-list-card p { margin-top: 12px; font-size: 14px; line-height: 1.55; }
+    .blog-only .blog-list-meta { font-size: 13px; line-height: 1.7; }
+    .blog-only .blog-read-button { margin-top: 10px; padding: 8px 31px; font-size: 15px; }
+    .blog-only .blog-sidebar { gap: 28px; }
+    .blog-only .blog-sidebar-card { padding: 38px 26px; border-radius: 15px; }
+    .blog-only .blog-sidebar-card h2 { font-size: 24px; }
+    .blog-only .blog-sidebar-card p { margin-top: 21px; font-size: 14px; line-height: 1.65; }
+    .blog-only .blog-sidebar-button { margin-top: 22px; padding: 10px 27px; font-size: 17px; }
+    .blog-only .blog-author-card { padding: 25px 28px 34px; }
+    .blog-only .blog-author-card img { height: 215px; }
+    .blog-only .blog-author-card h3 { margin-top: 24px; font-size: 14px; }
+    .blog-only .blog-author-card h2 { font-size: 28px; }
+    .blog-page-footer { display: none; padding: 30px 40px 0; background: #fff; }
+    .blog-only .blog-page-footer { display: block; }
+    .blog-only .blog-page-footer .site-footer { display: block; }
+    .blog-footer-newsletter { display: grid; grid-template-columns: 1fr 1.15fr; align-items: center; gap: 42px; max-width: 1120px; margin: 0 auto 70px; border-radius: 18px; padding: 28px 65px; background: #FF4D57; color: #fff; }
+    .blog-follow { display: flex; align-items: center; justify-content: center; gap: 20px; font-size: 25px; }
+    .blog-follow .social-links { border-radius: 12px; padding: 10px 16px; background: rgba(255,255,255,.28); }
+    .blog-follow .social-link { width: 34px; height: 34px; border-color: #fff; }
+    .blog-footer-subscribe h2 { margin-bottom: 18px; font-family: cursive; font-size: 33px; font-weight: 400; }
+    .blog-footer-subscribe form { display: flex; gap: 14px; }
+    .blog-footer-subscribe input { min-width: 0; flex: 1; border: 0; border-radius: 6px; padding: 13px 16px; color: #374151; font: inherit; font-size: 14px; }
+    .blog-footer-subscribe button { border: 0; border-radius: 6px; padding: 12px 24px; background: #fff; color: #111827; font: inherit; font-size: 16px; cursor: pointer; }
+    .blog-footer-main { margin-right: -40px; margin-left: -40px; }
+    @media (max-width: 700px) {
+      .blog-page-hero { min-height: 185px; }
+      .blog-page-hero p { font-size: 14px; }
+      .blog-only .blog-list-card { grid-template-columns: 1fr; }
+      .blog-footer-newsletter { grid-template-columns: 1fr; gap: 25px; padding: 28px 22px; text-align: center; }
+      .blog-footer-subscribe form { flex-direction: column; }
+      .blog-page-footer { padding-right: 20px; padding-left: 20px; }
+      .blog-footer-main { margin-right: -20px; margin-left: -20px; }
+    }
+
+    /* Recipe browser page */
+    .recipe-page { background: #fff; }
+    .recipe-topbar { display: flex; align-items: center; justify-content: space-between; gap: 22px; min-height: 92px; padding: 12px clamp(18px, 4vw, 54px); background: rgba(255,255,255,.84); box-shadow: 0 1px 7px rgba(36,19,21,.13); }
+    .recipe-topbar img { width: 78px; height: 64px; object-fit: contain; }
+    .recipe-search { position: relative; flex: 0 1 510px; }
+    .recipe-search input { width: 100%; border: 1px solid #D1D5DB; border-radius: 999px; padding: 15px 20px 15px 49px; background: #fff; color: #374151; font: inherit; font-size: 16px; }
+    .recipe-search::before { content: '⌕'; position: absolute; top: 50%; left: 18px; transform: translateY(-54%); color: #111827; font-size: 30px; }
+    .recipe-nav { display: flex; align-items: center; gap: clamp(14px, 2.5vw, 40px); }
+    .recipe-nav a { color: #111827; font-size: 18px; text-decoration: none; }
+    .recipe-nav .recipe-subscribe { border-radius: 999px; padding: 13px 29px; background: #FF4D57; color: #fff; }
+    .recipe-page-hero { min-height: 235px; background: linear-gradient(rgba(255,255,255,.72), rgba(255,255,255,.72)), url('food blog/ChatGPT Image Feb 27, 2026, 12_26_43 PM.png') center/cover; }
+    .recipe-page-hero h2 { font-size: clamp(32px, 4vw, 43px); font-weight: 400; }
+    .recipe-page-hero p { font-size: 16px; }
+    .recipe-page-close { top: 15px; right: 20px; z-index: 2; border-radius: 50%; }
+    .recipe-page-content { max-width: 1420px; padding: 38px clamp(20px, 4vw, 55px) 70px; }
+    .recipe-page-toolbar { display: none; }
+    .popular-recipes { margin-bottom: 55px; }
+    .recipe-section-title { margin-bottom: 26px; color: #111827; font-size: clamp(27px, 3vw, 34px); font-weight: 400; }
+    .popular-recipe-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
+    .popular-recipe-card { overflow: hidden; border: 1px solid #D1D5DB; border-radius: 22px; background: #fff; }
+    .popular-recipe-image { position: relative; height: 275px; }
+    .popular-recipe-image img { width: 100%; height: 100%; object-fit: cover; }
+    .recipe-pill, .recipe-score { position: absolute; top: 15px; border-radius: 999px; padding: 8px 18px; font-size: 14px; }
+    .recipe-pill { left: 15px; background: #FF4D57; color: #fff; }
+    .recipe-score { right: 15px; background: #fff; color: #111827; }
+    .recipe-score b { color: #FBBF24; font-size: 20px; }
+    .popular-recipe-body { padding: 18px 22px 20px; }
+    .recipe-time { display: flex; gap: 38px; color: #6B7280; font-size: 15px; }
+    .popular-recipe-body h3 { margin-top: 24px; color: #111827; font-size: 22px; font-weight: 400; }
+    .popular-recipe-body p { margin-top: 16px; color: #6B7280; font-size: 15px; line-height: 1.45; }
+    .all-recipes-title { margin: 0 0 25px; color: #111827; font-size: clamp(27px, 3vw, 34px); font-weight: 400; }
+    .recipe-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 22px; }
+    .recipe-card { border-radius: 16px; box-shadow: none; transition: transform .25s ease, box-shadow .25s ease; }
+    .recipe-card:hover { transform: translateY(-5px); box-shadow: 0 14px 28px rgba(36,19,21,.15); }
+    .recipe-card img { height: 220px; }
+    .recipe-card-body { padding: 14px; }
+    .recipe-card-body h4 { font-size: 16px; font-weight: 400; }
+    .recipe-card-body p, .recipe-card-rating { display: none; }
+    .recipe-browse-wrap { padding: 36px 0 12px; text-align: center; }
+    .recipe-browse-wrap button { border: 0; border-radius: 999px; padding: 13px 34px; background: #FF4D57; color: #fff; font: inherit; font-size: 18px; cursor: pointer; }
+    .recipe-footer { padding: 0 20px; }
+    .recipe-footer .newsletter-section { padding: 28px 0 52px; }
+    .recipe-footer .site-footer { margin: 0 -20px; }
+    @media (max-width: 1050px) { .recipe-nav { gap: 16px; } .recipe-nav a { font-size: 15px; } .recipe-grid { grid-template-columns: repeat(3, 1fr); } }
+    @media (max-width: 760px) { .recipe-topbar { flex-wrap: wrap; } .recipe-topbar img { width: 60px; height: 45px; } .recipe-search { order: 3; flex-basis: 100%; } .recipe-nav { margin-left: auto; } .recipe-nav a:not(.recipe-subscribe) { display: none; } .popular-recipe-grid { grid-template-columns: 1fr; } .recipe-grid { grid-template-columns: repeat(2, 1fr); } .popular-recipe-image { height: 230px; } }
+    /* Keep all page text aligned with the compact Blog view */
+    body, input, button { font-size: 14px; }
+    .navbar-links a, .navbar-links button { font-size: 14px; }
+    .trending-head h2, .home-feed-title, .join-content h2, .recipe-section-title, .all-recipes-title { font-size: 27px; }
+    .trending-head p, .latest-blog-body p, .join-benefit p, .footer-brand p, .footer-links { font-size: 14px; }
+    .latest-blog-body h3, .popular-recipe-body h3 { font-size: 19px; }
+    .home-feed-section > .recipe-footer, .home-feed-section > .recipe-browse-wrap { display: none; }
   </style>
 </head>
 <body class="home-only bg-gray-100 text-gray-700">
@@ -1435,6 +1828,10 @@
     </div>
   </nav>
 
+  <section class="blog-page-hero" aria-labelledby="blogPageHeroTitle">
+    <div><h1 id="blogPageHeroTitle">Our Food Blog</h1><p>Discover cooking tips, trending recipes, and kitchen inspiration.</p></div>
+  </section>
+
   <!-- Hero Section with Background Switcher -->
   <section id="heroSection" class="relative flex flex-col items-center justify-center h-[70vh] text-center bg-cover bg-center transition-all duration-500" style="background-image: url('food blog/ChatGPT Image Feb 27, 2026, 11_33_10 AM.png');">
     
@@ -1463,14 +1860,27 @@
 
   <!-- Recipe browser opened by Explore Recipes -->
   <section id="recipePage" class="recipe-page" aria-labelledby="recipePageTitle">
+    <header class="recipe-topbar">
+      <img src="food blog/ChatGPT Image Feb 27, 2026, 04_43_13 PM.png" alt="Tasty Bites logo">
+      <label class="recipe-search"><input type="search" placeholder="Search here..." aria-label="Search recipes"></label>
+      <nav class="recipe-nav" aria-label="Recipe page navigation"><a href="#heroSection" onclick="closeRecipePage()">Home</a><a href="#trendingSection" onclick="closeRecipePage()">Blogs</a><a href="#recipePage">Recipes</a><a href="#" onclick="closeRecipePage()">Write</a><a href="#" onclick="closeRecipePage()">Account</a><a class="recipe-subscribe" href="#" data-open-subscribe>Subscribe</a></nav>
+    </header>
     <div class="recipe-page-hero">
       <button id="closeRecipePage" class="recipe-page-close" type="button" aria-label="Close recipes">&times;</button>
       <div>
-        <h2 id="recipePageTitle">Our Food Blog</h2>
-        <p>Discover cooking tips, trending recipes, and kitchen inspiration.</p>
+        <h2 id="recipePageTitle">Explore Tasty Recipes</h2>
+        <p>From quick meals to gourmet delights, find the perfect recipe for every occasion.</p>
       </div>
     </div>
     <div class="recipe-page-content">
+      <section class="popular-recipes" aria-labelledby="popularRecipesTitle">
+        <h3 id="popularRecipesTitle" class="recipe-section-title">Most Popular Recipe Collections</h3>
+        <div class="popular-recipe-grid">
+          <article class="popular-recipe-card"><div class="popular-recipe-image"><img src="food blog/quinoa-avocado-bowl-fb.webp" alt="Avocado toast with poached egg"><span class="recipe-pill">Recipe</span><span class="recipe-score"><b>★</b> 4.5</span></div><div class="popular-recipe-body"><div class="recipe-time"><span>◷ &nbsp;15 min</span><span>Easy</span></div><h3>Avocado Toast with Poached Egg</h3><p>The perfect brunch staple with fresh, satisfying flavours.</p></div></article>
+          <article class="popular-recipe-card"><div class="popular-recipe-image"><img src="food blog/grilled-chicken-skewers-fresh-cucumber-salsa-spicy-sauce-black-bowl-grilled-chicken-skewers-fresh-cucumber-salsa-405289399.webp" alt="Grilled chicken with vegetables"><span class="recipe-pill">Recipe</span><span class="recipe-score"><b>★</b> 4.5</span></div><div class="popular-recipe-body"><div class="recipe-time"><span>◷ &nbsp;30 min</span><span>Medium</span></div><h3>Grilled Chicken with Vegetables</h3><p>A healthy and flavourful plate for an easy dinner.</p></div></article>
+          <article class="popular-recipe-card"><div class="popular-recipe-image"><img src="food blog/360_F_283759099_6dKKjPSCGKCR0hHgFkzvEd0JqH9baN0W.jpg" alt="Chocolate lava cake"><span class="recipe-pill">Recipe</span><span class="recipe-score"><b>★</b> 4.5</span></div><div class="popular-recipe-body"><div class="recipe-time"><span>◷ &nbsp;40 min</span><span>Hard</span></div><h3>Decadent Chocolate Lava Cake</h3><p>A rich chocolate cake with a soft molten centre.</p></div></article>
+        </div>
+      </section>
       <div class="recipe-page-toolbar">
         <h3>Explore Recipes</h3>
         <div class="recipe-categories" role="group" aria-label="Recipe categories">
@@ -1482,6 +1892,7 @@
           <button class="category-button" type="button" data-category="drinks">Drinks</button>
         </div>
       </div>
+      <h3 class="all-recipes-title">All Recipes</h3>
       <div id="recipeGrid" class="recipe-grid">
         <article class="recipe-card" data-category="desserts">
           <img src="food blog/Brownie-Recipe-with-Cocoa-Powder-1200x821.jpg" alt="Chocolate brownie dessert">
@@ -1524,6 +1935,7 @@
           <div class="recipe-card-body"><h4>Fresh Juice Collection</h4><p>Colorful drinks for every occasion.</p><div class="recipe-card-rating">★ 4.5</div></div>
         </article>
       </div>
+      <div class="recipe-browse-wrap"><button type="button">Browse All</button></div>
     </div>
   </section>
 
@@ -1590,6 +2002,133 @@
     <div id="blogEmptyState" class="blog-empty-state">
       <div><span aria-hidden="true">&#128193;</span><strong>No blog posts yet</strong><p>Waiting for your first blog post.</p></div>
     </div>
+  </section>
+
+  <section class="home-feed-section" aria-labelledby="latestBlogsTitle">
+    <div class="home-feed-inner">
+      <h2 id="latestBlogsTitle" class="home-feed-title">Latest Blogs</h2>
+      <div class="latest-blog-grid">
+        <article class="latest-blog-card">
+          <div class="latest-blog-image"><img src="food blog/plate-fettuccine-alfredo-with-fresh-parsley_9975-124881.avif" alt="Creamy garlic pasta"><span class="latest-blog-tag">Quick Meals</span></div>
+          <div class="latest-blog-body"><h3>Creamy Garlic Butter Pasta</h3><p>A rich and comforting pasta recipe with fresh garlic, butter, and parmesan, ready in just 20 minutes.</p><a class="latest-blog-link" href="#recipePage">Read more &rarr;</a></div>
+        </article>
+        <article class="latest-blog-card">
+          <div class="latest-blog-image"><img src="food blog/Brownie-Recipe-with-Cocoa-Powder-1200x821.jpg" alt="Chocolate brownie dessert"><span class="latest-blog-tag">Desserts</span></div>
+          <div class="latest-blog-body"><h3>Fudgy Chocolate Brownies</h3><p>Deep chocolate flavour, a crackly top, and a soft centre make these brownies an easy family favourite.</p><a class="latest-blog-link" href="#recipePage">Read more &rarr;</a></div>
+        </article>
+        <article class="latest-blog-card">
+          <div class="latest-blog-image"><img src="food blog/indian-feast-platter-thali-meal-with-rice-naan-photo.jpg" alt="Indian thali meal"><span class="latest-blog-tag">Vegetarian</span></div>
+          <div class="latest-blog-body"><h3>A Comforting Indian Thali</h3><p>Build a colourful, satisfying plate with fragrant rice, warm flatbreads, dal, and fresh seasonal sides.</p><a class="latest-blog-link" href="#recipePage">Read more &rarr;</a></div>
+        </article>
+        <article class="latest-blog-card">
+          <div class="latest-blog-image"><img src="food blog/Mango-Smoothie-1.jpg" alt="Fresh mango smoothie"><span class="latest-blog-tag">Drinks</span></div>
+          <div class="latest-blog-body"><h3>Sunshine Mango Smoothie</h3><p>A creamy, refreshing blend of ripe mango and yoghurt for an energising breakfast or afternoon treat.</p><a class="latest-blog-link" href="#recipePage">Read more &rarr;</a></div>
+        </article>
+      </div>
+      <div class="recipe-browse-wrap"><button type="button">Browse All</button></div>
+    </div>
+    <div class="recipe-footer">
+      <section class="newsletter-section" aria-labelledby="recipeNewsletterTitle"><div class="newsletter-box"><h2 id="recipeNewsletterTitle">Stay Updated with Fresh Recipes</h2><p>Get delicious recipes, cooking tips, and trending food ideas delivered straight to your inbox.</p><form class="home-newsletter-form" data-footer-form><input type="email" placeholder="Enter Email Address" aria-label="Email address" required><button type="submit">Subscribe Now</button></form><p class="newsletter-privacy">We respect your privacy. Unsubscribe anytime.</p></div></section>
+      <footer class="site-footer"><div class="footer-grid"><div class="footer-brand"><img src="food blog/ChatGPT Image Feb 27, 2026, 04_43_13 PM.png" alt="Tasty Bites logo"><p>Email: support@gmail.com<br>Phone: +91 XXXXX XXXXX<br>Location: Chennai, India</p></div><div><h2 class="footer-heading">Quick Links</h2><nav class="footer-links"><a href="#heroSection" onclick="closeRecipePage()">Home</a><a href="#trendingSection" onclick="closeRecipePage()">Blog</a><a href="#recipePage">Recipes</a><a href="#">Write</a></nav></div><div><h2 class="footer-heading">Categories</h2><nav class="footer-links"><a href="#recipePage">Desserts</a><a href="#recipePage">Quick Meals</a><a href="#recipePage">Vegetarian</a><a href="#recipePage">Non-Vegetarian</a><a href="#recipePage">Drinks</a></nav></div><div class="footer-newsletter"><h2 class="footer-heading">Subscribe to Our Newsletter</h2><p>Get fresh recipes and cooking inspiration every week.</p><form class="footer-form" data-footer-form><input type="email" placeholder="Enter Email Address" aria-label="Email address" required><button type="submit">Subscribe Now</button></form></div></div><div class="footer-bottom"><div class="footer-legal">© 2026 Your Website Name. All rights reserved.<br>Privacy Policy | Terms &amp; Conditions</div><div class="footer-social"><span>Follow us,</span><div class="social-links"><a class="social-link" href="#">f</a><a class="social-link" href="#">◎</a><a class="social-link" href="#">▶</a><a class="social-link" href="#">𝕏</a></div></div></div></footer>
+    </div>
+  </section>
+
+  <section class="home-feed-section categories-section" aria-labelledby="popularCategoriesTitle">
+    <div class="home-feed-inner">
+      <h2 id="popularCategoriesTitle" class="home-feed-title">Popular Categories</h2>
+      <div class="category-showcase">
+        <a class="showcase-category" href="#recipePage"><img src="food blog/Brownie-Recipe-with-Cocoa-Powder-1200x821.jpg" alt="Dessert category"><span>Desserts</span></a>
+        <a class="showcase-category" href="#recipePage"><img src="food blog/spring-roll-dipping-sauce-2.webp" alt="Quick meal category"><span>Quick Meals</span></a>
+        <a class="showcase-category" href="#recipePage"><img src="food blog/indian-feast-platter-thali-meal-with-rice-naan-photo.jpg" alt="Vegetarian category"><span>Vegetarian</span></a>
+        <a class="showcase-category" href="#recipePage"><img src="food blog/traditional-indian-thali-meal-displaying-rice-curry-chickpeas-and-naan-bread-photo.jpg" alt="Non vegetarian category"><span>Non-Veg</span></a>
+        <a class="showcase-category" href="#recipePage"><img src="food blog/pngtree-cocktail-collection-a-of-fresh-juices-and-alcoholic-drinks-image_17155251.jpg" alt="Drinks category"><span>Drinks</span></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="join-section" aria-labelledby="whyJoinTitle">
+    <div class="join-layout">
+      <div class="join-visual-grid" aria-label="Food community highlights">
+        <div class="join-visual-card"><img src="food blog/ChatGPT Image Feb 27, 2026, 11_33_10 AM.png" alt="Fresh ingredients"><span class="join-icon" aria-hidden="true">🍴</span></div>
+        <div class="join-visual-card"><img src="food blog/home-lindsay-kitchen-380x480.jpg" alt="Recipe on a phone"><span class="join-icon" aria-hidden="true">🔖</span></div>
+        <div class="join-visual-card"><img src="food blog/plate-fettuccine-alfredo-with-fresh-parsley_9975-124881.avif" alt="Cooking instructions"><span class="join-icon" aria-hidden="true">✓</span></div>
+        <div class="join-visual-card"><img src="food blog/quinoa-avocado-bowl-fb.webp" alt="Food lovers together"><span class="join-icon" aria-hidden="true">♥</span></div>
+      </div>
+      <div class="join-content">
+        <h2 id="whyJoinTitle">Why Join?</h2>
+        <p class="join-intro">Discover, cook, and share delicious recipes with thousands of food lovers around the world.</p>
+        <div class="join-benefits">
+          <div class="join-benefit"><span class="benefit-number">1</span><div><h3>Discover New Recipes</h3><p>Explore trending, seasonal, and chef-inspired dishes added daily.</p></div></div>
+          <div class="join-benefit"><span class="benefit-number">2</span><div><h3>Save Your Favorites</h3><p>Bookmark recipes and create your own personalised collection.</p></div></div>
+          <div class="join-benefit"><span class="benefit-number">3</span><div><h3>Step-by-Step Guidance</h3><p>Follow clear instructions with cooking tips for perfect results every time.</p></div></div>
+          <div class="join-benefit"><span class="benefit-number">4</span><div><h3>Join a Food Lovers Community</h3><p>Connect, comment, and share your cooking experiences with others.</p></div></div>
+        </div>
+        <button class="join-button" type="button" data-open-subscribe>Start Cooking Today</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="newsletter-section" aria-labelledby="newsletterTitle">
+    <div class="newsletter-box">
+      <h2 id="newsletterTitle">Stay Updated with Fresh Recipes</h2>
+      <p>Get delicious recipes, cooking tips, and trending food ideas delivered straight to your inbox. No spam, just tasty inspiration!</p>
+      <form id="homeNewsletterForm" class="home-newsletter-form">
+        <input id="homeNewsletterEmail" type="email" placeholder="Enter Email Address" aria-label="Email address" required>
+        <button type="submit">Subscribe Now</button>
+      </form>
+      <p id="homeNewsletterMessage" class="newsletter-message" aria-live="polite"></p>
+      <p class="newsletter-privacy">We respect your privacy. Unsubscribe anytime.</p>
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div class="footer-brand"><img src="food blog/ChatGPT Image Feb 27, 2026, 04_43_13 PM.png" alt="Sowjanya's Food Blog logo"><p>Email: support@gmail.com<br>Phone: +91 XXXXX XXXXX<br>Location: Chennai, India</p></div>
+      <div><h2 class="footer-heading">Quick Links</h2><nav class="footer-links" aria-label="Quick links"><a href="#heroSection">Home</a><a href="#trendingSection">Blog</a><a href="#recipePage">Recipes</a><a href="#">Write</a></nav></div>
+      <div><h2 class="footer-heading">Categories</h2><nav class="footer-links" aria-label="Categories"><a href="#recipePage">Desserts</a><a href="#recipePage">Quick Meals</a><a href="#recipePage">Vegetarian</a><a href="#recipePage">Non-Vegetarian</a><a href="#recipePage">Drinks</a></nav></div>
+      <div class="footer-newsletter"><h2 class="footer-heading">Subscribe to Our Newsletter</h2><p>Get fresh recipes and cooking inspiration every week.</p><form class="footer-form" data-footer-form><input type="email" placeholder="Enter Email Address" aria-label="Email address" required><button type="submit">Subscribe Now</button></form></div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-legal">© 2026 Your Website Name. All rights reserved.<br>Privacy Policy | Terms &amp; Conditions</div>
+      <div class="footer-social"><span>Follow us,</span><div class="social-links" aria-label="Social media"><a class="social-link" href="#" aria-label="Facebook">f</a><a class="social-link" href="#" aria-label="Instagram">◎</a><a class="social-link" href="#" aria-label="YouTube">▶</a><a class="social-link" href="#" aria-label="Twitter">𝕏</a></div></div>
+    </div>
+  </footer>
+
+  <main class="blog-library" aria-labelledby="blogLibraryTitle">
+    <div class="blog-library-inner">
+      <div class="blog-library-top">
+        <h1 id="blogLibraryTitle">Categories <span>⌄</span></h1>
+        <nav class="blog-pagination" aria-label="Blog pagination"><strong>Page</strong><span class="current-page">1</span><span>2</span><span>3</span><span>…</span><span>8</span><span>Next ›</span></nav>
+      </div>
+      <div class="blog-library-layout">
+        <section class="blog-post-list" aria-label="Latest blog posts">
+          <article class="blog-list-card"><img src="food blog/plate-fettuccine-alfredo-with-fresh-parsley_9975-124881.avif" alt="Creamy spinach and mushroom pasta"><div class="blog-list-card-content"><span class="blog-list-date">Feb 24, 2026</span><h2>Creamy Spinach &amp; Mushroom Pasta</h2><p>A comforting vegetarian pasta dish loaded with fresh spinach, mushrooms, and creamy sauce.</p><div class="blog-list-meta">▰ &nbsp; Read 5 min<br>By, Charles</div><button class="blog-read-button" type="button">Read Now</button></div></article>
+          <article class="blog-list-card"><img src="food blog/Mango-Smoothie-1.jpg" alt="Refreshing mango smoothie"><div class="blog-list-card-content"><span class="blog-list-date">Feb 24, 2026</span><h2>Refreshing Summer Mango Smoothie</h2><p>A cool and tropical mango smoothie recipe that’s perfect for hot summer afternoons.</p><div class="blog-list-meta">▰ &nbsp; Read 5 min<br>By, Charles</div><button class="blog-read-button" type="button">Read Now</button></div></article>
+          <article class="blog-list-card"><img src="food blog/garlic-butter-chicken-bites-snippet.jpg" alt="Garlic butter chicken"><div class="blog-list-card-content"><span class="blog-list-date">Feb 23, 2026</span><h2>20-Minute Garlic Butter Chicken</h2><p>A flavorful and juicy chicken recipe perfect for busy weeknights when you need something fast and delicious.</p><div class="blog-list-meta">▰ &nbsp; Read 5 min<br>By, Charles</div><button class="blog-read-button" type="button">Read Now</button></div></article>
+          <article class="blog-list-card"><img src="food blog/Brownie-Recipe-with-Cocoa-Powder-1200x821.jpg" alt="Homemade chocolate brownies"><div class="blog-list-card-content"><span class="blog-list-date">Feb 24, 2026</span><h2>Easy Homemade Chocolate Brownies</h2><p>Soft, fudgy, and rich brownies made with simple ingredients you already have in your kitchen.</p><div class="blog-list-meta">▰ &nbsp; Read 5 min<br>By, Charles</div><button class="blog-read-button" type="button">Read Now</button></div></article>
+        </section>
+        <aside class="blog-sidebar">
+          <section class="blog-sidebar-card"><h2>Join the TastyBites Community</h2><p>Love delicious recipes? Don’t miss out on our latest food blogs and cooking tips!</p><button class="blog-sidebar-button" type="button" data-open-subscribe>Subscribe Now</button><p>Our email newsletter delivers our new recipes and latest updates. It’s always free and you can unsubscribe any time.</p></section>
+          <section class="blog-sidebar-card blog-author-card"><img src="food blog/home-lindsay-kitchen-380x480.jpg" alt="Lindsay cooking in her kitchen"><h3>HI! I’M LINDSAY</h3><h2>Nice to meet you</h2><p>I’m a former teacher, now full-time food blogger. I share simple, delicious recipes for everyday cooking.</p><button class="blog-sidebar-button" type="button">Learn More</button></section>
+        </aside>
+      </div>
+    </div>
+  </main>
+
+  <section class="blog-page-footer" aria-labelledby="blogFooterSubscribeTitle">
+    <div class="blog-footer-newsletter">
+      <div class="blog-follow"><span>Follow us,</span><div class="social-links" aria-label="Social media"><a class="social-link" href="#" aria-label="Facebook">f</a><a class="social-link" href="#" aria-label="Instagram">◎</a><a class="social-link" href="#" aria-label="YouTube">▶</a><a class="social-link" href="#" aria-label="Twitter">𝕏</a></div></div>
+      <div class="blog-footer-subscribe"><h2 id="blogFooterSubscribeTitle">Sign Up for Email Updates</h2><form data-footer-form><input type="email" placeholder="Enter Email Address" aria-label="Email address" required><button type="submit">Subscribe</button></form></div>
+    </div>
+    <footer class="site-footer blog-footer-main">
+      <div class="footer-grid">
+        <div class="footer-brand"><img src="food blog/ChatGPT Image Feb 27, 2026, 04_43_13 PM.png" alt="Sowjanya's Food Blog logo"><p>Email: support@gmail.com<br>Phone: +91 XXXXX XXXXX<br>Location: Chennai, India</p></div>
+        <div><h2 class="footer-heading">Quick Links</h2><nav class="footer-links" aria-label="Quick links"><a href="#heroSection">Home</a><a href="#trendingSection">Blog</a><a href="#recipePage">Recipes</a><a href="#">Write</a></nav></div>
+        <div><h2 class="footer-heading">Categories</h2><nav class="footer-links" aria-label="Categories"><a href="#recipePage">Desserts</a><a href="#recipePage">Quick Meals</a><a href="#recipePage">Vegetarian</a><a href="#recipePage">Non-Vegetarian</a><a href="#recipePage">Drinks</a></nav></div>
+        <div class="footer-newsletter"><h2 class="footer-heading">Subscribe to Our Newsletter</h2><p>Get fresh recipes and cooking inspiration every week.</p><form class="footer-form" data-footer-form><input type="email" placeholder="Enter Email Address" aria-label="Email address" required><button type="submit">Subscribe Now</button></form></div>
+      </div>
+      <div class="footer-bottom"><div class="footer-legal">© 2026 Your Website Name. All rights reserved.<br>Privacy Policy | Terms &amp; Conditions</div><div class="footer-social"><span>Follow us,</span><div class="social-links" aria-label="Social media"><a class="social-link" href="#" aria-label="Facebook">f</a><a class="social-link" href="#" aria-label="Instagram">◎</a><a class="social-link" href="#" aria-label="YouTube">▶</a><a class="social-link" href="#" aria-label="Twitter">𝕏</a></div></div></div>
+    </footer>
   </section>
 
   <!-- Login popup shown before writing -->
@@ -1846,6 +2385,8 @@
     const profileTabs = document.querySelectorAll('.profile-tab');
     let pendingLoginAction = 'write';
     const recipePage = document.getElementById('recipePage');
+    const misplacedRecipeFooter = document.querySelector('.home-feed-section > .recipe-footer');
+    if (misplacedRecipeFooter) recipePage.appendChild(misplacedRecipeFooter);
     const recipeCards = document.querySelectorAll('.recipe-card');
     const categoryButtons = document.querySelectorAll('.category-button');
     const trendingCards = document.querySelectorAll('#cardGrid .card');
@@ -2141,6 +2682,9 @@
       openLoginModal('account');
     });
     document.getElementById('subscribeButton').addEventListener('click', openSubscribeModal);
+    document.querySelectorAll('[data-open-subscribe]').forEach((button) => {
+      button.addEventListener('click', openSubscribeModal);
+    });
     signOutNavButton.addEventListener('click', () => {
       if (currentSessionLoggedIn) {
         signOutUser();
@@ -2281,6 +2825,23 @@
       localStorage.setItem('foodBlogSubscriber', email);
       subscribeMessage.textContent = 'You are subscribed. Fresh recipes are on the way!';
       subscribeForm.reset();
+    });
+
+    document.getElementById('homeNewsletterForm').addEventListener('submit', (event) => {
+      event.preventDefault();
+      const emailInput = document.getElementById('homeNewsletterEmail');
+      localStorage.setItem('foodBlogSubscriber', emailInput.value.trim());
+      document.getElementById('homeNewsletterMessage').textContent = 'You are subscribed. Fresh recipes are on the way!';
+      event.currentTarget.reset();
+    });
+    document.querySelectorAll('[data-footer-form]').forEach((form) => {
+      form.addEventListener('submit', (event) => {
+        event.preventDefault();
+        const email = form.querySelector('input').value.trim();
+        localStorage.setItem('foodBlogSubscriber', email);
+        form.querySelector('button').textContent = 'Subscribed!';
+        form.reset();
+      });
     });
 
     blogImage.addEventListener('change', () => {

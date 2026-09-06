@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Expense Tracker</title>
+  <style>
+    body { font-family: Arial; padding: 20px; }
+    input { padding: 8px; margin-right: 5px; }
+    button { padding: 8px 12px; }
+    ul { margin-top: 15px; }
+  </style>
+</head>
+<body>
+  <h2>💰 Expense Tracker</h2>
+  <input type="number" id="amount" placeholder="Enter amount">
+  <button onclick="addExpense()">Add Expense</button>
+  <h3>Total: ₹<span id="total">0</span></h3>
+  <ul id="expenseList"></ul>
+
+  <script>
+    let expenses = [];
+
+    function addExpense() {
+      const amt = parseFloat(document.getElementById("amount").value);
+      if (!isNaN(amt) && amt > 0) {
+        expenses.push(amt);
+        document.getElementById("amount").value = "";
+        renderExpenses();
+      }
+    }
+
+    function renderExpenses() {
+      const list = document.getElementById("expenseList");
+      list.innerHTML = "";
+      expenses.forEach(exp => {
+        const li = document.createElement("li");
+        li.textContent = "₹" + exp;
+        list.appendChild(li);
+      });
+
+      // calculate total using reduce
+      const total = expenses.reduce((sum, val) => sum + val, 0);
+      document.getElementById("total").textContent = total;
+    }
+  </script>
+</body>
+</html>

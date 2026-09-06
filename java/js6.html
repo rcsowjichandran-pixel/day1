@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>User Filter Dashboard</title>
+  <style>
+    body { font-family: Arial; padding: 20px; }
+    button { padding: 8px 12px; margin-bottom: 10px; }
+    ul { list-style: none; padding: 0; }
+    li { padding: 6px; background: #f4f4f4; margin: 4px 0; border-radius: 4px; }
+  </style>
+</head>
+<body>
+  <h2>👥 User Dashboard</h2>
+  <button onclick="showActive()">Show Active Users</button>
+  <button onclick="showAll()">Show All Users</button>
+  <ul id="userList"></ul>
+
+  <script>
+    const users = [
+      { name: "Alice", active: true },
+      { name: "Bob", active: false },
+      { name: "Charlie", active: true },
+      { name: "Diana", active: false }
+    ];
+
+    function renderUsers(list) {
+      const ul = document.getElementById("userList");
+      ul.innerHTML = "";
+      list.forEach(user => {
+        const li = document.createElement("li");
+        li.textContent = user.name + (user.active ? " ✅ Active" : " ❌ Inactive");
+        ul.appendChild(li);
+      });
+    }
+
+    function showActive() {
+      const activeUsers = users.filter(u => u.active);
+      renderUsers(activeUsers);
+    }
+
+    function showAll() {
+      renderUsers(users);
+    }
+
+    // initial load
+    renderUsers(users);
+  </script>
+</body>
+</html>

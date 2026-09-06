@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Enhanced Todo List</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; background: #f4f4f4; }
+    form { margin-bottom: 15px; }
+    input, select { padding: 8px; margin-right: 5px; }
+    button { padding: 8px 12px; margin-left: 5px; }
+    ul { list-style: none; padding: 0; }
+    li {
+      background: #fff;
+      margin: 5px 0;
+      padding: 10px;
+      border-radius: 4px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: grab;
+      transition: all 0.3s ease;
+    }
+    li.completed {
+      text-decoration: line-through;
+      opacity: 0.6;
+      transform: scale(0.98);
+    }
+    .category { font-size: 12px; color: #555; }
+  </style>
+</head>
+<body>
+  <h2>📝 Enhanced To‑Do List</h2>
+
+  <!-- Task Input Form -->
+  <form id="taskForm">
+    <input type="text" id="taskInput" placeholder="Enter task..." required>
+    <input type="date" id="dueDate">
+    <select id="priority">
+      <option value="Low">Low</option>
+      <option value="Medium">Medium</option>
+      <option value="High">High</option>
+    </select>
+    <input type="text" id="category" placeholder="Category (Work, Study...)">
+    <button type="submit">Add Task</button>
+  </form>
+
+  <!-- Task List -->
+  <ul id="taskList"></ul>
+
+  <script>
+    const taskForm = document.getElementById("taskForm");
+    const taskList = document.getElementById("taskList");
+
+    let tasks = JSON.parse(localStorage.getItem("tasks")) || [];
+
+    // Render tasks
+    function renderTasks() {
+      taskList.innerHTML = "";
+      tasks.forEach((task, index) => {
+        const li = document.createElement("li");
+        li.draggable = true;
+        li.innerHTML = `
+          <div>
+            <strong>${task.text}</strong> 
+            <span class="category">[${task.category}]</span><br>
+            Due: ${task.dueDate || "N/A"} | Priority: ${task.priority}
+          </div>
+          <div>
+            <button onclick="toggleComplete(${index})">✔</button>
+            <button onclick="deleteTask(${index})">❌</button>
+          </div>
+        `;
+        if (task.completed) li.classList.add("completed");
+
+        // Drag events
+        li.addEventListener("dragstart", e => e.dataTransfer.setData("index", index));
+        li.addEventListener("dragover", e => e.preventDefault());
+        li.addEventListener("drop", e => {
+          const fromIndex = e.dataTransfer.getData("index");
+          const toIndex = index;
+          const moved = tasks.splice(fromIndex, 1)[0];
+          tasks.splice(toIndex, 0, moved);
+          updateStorage();
+        });
+
+        taskList.appendChild(li);
+      });
+    }
+
+    // Add task
+    taskForm.addEventListener("submit", e => {
+      e.preventDefault();
+      const newTask = {
+        text: document.getElementById("taskInput").value.trim(),
+        dueDate: document.getElementById("dueDate").value,
+        priority: document.getElementById("priority").value,
+        category: document.getElementById("category").value.trim() || "General",
+        completed: false
+      };
+      tasks.push(newTask);
+      updateStorage();
+      taskForm.reset();
+    });
+
+    // Toggle completion
+    function toggleComplete(index) {
+      tasks[index].completed = !tasks[index].completed;
+      updateStorage();
+    }
+
+    // Delete task
+    function deleteTask(index) {
+      tasks.splice(index, 1);
+      updateStorage();
+    }
+
+    // Save to localStorage (simulate backend sync)
+    async function updateStorage() {
+      localStorage.setItem("tasks", JSON.stringify(tasks));
+
+      // Simulate backend sync with fetch
+      try {
+        await fetch("https://jsonplaceholder.typicode.com/posts", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(tasks)
+        });
+        console.log("Synced with backend API");
+      } catch (error) {
+        console.error("Sync failed:", error);
+      }
+
+      renderTasks();
+    }
+
+    // Initial render
+    renderTasks();
+  </script>
+</body>
+</html>

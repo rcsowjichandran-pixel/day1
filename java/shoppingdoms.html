@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Shopping Cart Prototype</title>
+  <style>
+    .cart-item {
+      border: 1px solid #ccc;
+      padding: 10px;
+      margin: 5px;
+      border-radius: 5px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Products</h1>
+  <button onclick="addToCart('Laptop', 75000)">Add Laptop</button>
+  <button onclick="addToCart('Phone', 25000)">Add Phone</button>
+  <button onclick="addToCart('Headphones', 2000)">Add Headphones</button>
+
+  <h2>🛒 Cart Items</h2>
+  <div id="cart"></div>
+
+  <script>
+    // Add item to cart
+    function addToCart(name, price) {
+      let cart = JSON.parse(sessionStorage.getItem("cart")) || [];
+      cart.push({ name, price });
+      sessionStorage.setItem("cart", JSON.stringify(cart));
+      renderCart();
+    }
+
+    // Render cart items dynamically
+    function renderCart() {
+      let cart = JSON.parse(sessionStorage.getItem("cart")) || [];
+      let cartDiv = document.getElementById("cart");
+      cartDiv.innerHTML = ""; // Clear old items
+
+      cart.forEach((item, index) => {
+        let div = document.createElement("div");
+        div.className = "cart-item";
+        div.innerHTML = `${item.name} - ₹${item.price} 
+          <button onclick="removeItem(${index})">Remove</button>`;
+        cartDiv.appendChild(div);
+      });
+    }
+
+    // Remove item from cart
+    function removeItem(index) {
+      let cart = JSON.parse(sessionStorage.getItem("cart")) || [];
+      cart.splice(index, 1);
+      sessionStorage.setItem("cart", JSON.stringify(cart));
+      renderCart();
+    }
+
+    // Render cart on page load
+    window.onload = renderCart;
+  </script>
+</body>
+</html>

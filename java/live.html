@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Live Search Demo</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; }
+    input {
+      padding: 8px;
+      width: 300px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      margin-bottom: 15px;
+    }
+    ul { list-style: none; padding: 0; }
+    li {
+      background: #f4f4f4;
+      margin: 5px 0;
+      padding: 8px;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>🔍 Live Search</h2>
+  <input type="text" id="searchInput" placeholder="Type to search...">
+  <ul id="resultList"></ul>
+
+  <script>
+    // Sample data
+    const items = [
+      "HTML Basics",
+      "CSS Styling",
+      "JavaScript Functions",
+      "Bootstrap Grid",
+      "Tailwind Responsive",
+      "Python Fullstack",
+      "Django Framework",
+      "Flask API"
+    ];
+
+    const searchInput = document.getElementById("searchInput");
+    const resultList = document.getElementById("resultList");
+
+    // Render initial list
+    renderList(items);
+
+    // Listen for input events
+    searchInput.addEventListener("input", function() {
+      const query = this.value.toLowerCase();
+      const filtered = items.filter(item =>
+        item.toLowerCase().includes(query)
+      );
+      renderList(filtered);
+    });
+
+    // Render list dynamically
+    function renderList(list) {
+      resultList.innerHTML = "";
+      list.forEach(item => {
+        const li = document.createElement("li");
+        li.textContent = item;
+        resultList.appendChild(li);
+      });
+    }
+  </script>
+
+</body>
+</html>

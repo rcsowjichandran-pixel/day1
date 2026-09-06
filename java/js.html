@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Theme Switcher</title>
+  <style>
+    body.light {
+      background: #ffffff;
+      color: #333333;
+      transition: background 0.3s, color 0.3s;
+    }
+    body.dark {
+      background: #121212;
+      color: #f1f1f1;
+      transition: background 0.3s, color 0.3s;
+    }
+    button {
+      padding: 10px 15px;
+      margin-top: 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1>Welcome to My Website</h1>
+  <p>This is a simple theme switcher demo.</p>
+  <button id="toggleBtn">Toggle Theme</button>
+
+  <script>
+    const body = document.body;
+    const toggleBtn = document.getElementById("toggleBtn");
+
+    // Load saved theme from localStorage
+    const savedTheme = localStorage.getItem("theme");
+    if (savedTheme) {
+      body.className = savedTheme;
+    } else {
+      body.className = "light"; // default
+    }
+
+    // Toggle theme on button click
+    toggleBtn.addEventListener("click", () => {
+      if (body.className === "light") {
+        body.className = "dark";
+        localStorage.setItem("theme", "dark");
+      } else {
+        body.className = "light";
+        localStorage.setItem("theme", "light");
+      }
+    });
+  </script>
+</body>
+</html>

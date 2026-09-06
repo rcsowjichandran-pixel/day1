@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Modal Popup Demo</title>
+  <style>
+    body { font-family: Arial, sans-serif; }
+    .modal {
+      display: none; /* hidden by default */
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: rgba(0,0,0,0.5);
+      justify-content: center;
+      align-items: center;
+    }
+    .modal-content {
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      width: 300px;
+      text-align: center;
+    }
+    button {
+      padding: 8px 12px;
+      margin: 5px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    .open { background: #007bff; color: #fff; }
+    .close { background: #dc3545; color: #fff; }
+  </style>
+</head>
+<body>
+
+  <h2>✨ Modal Popup Example</h2>
+  <button class="open" id="openBtn">Open Modal</button>
+
+  <!-- Modal -->
+  <div class="modal" id="myModal">
+    <div class="modal-content" id="modalContent">
+      <h3>Hello, Sowjanya!</h3>
+      <p>This is a modal popup.</p>
+      <button class="close" id="closeBtn">Close</button>
+    </div>
+  </div>
+
+  <script>
+    const modal = document.getElementById("myModal");
+    const openBtn = document.getElementById("openBtn");
+    const closeBtn = document.getElementById("closeBtn");
+    const modalContent = document.getElementById("modalContent");
+
+    // Open modal
+    openBtn.addEventListener("click", () => {
+      modal.style.display = "flex";
+    });
+
+    // Close modal when clicking close button
+    closeBtn.addEventListener("click", () => {
+      modal.style.display = "none";
+    });
+
+    // Close modal when clicking outside content
+    modal.addEventListener("click", () => {
+      modal.style.display = "none";
+    });
+
+    // Prevent closing when clicking inside modal content
+    modalContent.addEventListener("click", (e) => {
+      e.stopPropagation();
+    });
+  </script>
+
+</body>
+</html>

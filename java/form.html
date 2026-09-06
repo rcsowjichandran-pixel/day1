@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Multi-Step Form</title>
+  <style>
+    body { font-family: Arial, sans-serif; padding: 20px; }
+    .step { display: none; }
+    .step.active { display: block; }
+    .error { color: red; font-size: 14px; }
+    button { margin-top: 10px; padding: 8px 16px; }
+  </style>
+</head>
+<body>
+
+  <h2>📝 Multi-Step Registration</h2>
+
+  <!-- Step 1: Email -->
+  <div class="step active" id="step1">
+    <label>Email:</label><br>
+    <input type="email" id="email"><br>
+    <span class="error" id="emailError"></span><br>
+    <button onclick="validateStep1()">Next</button>
+  </div>
+
+  <!-- Step 2: Password -->
+  <div class="step" id="step2">
+    <label>Password:</label><br>
+    <input type="password" id="password"><br>
+    <span class="error" id="passwordError"></span><br>
+    <button onclick="prevStep(1)">Back</button>
+    <button onclick="validateStep2()">Next</button>
+  </div>
+
+  <!-- Step 3: Profile Info -->
+  <div class="step" id="step3">
+    <label>Full Name:</label><br>
+    <input type="text" id="fullname"><br>
+    <span class="error" id="nameError"></span><br>
+    <button onclick="prevStep(2)">Back</button>
+    <button onclick="validateStep3()">Submit</button>
+  </div>
+
+  <script>
+    // Object to store form data
+    const formData = {};
+
+    function showStep(step) {
+      document.querySelectorAll('.step').forEach(s => s.classList.remove('active'));
+      document.getElementById('step' + step).classList.add('active');
+    }
+
+    function prevStep(step) {
+      showStep(step);
+    }
+
+    function validateStep1() {
+      const email = document.getElementById("email").value;
+      const error = document.getElementById("emailError");
+      const regex = /^[^@]+@[^@]+\.[^@]+$/;
+      if (!regex.test(email)) {
+        error.textContent = "Please enter a valid email.";
+      } else {
+        error.textContent = "";
+        formData.email = email;
+        showStep(2);
+      }
+    }
+
+    function validateStep2() {
+      const password = document.getElementById("password").value;
+      const error = document.getElementById("passwordError");
+      if (password.length < 6) {
+        error.textContent = "Password must be at least 6 characters.";
+      } else {
+        error.textContent = "";
+        formData.password = password;
+        showStep(3);
+      }
+    }
+
+    function validateStep3() {
+      const name = document.getElementById("fullname").value.trim();
+      const error = document.getElementById("nameError");
+      if (name === "") {
+        error.textContent = "Name cannot be empty.";
+      } else {
+        error.textContent = "";
+        formData.fullname = name;
+        alert("Form submitted successfully!\n\n" + JSON.stringify(formData, null, 2));
+      }
+    }
+  </script>
+
+</body>
+</html>
